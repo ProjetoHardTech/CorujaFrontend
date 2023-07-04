@@ -1,4 +1,4 @@
-#CORUJA - 2023
+#CORUJA 0.0.0 - 2023
 
 <aside>
 👋 Seja bem-vindo, Raposas!
@@ -8,6 +8,7 @@ Onde nos achar?
 - Instagram: @/hardtech.ifba
 - GitHub: ProjetoCooruja
 </aside>
+
 
  - Sobre o nosso team:
 
