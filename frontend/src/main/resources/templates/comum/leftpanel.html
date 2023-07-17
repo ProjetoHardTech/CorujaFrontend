@@ -1,0 +1,42 @@
+<div class="leftpanel">
+    <div class="media profile-left">
+        <a class="pull-left profile-thumb" href="profile.html">
+            <img class="img-circle" src="images/photos/othon.jpg" alt="">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading" th:text="${nome}">Elen Adarna</h4>
+            <small class="text-muted" th:text="${descricao}">Beach Lover</small>
+        </div>
+    </div><!-- media -->
+    
+    <h5 class="leftpanel-title">Navigation</h5>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active">
+        	<a href="/dashboard">
+        		<i class="fa fa-home"></i>
+        		<span>Dashboard</span>
+        	</a>
+        </li>
+        <li>
+        	<a href="/cadastro_livro">
+        		<i class="fa fa-envelope-o"></i> 
+        		<span>Cadastro de Livros</span>
+        	</a>
+        </li>
+		<li>
+        	<a href="/tarefa/">
+        		<i class="fa fa-envelope-o"></i> 
+        		<span>Lista de Tarefas</span>
+        	</a>
+        </li>
+        <li class="parent">
+        	<a href="#"><i class="fa fa-bars"></i>
+				<span>Tables</span>
+			</a>
+            <ul class="children">
+                <li><a href="basic-tables.html">Basic Tables</a></li>
+                <li><a href="data-tables.html">Data Tables</a></li>
+            </ul>
+        </li>
+    </ul>
+</div><!-- leftpanel -->
