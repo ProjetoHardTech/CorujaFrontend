@@ -3009,6 +3009,9 @@ body.signin {
 
 .panel-body{
     background-color: #221328;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .panel-footer{
@@ -3028,7 +3031,7 @@ body.signin {
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 800;
-    color: #221328;
+    color: #ffffff;
     background: #f36743;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #a5422a;
