@@ -7,15 +7,119 @@
     <meta name="author" content="">
     <title>Coruja</title>
     <link href="css/style.default.css" rel="stylesheet">
+	<style>
+		p.roxo{
+			color: #221328;
+			font-family: verdana;
+			font-size: 50px;
+			margin-left: -65px;
+  			text-indent: 0px;
+			line-height: 50px;
+  			text-transform: uppercase;
+		}
+		p.laranja{
+			color: #f36743;
+			font-family: verdana;
+			font-size: 50px;
+			margin-left: -65px;
+  			text-indent: 0px;
+			line-height: 50px;
+  			text-transform: uppercase;
+		}
+		p.pequeno{
+			color: #272727;
+			font-family: verdana;
+			font-size: 15px;
+			margin-top: -175px;
+			margin-left: -65px;	
+  			text-indent: 0px;
+			line-height: 20px;
+			width: 600px;
+  			text-transform: uppercase;
+		}
+		p.caracteristicasTitulo{
+			color: #221328;
+			font-family: verdana;
+			font-size: 25px;
+			margin-left: 240px;
+  			text-indent: 0px;
+			line-height: 30px;
+			width: 500px;
+  			text-transform: uppercase;
+		}
+		p.caracteristicas{
+			color: #f36743;
+			font-family: verdana;
+			font-size: 15px;
+			margin-bottom: 50px;
+			margin-left: 240px;	
+			line-height: 20px;
+			width: 650px;
+  			text-transform: uppercase;
+		}
+		p.caracteristicasTituloDireita{
+			color: #221328;
+			font-family: verdana;
+			font-size: 25px;
+			margin-left: 350px;
+  			text-indent: 0px;
+			line-height: 30px;
+  			text-transform: uppercase;
+		}
+		p.caracteristicasDireita{
+			color: #f36743;
+			font-family: verdana;
+			font-size: 15px;
+			margin-bottom: 50px;
+			margin-left: 350px;	
+			line-height: 20px;
+			width: 650px;
+  			text-transform: uppercase;
+		}
+		.colorize{
+			margin-right: 10px
+		}
+		p.botao{
+			font-size: 15px;
+		}
+		p.titulo{
+			color: #221328;
+			font-family: verdana;
+			font-size: 35px;
+			margin-left: 0px;
+  			text-indent: 0px;
+			line-height: 150px;
+			float: none;
+			text-align: center;
+  			text-transform: uppercase;
+		}
+		p.contato{
+			color: #221328;
+			font-family: verdana;
+			font-size: 18px;
+			margin-left: 0px;
+  			text-indent: 0px;
+			line-height: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+  			text-transform: uppercase;
+		}
+	</style>
 <body>  
 	<header>
 		<div class="headerwrapper">
 			<div class="header-right">
 				<div class="pull-right">
-					<form class="form form-search"
-						action="http://themepixels.com/demo/webpage/chain/search-results.html">
-						<input type="search" class="form-control" placeholder="Procurar" />
-					</form>
+					<div class="btn-group">
+						<div class="colorize">
+							<a class="btn btn-bordered dropdown-toggle" href="/">
+							<p class="botao">
+								Sobre
+							</p>
+							</a>
+						</div>
+					</div><!-- btn-group -->
 
 					<div class="btn-group">
 						<a class="btn btn-default dropdown-toggle" href="/login">
@@ -31,11 +135,72 @@
 						</a>
 					</div><!-- btn-group -->
 				</div><!-- pull-right -->
+				
 			</div><!-- header-right -->
+			<div class="header-left">
+				<div class="logo">
+					<strong>
+						<img src="images\coruja_images\icons\160x160\Ativo 57.png" height="40" alt="Logo">
+					<strong>
+				</div>
+			</div><!-- header-left -->
 		</div><!-- headerwrapper -->
+		
 	</header>
-	
-	
+	<div class="mainwrapper">
+		<table>
+		<tr>
+			<th scope="col">
+				<div class="img-offline">
+					<img src="images\coruja_images\index\Tela.png" alt="Logo" width="650" vspace="100" hspace="200">
+				</div>
+			</th>
+			<th scope="col">
+				<div class="msg-right">
+					<p class="roxo">O site pretende</p> <p class="laranja">facilitar</p> <p class="roxo">o relato e a</p> <p class="laranja">resolução</p> <p class="laranja">de problemas</p> <p class="laranja">estruturais</p>  <p class="roxo">em escolas.</p>
+				</div>
+			</th>
+		</tr>
+		<tr>
+			<th scope="col">
+
+			</th>
+			<th scope="col">
+				<p class="pequeno">Permitindo que os usuários postem fotos e textos sobre os problemas encontrados e interajam com outros usuários para dar visibilidade e prioridade aos casos mais urgentes.</p>
+			</th>
+		</tr>
+		</table>
+		<p class="titulo">O que o cooruja pode fazer por você?</p>
+		<table>
+		<tr>
+			<th scope="col">
+				<div class="msg-left">
+					<p class="caracteristicasTitulo">1 - Auxiliar na manutenção</p><p class="caracteristicas">Mencione demandas que possam melhorar no auxílio da manutenção da nossa instituição</p>
+				</div>
+			</th>
+			<th scope="col">
+				<div class="msg-left">
+					<p class="caracteristicasTituloDireita">3 - Como funciona nosso Site?</p><p class="caracteristicasDireita">Muito fácil de ser usado e para isso é preciso da realização de um cadastro, precisando apenas de um endereço de email, seu nome e sobrenome. E novidade, o cadastro e uso do site/app é totalmente gratuito!</p>
+				</div>
+			</th>	
+		</tr>
+		<tr>
+			<th scope="col">
+				<div class="msg-left">
+					<p class="caracteristicasTitulo">2 - Mais facilidade</p><p class="caracteristicas">Mais facilidade para nós alunos/ colaboradores e mais tecnologia para nosso campus</p>
+				</div>
+			</th>
+			<th scope="col">
+				<div class="msg-left">
+					<p class="caracteristicasTituloDireita">4 - Interações</p><p class="caracteristicasDireita">Interações nas publicações com curtidas e comentários dos demais alunos e colaboradores</p>
+				</div>
+			</th>
+		</tr>
+	</table>
+			<p class="contato">Onde nos achar?</p>
+			<p class="contato">Instagram: @/hardtech.ifba</p>
+			<p class="contato">GitHub: ProjetoCooruja</p>
+	</div>
 
 
         <script src="js/jquery-1.11.1.min.js"></script>

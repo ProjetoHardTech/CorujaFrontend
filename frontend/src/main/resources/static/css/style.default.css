@@ -42,6 +42,7 @@ URL: http://themepixels.com/
 */
 
 
+
 /********** 1. IMPORTS **********/
 /********************************/
 
@@ -54,7 +55,6 @@ URL: http://themepixels.com/
 @import url('animate.delay.css');
 @import url('toggles.css');
 @import url('pace.css');
-
 
 /********** 2. RESET STYLES **********/
 /*************************************/
@@ -82,7 +82,7 @@ a:focus {
 
 .headerwrapper {
     background-color: #221328;
-    min-height: 60px;
+    min-height: 90px;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -100,16 +100,16 @@ a:focus {
 .headerwrapper .header-left {
     width: 230px;
     min-height: 60px;
-    padding: 14px 15px;
+    padding: 14px 400px;
     float: left;
-    border-right: 1px solid rgba(255,255,255,0.14);
-    background-color: rgba(0,0,0,0.03);
-    position: relative;
+    border-right: 0px solid rgba(255,255,255,0.14);
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
 }
 
 .headerwrapper .header-left .logo {
     display: inline-block;
-    margin-top: 5px;
+    margin-top: -45px;
     float: left;
 }
 
@@ -142,25 +142,25 @@ a:focus {
 .headerwrapper .header-right {
     margin-left: 230px;
     min-height: 60px;
-    padding: 14px 15px;
+    padding: 25px 350px;
 }
 
 .headerwrapper .header-right .btn-group {
     margin: 0;
-    line-height: 21px;
+    line-height: 22px;
     float: left;
 }
 
 .headerwrapper .header-right .btn-group > .btn {
     border: 0;
-    background-color: rgba(0,0,0,0.1);
-    color: rgba(255,255,255,0.75);
+    background-color: #f36743;
+    color: #221328;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
-    line-height: normal;
-    margin-left: 5px;
-    height: 33px;
+    line-height: 24px;
+    margin-left: 15px;
+    height: 40px;
 }
 
 .headerwrapper .header-right .btn-group > .btn:hover {
@@ -262,7 +262,7 @@ a:focus {
 
 .headerwrapper .header-right .form-search:before {
     position: absolute;
-    top: 6px;
+    top: 10px;
     left: 10px;
     font-family: 'Glyphicons Halflings';
     content: '\e003';
@@ -276,8 +276,8 @@ a:focus {
     border-radius: 50px;
     width: 200px;
     padding-left: 30px;
-    height: 32px;
-    font-size: 13px;
+    height: 40px;
+    font-size: 14px;
 }
 
 .headerwrapper .header-right .btn-group-list .dropdown-menu {
@@ -390,7 +390,7 @@ a:focus {
     top: 0;
     left: 0;
     width: 230px;
-    border-right: 1px solid #e7e7e7;
+    border-right: 0px solid #e7e7e7;
 }
 
 .mainwrapper:after {
@@ -406,9 +406,9 @@ a:focus {
 }
 
 .img-offline {
-    border: 2px solid #ccc;
-    padding: 2px;
-    background-color: #fff;
+    border: 0px solid #ccc;
+    padding: 50px 50px;
+    background-color: #ffffff00;
 }
 
 
@@ -733,9 +733,16 @@ a:focus {
 
 .msg-left {
     float: left;
-    width: 250px;
+    width: 700px;
     position: relative;
     z-index: 50;
+}
+
+.msg-right {
+    float: right;
+    width: 700px;
+    position: relative;
+    z-index: 20;
 }
 
 .nav-msg li a {
@@ -1067,7 +1074,8 @@ a:focus {
 }
 
 .btn.btn-bordered {
-    padding: 6px 13px;
+    padding: 8px 15px;
+    color: #f36743;
 }
 
 .btn-sm.btn-bordered {
