@@ -8,15 +8,22 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Chain Responsive Bootstrap3 Admin</title>
+        <title>Login</title>
 
         <link href="css/style.default.css" rel="stylesheet">
+        <link rel="icon" href="images/coruja_images/icons/32x32/Sem/Ativo 73.png" type="image/png">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
         <![endif]-->
+            <style>
+                btn btn-info btn-block{
+                    background-color: black;
+                }
+            </style>
+
     </head>
 
     <body class="signin">
@@ -27,26 +34,25 @@
             <div class="panel panel-signin">
                 <div class="panel-body">
                     <div class="logo text-center">
-                        <img src="images/logo-primary.png" alt="Chain Logo" >
+                        <img src="images/coruja_images/logos/400X160/cOM bORDA/Ativo 9.png" alt="Cooruja Logo">
                     </div>
-                    <br />
-                    <h4 class="text-center mb5">Possui cadastro?</h4>
+                    <h4 class="text-center-titulo">Possui cadastro?</h4>
                     <p class="text-center">Entre em sua conta</p>
                     
                     <div class="mb30"></div>
                     
                     <form action="/process_login" method="post">
-                        <div class="input-group mb15">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <div class="input-group-a">
                             <input name="usuario" id="usuario" type="text" class="form-control" placeholder="Usuário">
                         </div><!-- input-group -->
-                        <div class="input-group mb15">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <br>
+                        <div class="input-group-a">
                             <input name="senha" id="senha" type="password" class="form-control" placeholder="Senha">
                         </div><!-- input-group -->
+                        <br>
                         <div class="clearfix">
                             <div class="pull-left">
-                            	<a href="/" class="btn btn-info btn-block">
+                            	<a href="/" class="btn btn-success btn-block">
                             		<i class="fa fa-arrow-circle-left mr5"></i> Voltar
                             	</a>
                             </div>
@@ -58,9 +64,12 @@
                     </form>
                     
                 </div><!-- panel-body -->
-                <div class="panel-footer">
-                    <a href="/signup" class="btn btn-primary btn-block">Ainda não possui conta? Crie sua conta agora!</a>
+                <div class="panel-body">
+                    <a href="/signup" class="btn-newconta">Ainda não possui conta? Crie sua conta agora!</a>
                 </div><!-- panel-footer -->
+                <div class="recuperar-senha">
+                    <a href="/esq-senha" class="esqueci-senha">Esqueci minha senha!</a>
+                </div>
             </div><!-- panel -->
             
         </section>

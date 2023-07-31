@@ -1,5 +1,5 @@
 /*
-Created by: @themepixels
+Creted by: @themepixels
 URL: http://themepixels.com/
 
 [TABLE OF CONTENTS]
@@ -1129,6 +1129,14 @@ a:focus {
     border-radius: 0;
 }
 
+.btn-info{
+    background-color: #f36743;
+}
+
+.btn-success{
+    background-color: #f36743;
+}
+
 .btn-group .btn.btn-bordered + .btn.btn-bordered,
 .btn-group .btn.btn-bordered + .btn-group,
 .btn-group .btn-group + .btn.btn-bordered,
@@ -1141,7 +1149,18 @@ a:focus {
     padding-right: 15px;
 }
 
+.esqueci-senha{
+    color: #f36743;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: underline
+}
 
+.recuperar-senha{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 /***** 6.2 EXTRAS STYLES *****/
 
@@ -1576,7 +1595,6 @@ a:focus {
 .panel-danger-head .panel-body,
 .panel-info-head .panel-body,
 .panel-dark-head .panel-body {
-    border: 1px solid #ddd;
     border-top: 0;
 }
 
@@ -1586,7 +1604,6 @@ a:focus {
 .panel-danger-head .panel-footer,
 .panel-info-head .panel-footer,
 .panel-dark-head .panel-footer {
-    border: 1px solid #ddd;
     border-top: 0;
 }
 
@@ -1604,6 +1621,10 @@ a:focus {
 
 .panel-danger-head .panel-heading {
     background-color: #d9534f;
+}
+
+.pull-right{
+    
 }
 
 .panel-info-head .panel-heading {
@@ -2987,6 +3008,55 @@ table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
 
 body.signin {
     background-color: #221328;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.panel-body{
+    background-color: #221328;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel-footer{
+    background-color: #221328;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-newconta{
+    width: 100%;
+    padding: 16px 2px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #ffffff;
+    background: #f36743;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #a5422a;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center-titulo{
+    color: #ffffff;
+    font-weight: 800;
+    text-align: center;
+    font-size: 25px;
+}
+
+.text-center{
+    color: #ffffff;
+    font-weight: 800;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10px;
 }
 
 .panel-signin,
@@ -2995,11 +3065,13 @@ body.signin {
 }
 
 .panel-signin {
-    width: 400px;
+    width: 800px;
+    border: none;
+    background-color: #221328;
 }
 
 .panel-signup {
-    width: 600px;
+    width: 1200px;
 }
 
 .panel-signin .panel-body,
@@ -3012,6 +3084,7 @@ body.signin {
     padding-left: 40px;
     padding-right: 40px;
 }
+
 
 
 /***** 9.8 LOCKED SCREEN ********/
