@@ -26,4 +26,8 @@ public class HomeController{
 		return "signup";
 	}
 
+	@GetMapping("/erro")
+	public String erro() {
+		return "erro";
+	}
 }
