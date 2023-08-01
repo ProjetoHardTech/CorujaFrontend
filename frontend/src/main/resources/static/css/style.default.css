@@ -3052,6 +3052,10 @@ body.signin {
     align-items: center;
 }
 
+.btn-newconta:hover, .active {
+    color:#ffffff!important;
+}
+
 .text-center-titulo{
     color: #ffffff;
     font-weight: 800;
