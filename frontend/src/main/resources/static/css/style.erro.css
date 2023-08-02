@@ -46,6 +46,9 @@ nav ul li a {
 nav ul li a:hover{
    border-bottom: 3px solid #fff;
 }
+li{
+    list-style: none;
+}
 .main{
  overflow: hidden;
 }
