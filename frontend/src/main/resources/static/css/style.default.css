@@ -164,7 +164,7 @@ a:focus {
 }
 
 .headerwrapper .header-right .btn-group > .btn:hover {
-    background-color: rgba(0,0,0,0.2);
+    background-color: #fff;
 }
 
 .headerwrapper .header-right .btn-group > .btn:focus,
@@ -731,11 +731,21 @@ a:focus {
 /******** 5. MESSAGES STYLES *********/
 /*************************************/
 
-.msg-left {
+.msg-center {
     float: left;
     width: 700px;
     position: relative;
     z-index: 50;
+    margin-top: -400px;
+}
+
+.msg-titulo {
+    width: 100%;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-top: -700px;
 }
 
 .msg-right {
@@ -743,6 +753,17 @@ a:focus {
     width: 700px;
     position: relative;
     z-index: 20;
+    margin-left: 870px;
+    margin-top: -300px;
+}
+
+.msg-right-pequeno {
+    float: right;
+    position: relative;
+    z-index: 20;
+    margin-right: 163px;
+    margin-top: -245px;
+
 }
 
 .nav-msg li a {
