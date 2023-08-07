@@ -29,4 +29,8 @@ public class HomeController{
 	public String erro() {
 		return "erro";
 	}
+		@GetMapping("/home")
+	public String home() {
+		return "home";
+	}
 }
