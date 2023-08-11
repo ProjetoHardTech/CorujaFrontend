@@ -1,4 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
+/*
+Creted by: @themepixels
+URL: http://themepixels.com/
+
+[TABLE OF CONTENTS]
+
+1.  IMPORTS
+2.  RESET STYLES
+3.  HEADER STYLES
+    3.1 HEADER LEFT
+    3.2 HEADER RIGHT
+4.  MAIN WRAPPER STYLES
+    4.1 LEFT PANEL STYLES
+        4.1.1 LEFT PANEL NAVIGATION
+    4.2 MAIN PANEL STYLES
+        4.2.1 CONTENT PANEL STYLES
+5.  MESSAGES STYLES
+6.  UI ELEMENTS STYLES
+    6.1 BUTTONS PAGE STYLES
+    6.2 EXTRAS STYLES
+    6.3 GRAPHS STYLES
+    6.4 ICON STYLES
+    6.5 PANELS & WIDGET STYLES
+    6.6 TABS & ACCORDION STYLES
+7.  FORM STYLES
+    7.1 FORM WIZARD STYLES
+8.  TABLE STYLES
+9.  PAGES STYLES
+    9.1 NOT FOUND PAGE STYLES
+    9.2 INVOICE STYLES
+    9.3 MEDIA MANAGER STYLES
+    9.4 PEOPLE DIRECTORY STYLES
+    9.5 PROFILE STYLES
+    9.6 SEARCH RESULTS STYLES
+    9.7 SIGN IN/UP PAGE STYLES
+    9.8 LOCKED SCREEN STYLES
+10. DASHBOARD STYLES
+11. LEFT MENU COLLAPSE STYLES
+12. CUSTOM STYLES
+13. MEDIA QUERIES
+
+*/
+
+
+
+/********** 1. IMPORTS **********/
+/********************************/
+
 @import url('bootstrap.min.css');
 @import url('bootstrap-override.css');
 @import url('weather-icons.min.css');
@@ -9,6 +56,8 @@
 @import url('toggles.css');
 @import url('pace.css');
 
+/********** 2. RESET STYLES **********/
+/*************************************/
 
 body {
     font-size: 13px;

@@ -8,10 +8,9 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Cooruja | Login</title>
+        <title>Cooruja | Esqueci-Senha</title>
 
-        <link href="css/style.default.css" rel="stylesheet">
-        <link href="css/mobilelogin.css" media="screen and (max-width: 768px)" rel="stylesheet" >
+        <link href="css/style.default.esquecisenha.css" rel="stylesheet">
         <link rel="icon" href="images/coruja_images/icons/32x32/Sem/Ativo 73.png" type="image/png">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,40 +30,24 @@
                     <div class="logo text-center">
                         <img src="images/coruja_images/logos/400X160/cOM bORDA/Ativo 9.png" alt="Cooruja Logo">
                     </div>
-                    <h4 class="text-center-titulo">Possui cadastro?</h4>
-                    <p class="text-center">Entre em sua conta</p>
+                    <h4 class="text-center-titulo">ESQUECEU SUA SENHA?!</h4>
+                    <p class="text-center">Não se preocupe! Digite o seu email abaixo para que você possa recupera-lá!</p>
                     
                     <div class="mb30"></div>
                     
                     <form action="/process_login" method="post">
                         <div class="input-group-a">
-                            <input name="usuario" id="usuario" type="text" class="form-control" placeholder="Usuário">
-                        </div><!-- input-group -->
-                        <br>
-                        <div class="input-group-a">
-                            <input name="senha" id="senha" type="password" class="form-control" placeholder="Senha">
+                            <input name="email" id="email" type="text" class="form-control" placeholder="Email">
                         </div><!-- input-group -->
                         <br>
                         <div class="clearfix">
-                            <div class="pull-left">
-                            	<a href="/" class="btn btn-success btn-block">
-                            		<i class="fa fa-arrow-circle-left mr5"></i> Voltar
-                            	</a>
-                            </div>
-                            
-                            <div class="pull-right">
-                                <button type="submit" class="btn btn-success">Login <i class="fa fa-arrow-circle-right ml5"></i></button>
+                            <div class="panel-body">
+                                <a class="btn-newconta">Enviar email com instruções de recuperação de senha</a>
                             </div>
                         </div>                      
                     </form>
-                    
                 </div><!-- panel-body -->
-                <div class="panel-body">
-                    <a href="/signup" class="btn-newconta">Ainda não possui conta? Crie sua conta agora!</a>
-                </div><!-- panel-footer -->
-                <div class="recuperar-senha">
-                    <a href="/esquecisenha" class="esqueci-senha">Esqueci minha senha!</a>
-                </div>
+                <!-- panel-footer -->
             </div><!-- panel -->
             
         </section>
