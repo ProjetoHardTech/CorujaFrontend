@@ -33,8 +33,10 @@ public class HomeController{
 	@GetMapping("/esquecisenha")
 	public String esquecisenha() {
 		return "esquecisenha";
-  }
-		@GetMapping("/home")
+	}
+	@GetMapping("/home")
 	public String home() {
 		return "home";
+	}
+
 }
