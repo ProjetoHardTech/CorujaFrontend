@@ -29,4 +29,9 @@ public class HomeController{
 	public String erro() {
 		return "erro";
 	}
+
+	@GetMapping("/esquecisenha")
+	public String esquecisenha() {
+		return "esquecisenha";
+	}
 }
