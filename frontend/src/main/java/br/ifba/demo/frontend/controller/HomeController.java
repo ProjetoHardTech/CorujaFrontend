@@ -30,17 +30,11 @@ public class HomeController{
 		return "erro";
 	}
 
-
-
-
-
-
-
-
-	
-
 	@GetMapping("/esquecisenha")
 	public String esquecisenha() {
 		return "esquecisenha";
-	}
+  }
+		@GetMapping("/home")
+	public String home() {
+		return "home";
 }
