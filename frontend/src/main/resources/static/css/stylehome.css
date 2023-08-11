@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
 
-*, *::after, *::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-transform: capitalize;
-    font-family: sans-serif;
-    list-style: none;
-    text-decoration: none;
-    outline: none;
-    border: none;
-}
-
 :root{
     --color-white: hsl(252,30%, 100%);
     --color-light: hsl(252,30%, 95%);
@@ -28,16 +16,18 @@
     --card-padding: 1rem; 
 }
 
-*, 
-*::before,
-*::after { 
+*,
+*::before, 
+*::after {
     margin: 0;
     padding: 0;
+    outline: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     border: none;
 }
+
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -50,13 +40,17 @@ body{
     width: 80%;
     margin: 0 auto;
 }
+
+img{
+    display: block;
+    width: auto;
+}
 .profile-photo{
     width: 2.7rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
 }
-
 
 .btn{
     display: inline-block;
@@ -72,7 +66,7 @@ body{
 }
 .btn-primary{
     background: var( --color-primary);
-    color: rgb(209, 4, 4);
+    color: white;
 }
 
 .text-bold{
@@ -91,7 +85,7 @@ nav{
     top: 0;
     z-index: 10;
 }
-nav.container{
+nav .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,7 +96,23 @@ nav .search-bar{
    border-radius: var(--border-radius);
    padding: var(--search-padding);
 }
-nav . search-bar input-security: ;
+
+nav .search-bar input[type="search"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+nav .search-bar input[type="search"]::placeholder{
+    color: var(--color-grey);
+}
+
+nav .create{
+    display: flex;
+    align-items: center;
+    gap: 2rem ;
+}
 
 
 
