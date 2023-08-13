@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-/* Estilos para a seção de login */
+/* Estilos para a seção de esqueci-senha */
 .signin {
     display: flex;
     justify-content: center;
@@ -16,7 +16,6 @@ body {
 .panel-signin {
     max-width: 400px;
     width: 90%;
-    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 50px rgba(0, 0, 0, 0.364);
 }
@@ -32,27 +31,20 @@ body {
 .form-control {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 14px;
 }
 
-.btn-success {
+.btn-newconta {
     border: none;
     color: #fff;
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.pull-left, .pull-right {
-    width: 49%;
-}
-
-.recuperar-senha{
-    background-color: #221328;
-    padding-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px;
 }
 
 /* Estilos para telas menores que 768px */
@@ -60,30 +52,4 @@ body {
     .panel-signin {
         max-width: 100%;
     }
-
-    .btn-success {
-        width: 50%;
-    }
-
-    .pull-left, .pull-right {
-        width: 50%;
-        margin-bottom: 10px;
-    }
-
-    .pull-right{
-        text-align: right;
-    }
-
-    .btn-newconta{
-        margin: 0;
-        font-size: 55%;
-        width: 100px;
-        padding: 10px;
-    }
-
-    .panel-signin .panel-body {
-        padding: 15px;
-    }
 }
-
-/* Outros estilos responsivos podem ser adicionados aqui */
