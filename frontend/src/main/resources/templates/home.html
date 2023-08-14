@@ -17,10 +17,7 @@
             <nav>
                 <div class="container">
                     <h2 class="log">COORUJA</h2>
-                      <img src="\images\coruja_images\icons\16x16\sem\lupa.png" alt="">
-                    <div class="search-bar">
-                        <input type="search" placeholder="Pesquise por relato...">
-                    </div>
+                    
                     <div class="create">
                         <label class="btn btn-primary" for="create-post">Criar</label>
                         <div class="profile-photo">
@@ -32,16 +29,19 @@
            <main>
                 <div class="container">
                     <div class="left">
-                    <a href="" class="profile">
-                        <div class="profile-photo"></div>
-                          <img src="\images\coruja_images\icons\48x48\com\Ativo 60.png" alt="">
-                        <div class="handle">
-                            <h4>HardTech</h4>
-                            <p class="text-muted">
-                                @hardtech2023
-                            </p>
-                        </div>
-                    </a>
+
+                        <a href="" class="profile">
+                            <div class="profile-photo"></div>
+                              <img src="\images\coruja_images\icons\48x48\com\Ativo 60.png" alt="">
+                            <div class="handle">
+                                <h4>HardTech</h4>
+                                <p class="text-muted">
+                                    @hardtech2023
+                                </p>
+                            </div>
+                        </a>
+                   
+
                     <div class="sidebar">
                         <a class="menu-item active">
                             <span><i class='bx bx-home'></i></span><h3>Home</h3> 
@@ -97,14 +97,67 @@
                             <span><i class='bx bx-cog' ></i></span><h3>Configurações</h3>
                         </a>
                         
-                        <a class="menu-item ">
+                        <a class="menu-item" id="themes">
                             <span><i class='bx bx-palette bx-tada bx-rotate-90' ></i></span><h3>Temas</h3>
+                            <div class="themes-popup">
+                                <div class="customize-theme">
+                                    <div class="card">
+                                        <h2>Personalize a sua visualização</h2>
+                                        <p class="text-muted">Configure o tamanho da sua fonte, a cor e o fundo</p>
+
+                                        <div class="font-size">
+                                            <h4>Tamanho da fonte</h4>
+                                            <div>
+                                                <h6>Aa</h6>
+                                                <div class="choose-size">
+                                                    <span class="font-size-1"></span>
+                                                    <span class="font-size-2"></span>
+                                                    <span class="font-size-3"></span>
+                                                    <span class="font-size-4"></span>
+                                                    <span class="font-size-5"></span>
+                                                </div>
+                                                <h3>Aa</h3>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="color">
+                                            <h4>Cores</h4>
+                                            <div class="choose-color">
+                                                <span class="color-1 active"></span>
+                                                <span class="color-2"></span>
+                                                <span class="color-3"></span>
+                                                <span class="color-4"></span>
+                                                <span class="color-5"></span>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="background">
+                                            <h4>Fundo</h4>
+                                            <div class="choose-bg">
+                                                <div class="bg-1 active">
+                                                    <span></span>
+                                                    <h5 for="bg-1">Light</h5>
+                                                </div>
+                                                <div class="bg-2">
+                                                    <span></span>
+                                                    <h5 for="bg-2">Dim</h5>
+                                                </div>
+                                                <div class="bg-3">
+                                                    <span></span>
+                                                    <h5 for="bg-3">Ligths Out</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   </div>
+                            </div>
                         </a>
                     
                         <label for="create-post" class="btn btn-primary">Criar Relato</label>
                     </div>
 
                 </div>
+
                 <div class="middle">
                     
                     <form class="create-post">
@@ -230,58 +283,6 @@
                     <!-----final do right---->
                 </div>
            </main>
-
-           <div class="customize-theme">
-            <div class="card">
-                <h2>Personalize a sua visualização</h2>
-                <p class="text-muted">Configure o tamanho da sua fonte, a cor e o fundo</p>
-
-                <div class="font-size">
-                    <h4>Tamanho da fonte</h4>
-                    <div>
-                        <h6>Aa</h6>
-                        <div class="choose-size">
-                            <span class="font-size-1"></span>
-                            <span class="font-size-2"></span>
-                            <span class="font-size-3"></span>
-                            <span class="font-size-4"></span>
-                            <span class="font-size-5"></span>
-                        </div>
-                        <h3>Aa</h3>
-                    </div>
-                </div>
-
-                <div class="color">
-                    <h4>Cores</h4>
-                    <div class="choose-color">
-                        <span class="color-1 active"></span>
-                        <span class="color-2"></span>
-                        <span class="color-3"></span>
-                        <span class="color-4"></span>
-                        <span class="color-5"></span>
-                    </div>
-                </div>
-
-                <div class="background">
-                    <h4>Fundo</h4>
-                    <div class="choose-bg">
-                        <div class="bg-1 active">
-                            <span></span>
-                            <h5 for="bg-1">Light</h5>
-                        </div>
-                        <div class="bg-2">
-                            <span></span>
-                            <h5 for="bg-2">Dim</h5>
-                        </div>
-                        <div class="bg-3">
-                            <span></span>
-                            <h5 for="bg-3">Ligths Out</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           </div>
-
      </body>
 </html>
 
