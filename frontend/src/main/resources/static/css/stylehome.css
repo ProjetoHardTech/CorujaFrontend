@@ -553,7 +553,7 @@ uma animação igual ao da notificação para sobressair na tela
     .container{
         width: 96%;
     }
-    
+
     .main .container{
         grid-template-columns: 5rem auto 30vw;
         gap: 1rem;
@@ -573,7 +573,7 @@ uma animação igual ao da notificação para sobressair na tela
     }
 }
 
-@media screen and (max-width:992px){
+@media screen and (max-width: 844px){
     main .container{
         grid-template-columns: 0 auto 5rem;
         gap: 0;
