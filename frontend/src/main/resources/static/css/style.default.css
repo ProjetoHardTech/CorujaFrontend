@@ -3407,6 +3407,16 @@ body.signin {
         float: none;
         width: auto;
     }
+    .ckbox label:before {
+        width: 22px;
+        height: 22px;
+        margin-left: 1px;
+        margin-top: -4px;
+
+    }
+    .texto{
+        margin-top: -10px;
+    }
 
    
 }
@@ -3419,6 +3429,17 @@ body.signin {
 
     .logo {
         position: static;
+    }
+    .ckbox label:before {
+        width: 22px;
+        height: 22px;
+        margin-left: 0px;
+        margin-top: -4px;
+
+    }
+    .texto{
+        margin-top: -10px;
+        margin-left: 40px;
     }
     
     .headerwrapper .header-left,
@@ -3555,6 +3576,18 @@ body.signin {
     .btn-group-notification .dropdown-menu {
         margin-right: -62px;
     }
+    .ckbox label:before {
+        width: 30px;
+        height: 30px;
+        margin-left: 0px;
+        margin-top: -4px;
+
+    }
+    .texto{
+        margin-top: -5px;
+        margin-left: 40px;
+        font-size: 25px;
+    }
     
     .headerwrapper .header-right .btn-group-notification .dropdown-menu:after {
         right: 75px;
@@ -3596,6 +3629,18 @@ body.signin {
     
     .pageheader h4 {
         font-size: 24px;
+    }
+    .ckbox label:before {
+        width: 30px;
+        height: 30px;
+        margin-left: 0px;
+        margin-top: -5px;
+
+    }
+    .texto{
+        margin-top: -10px;
+        margin-left: -260px;
+        font-size: 28px;
     }
     
     .form-search {
@@ -3713,6 +3758,19 @@ body.signin {
     
     .pageheader h4 {
         font-size: 20px;
+    }
+    
+    .ckbox label:before {
+        width: 40px;
+        height: 40px;
+        margin-left: -10px;
+        margin-top: 0px;
+
+    }
+    .texto{
+        margin-top: -5px;
+        margin-left: -260px;
+        font-size: 34px;
     }
     
     .pageheader .breadcrumb {
