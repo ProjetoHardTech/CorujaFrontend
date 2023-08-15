@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-FrontendApplication<frontend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.ifba.demo.frontend.FrontendApplication",
+            "projectName": "frontend",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

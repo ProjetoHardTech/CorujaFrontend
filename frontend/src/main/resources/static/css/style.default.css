@@ -8,6 +8,7 @@
 @import url('animate.delay.css');
 @import url('toggles.css');
 @import url('pace.css');
+@import url('estilosignup.css');
 
 
 body {
@@ -2540,7 +2541,7 @@ table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
 .media-manager .ckbox {
     position: absolute;
     top: 15px;
-    left: 15px;
+    left: 150px;
     display: none;
 }
 
@@ -3355,7 +3356,7 @@ body.signin {
 .mr15 { margin-right: 15px !important; }
 .mr20 { margin-right: 20px !important; }
 .mr30 { margin-right: 30px !important; }
-.mb5 { margin-bottom: 5px; }
+.mb5 { margin-bottom: 25px; }
 .mb8 { margin-bottom: 8px; }
 .mb9 { margin-bottom: 9px; }
 .mb10 { margin-bottom: 10px; }
@@ -3383,7 +3384,7 @@ body.signin {
 /***************************************/
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
     
     body {
         width: 100%;
@@ -3406,6 +3407,8 @@ body.signin {
         float: none;
         width: auto;
     }
+
+   
 }
 
 @media screen and (max-width: 768px) {
