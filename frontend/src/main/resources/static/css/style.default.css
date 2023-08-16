@@ -59,6 +59,10 @@ URL: http://themepixels.com/
 /********** 2. RESET STYLES **********/
 /*************************************/
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     font-size: 13px;
     color: #636E7B;
