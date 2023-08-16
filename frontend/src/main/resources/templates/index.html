@@ -1,216 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Coruja</title>
-    <link href="css/style.default.css" rel="stylesheet">
-    <link rel="icon" href="images\coruja_images\icons\48x48\Sem\Ativo 65.png">
-    <style>
-        p.roxo{
-            color: #221328;
-            font-family: verdana;
-            font-size: 50px;
-            margin-left: -65px;
-            text-indent: 0px;
-            line-height: 50px;
-            text-transform: uppercase;
-        }
-        p.laranja{
-            color: #f36743;
-            font-family: verdana;
-            font-size: 50px;
-            margin-left: -65px;
-            text-indent: 0px;
-            line-height: 50px;
-            text-transform: uppercase;
-        }
-        p.pequeno{
-            color: #272727;
-            font-family: verdana;
-            font-size: 15px;
-            margin-top: -175px;
-            margin-left: -65px;
-            text-indent: 0px;
-            line-height: 20px;
-            width: 600px;
-            text-transform: uppercase;
-        }
-        p.caracteristicasTitulo{
-            color: #221328;
-            font-family: verdana;
-            font-size: 25px;
-            margin-left: 680px;
-            text-indent: 0px;
-            line-height: 30px;
-            width: 500px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        p.caracteristicas{
-            color: #f36743;
-            font-family: verdana;
-            font-size: 15px;
-            margin-bottom: 50px;
-            text-align: center;
-            margin-left: 620px;
-            line-height: 20px;
-            width: 650px;
-            text-transform: uppercase;
-        }
-       
-        .colorize{
-            margin-right: 10px
-        }
-        p.botao{
-            font-size: 15px;
-        }
-        p.titulo{
-            color: #221328;
-            font-family: verdana;
-            font-size: 35px;
-            margin-left: 0px;
-            text-indent: 0px;
-            line-height: 150px;
-            float: none;
-            text-align: center;
-            text-transform: uppercase;
-        }
-        p.contato{
-            color: #221328;
-            font-family: verdana;
-            font-size: 18px;
-            margin-left: 0px;
-            text-indent: 0px;
-            line-height: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-        }
-
-
-        .imagem-esquerda{right: 400px; position:absolute;}
-
-		.img-offline {
-			position:relative;
-			width: 100%;
-			height: 100vh;
-		}
-
-		.imagem-tela {
-			position:absolute;
-			left: 150px;
-		}
-           
-    </style>
-<body>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styleindex.css">
+    <link rel="icon" type="image/png" href="images\coruja_images\icons\32x32\Sem\Ativo 73.png">
+    <title>Cooruja</title>
+</head>
+<body>
     <header>
-        <div class="headerwrapper">
-            <div class="header-right">
-                <div class="pull-right">
-                    <div class="btn-group">
-                        <div class="colorize">
-                            <a class="btn btn-bordered dropdown-toggle" href="/">
-                            <p class="botao">
-                                Sobre
-                            </p>
-                            </a>
-                        </div>
-                    </div><!-- btn-group -->
+        <div class="box-img-header">
+            <img class="img-logo" src="images\coruja_images\logos\187x75\Sem Borda\Ativo 33.png" alt="Logo cooruja">
+        </div>
+        <nav>
+            <a href="#recursos" class="nav-links">Nossos recursos</a>
+            <a href="#quem-somos" class="nav-links">Quem somos</a>
+            <a href="#hardtech" class="nav-links">Hardtech</a>
+            <a href="#contact" class="nav-links">Contato</a>
+        </nav>
 
 
-                    <div class="btn-group">
-                        <a class="btn btn-default dropdown-toggle" href="/login">
-                            <i class="fa fa-sign-in"></i>  
-                            Login
-                        </a>
-                    </div><!-- btn-group -->
-                   
-                    <div class="btn-group">
-                        <a class="btn btn-default dropdown-toggle" href="/signup">
-                            <i class="fa fa-sign-in"></i>  
-                            Cadastro
-                        </a>
-                    </div><!-- btn-group -->
-                </div><!-- pull-right -->
-               
-            </div><!-- header-right -->
-            <div class="header-left">
-                <div class="logo">
-                    <strong>
-                        <img src="images/coruja_images/logos/187x75/Sem Borda/Ativo 33.png" alt="Logo" class="imagem-esquerda">
-                    <strong>
-                </div>
-            </div><!-- header-left -->
-        </div><!-- headerwrapper -->
-       
+        <div class="box-btn-actions">
+            <a class="action-btn" href="/login">
+                <button class="btn-action">Login</button>
+            </a>
+            <a class="action-btn" href="/signup">
+                <button class="btn-action">Cadastrar</button>
+            </a>
+        </div>
+
     </header>
-    <div class="mainwrapper">
-        <table>
-        <tr>
-            <th scope="col">
-                <div class="img-offline">
-                    <img src="images\coruja_images\index\Tela.png" alt="Logo" width="450" vspace="100" hspace="200" class="imagem-tela">
-                </div>
-            </th>
-            <th scope="col">
-                <div class="msg-right">
-                    <p class="roxo">O site pretende</p> <p class="laranja">facilitar</p> <p class="roxo">o relato e a</p> <p class="laranja">resolução</p> <p class="laranja">de problemas</p> <p class="laranja">estruturais</p>  <p class="roxo">em escolas.</p>
-                </div>
-            </th>
-        </tr>
-        <tr>
-            <th scope="col">
-            </th>
-            <th scope="col">
-				<div class="msg-right-pequeno">
-                <p class="pequeno">Permitindo que os usuários postem fotos e textos sobre os problemas encontrados e interajam com outros usuários para dar visibilidade e prioridade aos casos mais urgentes.</p>
-            </th>
-        </tr>
-        </table>
-		<div class="msg-titulo">
-        <p class="titulo">O que o cooruja pode fazer por você?</p>
-	 	</div>
-        <table>
-        <tr>
-            <th scope="col">
-                <div class="msg-center">
-                    <p class="caracteristicasTitulo">1 - Auxiliar na manutenção</p><p class="caracteristicas">Mencione demandas que possam melhorar no auxílio da manutenção da nossa instituição</p>
-                    <p class="caracteristicasTitulo">2 - Mais facilidade</p><p class="caracteristicas">Mais facilidade para nós alunos/ colaboradores e mais tecnologia para nosso campus</p>
-                    <p class="caracteristicasTitulo">3 - Como funciona nosso Site?</p><p class="caracteristicas">Muito fácil de ser usado e para isso é preciso da realização de um cadastro, precisando apenas de um endereço de email, seu nome e sobrenome. E novidade, o cadastro e uso do site/app é totalmente gratuito!</p>
-                    <p class="caracteristicasTitulo">4 - Interações</p><p class="caracteristicas">Interações nas publicações com curtidas e comentários dos demais alunos e colaboradores</p>
-                </div>
-            </th>
 
 
+    <main>
+        <section class="first-section">
+            <div class="bo-img-main">
+                <img class="img-profile" src="images/coruja_images/index/Tela.png" alt="Tela">
+            </div>
+
+            <div>
+                <h1>Nós acreditamos que <br> cada <strong>aluno</strong> merece <br> um <srong>ambiente</srong> escolar, <br> <strong>saudável</strong> e <strong>inspirador</strong>
+                     <br> para prosperar. </h1>
+                    <p>É por isso que apresentamos a você o COORUJA, a plataforma <br>
+                        revolucionária que permite alunos, professores e funcionários <br>
+                        a notificarem e resolverem problemas estruturais no Instituto <br>
+                        Federal da Bahia campus Paulo Afonso de maneira eficaz <br> e colaborativa.
+                    </p>
+            </div>
+
+        </section>
+
+        <section id="recursos" class="second-section">
+            <h2 class="title">Recursos que fazem a diferença:</h2>
+            <h3 class="title-list">1. Notificação de problemas:</h3>
+            <p class="text-list">Não deixe que os problemas fiquem sem solução. Com o COORUJA, notificar problemas <br>
+                estruturais é fácil e rápido. Você pode tirar fotos, escrever descrições detalhadas e enviar as <br>
+                informações diretamente para a plataforma. Sua voz será ouvida e suas preocupações <br>
+                serão transformadas em ação.
+                </p>
+            <h3 class="title-list">2. Colaboração em Tempo Real:</h3>
+            <p class="text-list">Somos mais fortes quando trabalhamos juntos. Nossa plataforma permite que você interaja <br>
+                com outros membros da comunidade engajada de usuários que compartilham suas <br>
+                preocupações. Visualize, leia, curta e comente os problemas notificados por outros. Juntos, <br>
+                podemos dar visibilidade aos casos mais urgentes e exigir as mudanças necessárias.
+                </p>
+            <h3 class="title-list">3. Visualize o Status do Problema:</h3>
+            <p class="text-list">Saiba em que estágio está a resolução de um problema através do status visível em cada <br>
+                postagem. Os estados, como "Concluído", "Em Processo" ou "Ainda Não Verificado", <br>
+                proporcionam uma visão clara do progresso, mantendo você informado sobre a situação <br>
+                atual da sua notificação.
+                </p>
+            <h3 class="title-list">4. Impacto Duradouro:</h3>
+            <p class="text-list">Cada notificação, cada solução implementada contribui para um futuro melhor. Ao usar o <br>
+                COORUJA, você está ajudando a criar um ambiente escolar mais seguro e saudável para <br>
+                as gerações futuras. Sua participação é uma peça essencial na construção de um legado <br>
+                positivo.</p>
 
 
-    </table>
-            <p class="contato">Onde nos achar?</p>
-            <p class="contato">Instagram: @/hardtech.ifba</p>
-            <p class="contato">GitHub: ProjetoCooruja</p>
-    </div>
+        </section>
+        <section id="quem-somos" class="third-section">
+            <h2 class="title-who">Quem Somos</h2>
+            <div>
+                <img src="images/coruja_images/index/info4.JPG" alt="Quem somos">
+                <p>Com mentes curiosas e criativas, os estudantes do 4º ano de Informática são do Instituto
+                    Federal da Bahia do campus Paulo Afonso. Um grupo que embarcou nessa jornada de
+                    aprendizado e descoberta desde o primeiro dia. Com a orientação de seus professores e
+                    sua própria sede de conhecimento, eles aprimoraram suas habilidades técnicas, exploraram
+                    soluções inovadoras e enfrentaram desafios com determinação. O resultado dessa jornada
+                    é o site COORUJA, uma manifestação tangível de suas capacidades.
+                    </p>
+            </div>
+
+        </section>
+
+        <section id="hardtech" class="four-section">
+            <h2 class="title-hardtech">Hardtech</h2>
+
+            <div>
+                <p>A turma do 4º ano de Informática faz parte da equipe HARDTECH, uma equipe notável na
+                    Gincana Científica. Composta por indivíduos apaixonados por tecnologia e inovação, a
+                    equipe HARDTECH é reconhecida por sua criatividade, dedicação e habilidades técnicas
+                    excepcionais.</p>
+
+                    <img src="images/coruja_images/index/hardtech.jpg" alt="hardtech">
+            </div>
+
+        </section>
 
 
+    </main>
 
 
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/jquery-migrate-1.2.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/modernizr.min.js"></script>
-        <script src="js/pace.min.js"></script>
-        <script src="js/retina.min.js"></script>
-        <script src="js/jquery.cookies.js"></script>
+    <footer id="contact">
+        <h2 class="title-footer">Contato</h2>
+        <div>
+            <a href="https://www.instagram.com/hardtech.ifba/" title="Instagram" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/ProjetoCooruja" title="GitHub" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg>
+            </a>
+        </div>
 
 
-        <script src="js/custom.js"></script>
-
-
-    </body>
-
-
-<!-- Mirrored from themepixels.com/demo/webpage/chain/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:22:37 GMT -->
+    </footer>
+</body>
 </html>
