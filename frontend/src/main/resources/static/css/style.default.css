@@ -10,6 +10,10 @@
 @import url('pace.css');
 
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     font-size: 13px;
     color: #636E7B;
@@ -131,7 +135,7 @@ a:focus {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background-color: #fff;
+    background-color: #f4f4f4;
     color: #000;
     margin-left: 2px;
     padding: 2px 6px;
