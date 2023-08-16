@@ -29,6 +29,8 @@
 
 .texto{
     font-size: 14px;
+    margin-left: 1px;
+    margin-top:-20px;
 }
 .letras-miudas{
     color: #ffffff;
@@ -342,14 +344,6 @@ font-size: 60px;
         
     }
     
-@media screen and (min-width: 769px){
-    
-
-        .texto{
-            margin-left: 27px;
-            margin-top:-20px;
-        }
-        }
 
  @media screen and (max-width: 320px){
     

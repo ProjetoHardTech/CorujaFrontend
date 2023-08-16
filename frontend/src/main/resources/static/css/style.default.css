@@ -3420,6 +3420,7 @@ body.signin {
     }
     .texto{
         margin-top: -10px;
+        margin-left: 7px;
     }
 
    
@@ -3442,8 +3443,9 @@ body.signin {
 
     }
     .texto{
+        font-size: 20.5px;
         margin-top: -10px;
-        margin-left: 40px;
+        margin-left: 20px;
     }
     
     .headerwrapper .header-left,
@@ -3589,7 +3591,7 @@ body.signin {
     }
     .texto{
         margin-top: -5px;
-        margin-left: 40px;
+        margin-left: 22px;
         font-size: 25px;
     }
     
@@ -3643,8 +3645,8 @@ body.signin {
     }
     .texto{
         margin-top: -10px;
-        margin-left: -260px;
-        font-size: 28px;
+        margin-left: -290px;
+        font-size: 24px;
     }
     
     .form-search {
@@ -3772,8 +3774,8 @@ body.signin {
 
     }
     .texto{
-        margin-top: -5px;
-        margin-left: -260px;
+        margin-top: -2px;
+        margin-left: -185px;
         font-size: 34px;
     }
     
