@@ -8,6 +8,7 @@
 @import url('animate.delay.css');
 @import url('toggles.css');
 @import url('pace.css');
+@import url('estilosignup.css');
 
 
 * {
@@ -2544,7 +2545,7 @@ table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
 .media-manager .ckbox {
     position: absolute;
     top: 15px;
-    left: 15px;
+    left: 150px;
     display: none;
 }
 
@@ -3359,7 +3360,7 @@ body.signin {
 .mr15 { margin-right: 15px !important; }
 .mr20 { margin-right: 20px !important; }
 .mr30 { margin-right: 30px !important; }
-.mb5 { margin-bottom: 5px; }
+.mb5 { margin-bottom: 25px; }
 .mb8 { margin-bottom: 8px; }
 .mb9 { margin-bottom: 9px; }
 .mb10 { margin-bottom: 10px; }
@@ -3387,7 +3388,7 @@ body.signin {
 /***************************************/
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
     
     body {
         width: 100%;
@@ -3410,6 +3411,18 @@ body.signin {
         float: none;
         width: auto;
     }
+    .ckbox label:before {
+        width: 22px;
+        height: 22px;
+        margin-left: 1px;
+        margin-top: -4px;
+
+    }
+    .texto{
+        margin-top: -10px;
+    }
+
+   
 }
 
 @media screen and (max-width: 768px) {
@@ -3420,6 +3433,17 @@ body.signin {
 
     .logo {
         position: static;
+    }
+    .ckbox label:before {
+        width: 22px;
+        height: 22px;
+        margin-left: 0px;
+        margin-top: -4px;
+
+    }
+    .texto{
+        margin-top: -10px;
+        margin-left: 40px;
     }
     
     .headerwrapper .header-left,
@@ -3556,6 +3580,18 @@ body.signin {
     .btn-group-notification .dropdown-menu {
         margin-right: -62px;
     }
+    .ckbox label:before {
+        width: 30px;
+        height: 30px;
+        margin-left: 0px;
+        margin-top: -4px;
+
+    }
+    .texto{
+        margin-top: -5px;
+        margin-left: 40px;
+        font-size: 25px;
+    }
     
     .headerwrapper .header-right .btn-group-notification .dropdown-menu:after {
         right: 75px;
@@ -3597,6 +3633,18 @@ body.signin {
     
     .pageheader h4 {
         font-size: 24px;
+    }
+    .ckbox label:before {
+        width: 30px;
+        height: 30px;
+        margin-left: 0px;
+        margin-top: -5px;
+
+    }
+    .texto{
+        margin-top: -10px;
+        margin-left: -260px;
+        font-size: 28px;
     }
     
     .form-search {
@@ -3714,6 +3762,19 @@ body.signin {
     
     .pageheader h4 {
         font-size: 20px;
+    }
+    
+    .ckbox label:before {
+        width: 40px;
+        height: 40px;
+        margin-left: -10px;
+        margin-top: 0px;
+
+    }
+    .texto{
+        margin-top: -5px;
+        margin-left: -260px;
+        font-size: 34px;
     }
     
     .pageheader .breadcrumb {

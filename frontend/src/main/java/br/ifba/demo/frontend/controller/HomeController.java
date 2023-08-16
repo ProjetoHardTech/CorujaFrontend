@@ -2,6 +2,8 @@ package br.ifba.demo.frontend.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class HomeController{
@@ -28,6 +30,11 @@ public class HomeController{
 	@GetMapping("/erro")
 	public String erro() {
 		return "erro";
+	}
+	
+	@GetMapping("/termosdeuso")
+	public String termosdeuso(){
+		return "termosdeuso";
 	}
 
 	@GetMapping("/esquecisenha")
