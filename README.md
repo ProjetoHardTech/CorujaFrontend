@@ -1,4 +1,4 @@
-#CORUJA 1.0.0 - 2023
+#CORUJA 1.0.1 - 2023
 
 <aside>
 👋 Seja bem-vindo, Raposas!
