@@ -1,8 +1,16 @@
+.DS_Store
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+# OS-specific files
+.DS_Store
+**/.DS_Store
+._.DS_Store
+**/._.DS_Store
+.Trashes
 
 ### STS ###
 .apt_generated

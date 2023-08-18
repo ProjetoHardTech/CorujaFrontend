@@ -35,6 +35,11 @@
                     <p class="text-center">Entre em sua conta</p>
                     
                     <div class="mb30"></div>
+
+                    <div th:if="${possui_erro}" class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Atenção!</strong> <span th:text="${mensagem}"></span>
+                    </div>
                     
                     <form action="/process_login" method="post">
                         <div class="input-group-a">
