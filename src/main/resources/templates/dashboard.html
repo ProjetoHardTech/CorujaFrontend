@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<!-- Mirrored from themepixels.com/demo/webpage/chain/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:18:34 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Chain Responsive Bootstrap3 Admin</title>
+
+        <link href="css/style.default.css" rel="stylesheet">
+        <link href="css/morris.css" rel="stylesheet">
+        <link href="css/select2.css" rel="stylesheet" />
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+		
+		<!-- <div th:replace="/comum/header"></div> -->
+        <div th:replace="~{/comum/header}"></div>
+        
+        <section>
+            <div class="mainwrapper">
+            	<!-- <div th:replace="/comum/leftpanel"></div> -->
+                <div th:replace="~{/comum/leftpanel}"></div>
+                
+                <div class="mainpanel">
+                    <div class="pageheader">
+                        <div class="media">
+                            <div class="pageicon pull-left">
+                                <i class="fa fa-folder"></i>
+                            </div>
+                            <div class="media-body">
+                                <ul class="breadcrumb">
+                                    <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+                                    <li><a href="#">Pages</a></li>
+                                    <li>Media Manager</li>
+                                </ul>
+                                <h4>Media Manager</h4>
+                            </div>
+                        </div><!-- media -->
+                    </div><!-- pageheader -->
+                    
+                    <div class="contentpanel">
+                        <div class="row">
+                            <!-- Colocar aqui os botoes de filtro e/ou ordenacao -->
+                        </div>
+                        
+
+                        <div class="row" th:each="post : ${posts}">
+                            <div class="col-sm-12">
+                                <div class="activity-list">  
+                                    <div class="media">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object img-circle" src="images/photos/profile.png" alt="" />
+                                        </a>
+                                        <div class="media-body">
+                                            <strong th:text="${post.nome}">Elen Adarna</strong> - 
+                                            <strong th:text="${post.titulo}">Comentário</strong>
+                                            <br/>
+                                            <small th:text="${post.data_cadastro}" class="text-muted">December 25 at 3:18pm</small>
+                                            
+                                            <div class="media blog-media">
+                                                <!-- <a th:href="@{post.path_arquivo}" data-rel="prettyPhoto" class="img-single"> -->
+                                                    <img th:src="${post.path_arquivo}" class="thumbnail img-responsive" style="width:50%; height:auto;" alt="" />
+                                                <!-- </a> -->
+                                                <button name="meusBotoes" class="btn btn-dark btn-sm mr5" th:value="${post.id}" data-toggle="modal" data-target=".bs-example-modal-lg">Comente</button>
+                                                <!-- <div class="media-body">
+                                                    <form id="form_comentario_add" method="post" action="/add_comentario" enctype="multipart/form-data">
+                                                        <div class="form-group">
+                                                            <div class="col-sm-5">
+                                                                <input id="id_post_x"    nome="id_post_x"    type="hidden" th:value="${post.id}" />
+                                                                <input id="comentario_x" nome="comentario_x" type="text"   class="form-control" placeholder="Comentários" required />
+                                                            </div>
+                                                            <button type="submit" class="btn btn-dark btn-sm mr5">Comentar</button>
+                                                        </div>
+                                                    </form>
+                                                </div> -->
+                                                <br/>
+                                                <br/>
+                                                <div class="media-body" th:each="cmt : ${post.comentarios}">
+                                                    <h4 class="media-title">
+                                                        <a href="#" th:text="${cmt.nome_usuario}">Ut Enim Ad Minim Veniam</a>
+                                                        <small th:text=" ' - ' + ${cmt.data_cadastro}"></small>
+                                                    </h4>
+                                                    <p th:text="${cmt.comentario}">Lorem ipsum dolor sit amet</p>
+                                                </div>
+                                            </div>
+                                            <!-- Envie seu comentario
+                                            <div class="media">
+                                                <a class="pull-left" href="#">
+                                                    <img class="media-object img-circle" src="images/photos/user4.png" alt="" />
+                                                </a>
+                                                <div class="media-body">
+                                                    <div class="col-sm-6 ">
+                                                        <form classe="form-inline">
+                                                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                                            <button type="submit" class="btn btn-primary mr5">Enviar</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            -->
+                                        </div>
+                                    </div><!-- media -->
+
+                                    
+                                </div><!-- activity-list -->
+                                
+                            </div><!-- col-sm-9 -->
+                        </div><!-- row -->                          
+                    </div><!-- contentpanel -->
+                </div><!-- mainpanel -->
+            </div><!-- mainwrapper -->
+        </section>
+
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button aria-hidden="true" data-dismiss="modal" class="close" type="button">&times;</button>
+                      <h4 class="modal-title">Insira seu comentário</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form id="form_add_comentario" method="post" action="/add_comentario">
+                        <input id="id_post" name="id_post" class="form-control" type="hidden" >
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Comentário</label>
+                            <div class="col-sm-10">
+                                <textarea id="comentario" name="comentario" class="form-control" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label class="col-sm-2 control-label">Tags</label>
+                            <div class="col-sm-10">
+                                <input name="tags" id="tags" class="form-control" value="foo,bar,baz" />
+                            </div>
+                        </div> -->
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" type="submit">Adicionar</button>
+                            <button class="btn btn-primary mr5" data-dismiss="modal">Criar</button>
+                        </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/pace.min.js"></script>
+        <script src="js/retina.min.js"></script>
+        <script src="js/jquery.cookies.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+
+        <script src="js/flot/jquery.flot.min.js"></script>
+        <script src="js/flot/jquery.flot.resize.min.js"></script>
+        <script src="js/flot/jquery.flot.spline.min.js"></script>
+        <script src="js/jquery.sparkline.min.js"></script>
+        <script src="js/morris.min.js"></script>
+        <script src="js/raphael-2.1.0.min.js"></script>
+        <script src="js/bootstrap-wizard.min.js"></script>
+        <script src="js/select2.min.js"></script>
+
+  <!--[if lt IE 8]>
+  <script src="js/flot/excanvas.min.js"></script>
+    <![endif]-->
+
+
+        <script src="js/custom.js"></script>
+        <script src="js/dashboard.js"></script>
+
+        <script>
+            jQuery(document).ready(function(){
+              
+              jQuery("a[data-rel^='prettyPhoto']").prettyPhoto();
+              
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // Seleciona todos os botões pelo atributo 'name'
+                const botoes = document.querySelectorAll('button[name="meusBotoes"]');
+                const inputHidden = document.getElementById('id_post');
+
+                // Adiciona um ouvinte de evento a cada botão
+                botoes.forEach(function(botao) {
+                    botao.addEventListener('click', function(event) {
+                        inputHidden.value = event.target.value;
+                        console.log(inputHidden.value);
+                    });
+                });
+            });
+
+        </script>
+
+    </body>
+
+<!-- Mirrored from themepixels.com/demo/webpage/chain/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:19:13 GMT -->
+</html>
