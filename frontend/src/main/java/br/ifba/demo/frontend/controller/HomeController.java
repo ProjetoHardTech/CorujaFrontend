@@ -3,7 +3,6 @@ package br.ifba.demo.frontend.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,6 +43,7 @@ public class HomeController{
 		// HttpSession session = request.getSession();
 		List<PostResponse> list = postService.listall();
 		model.addAttribute( "posts", list);
+		model.addAttribute( "currentPage", "dashboard");
 		return "dashboard";
 	}
 
@@ -88,17 +88,24 @@ public class HomeController{
 	}
 
 	@GetMapping("/novo_post")
-	public String upload_page() {
-		return "/post/novo_post";
+	public ModelAndView upload_page(Model model) {
+		// model.addAttribute( "currentPage", "novo_post");
+		// return "/post/novo_post";
+
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "novo_post");
+		modelAndView.setViewName("/post/novo_post");
+		return modelAndView;
 	}
 
 	@PostMapping("/upload")
-	public String upload(
+	public ModelAndView upload(
 		@ModelAttribute PostForm postForm, 	
 		HttpServletRequest request,	
 		RedirectAttributes redirectAttributes)
 	{
 		HttpSession session = request.getSession();
+		ModelAndView mav = new ModelAndView();
 		Long id_usuario = (Long)session.getAttribute("id_usuario");
 		// System.out.println(id_usuario);
 		postForm.setId_usuario(id_usuario);
@@ -112,26 +119,8 @@ public class HomeController{
 			System.out.println("Post nao CRIANDO");
 		}
 
-
-		
-	
-		
-		// 	if (file.isEmpty()) {
-	// 		redirectAttributes.addFlashAttribute("message", "Por favor, selecione um arquivo para fazer upload.");
-    //         return "redirect:/dashboard";
-    //     }
-		
-	// 	HttpSession session = request.getSession();
-	// 	String id_usuario = session.getAttribute("id_usuario").toString();
-		// boolean retorno = arquivoService.upload(file, id_usuario);
-
-	// 	if (retorno) {
-	// 		System.out.println("TUDO CERTO" + id_usuario);
-	// 	}
-	// 	else {
-	// 		System.out.println("Erro no Upload");
-	// 	}
-		return "dashboard";
+		mav.setViewName("redirect:/dashboard");
+		return mav;
 	}
 
 	@PostMapping("/process_login")
@@ -148,6 +137,7 @@ public class HomeController{
 			session.setAttribute("email", uModel.getEmail());
 			session.setAttribute("nome" , uModel.getNome());
 			session.setAttribute("perfil" , uModel.getId_perfil());
+			model.addAttribute( "nome", uModel.getNome());
 			return "redirect:/dashboard";
 		}
 		else {
@@ -187,9 +177,18 @@ public class HomeController{
 		usuModel.setSenha(senha);
 		usuModel.setTermos_aceite(termos);
 		usuModel.setId_perfil(Long.valueOf(2));
-		
-		usuarioService.insert( usuModel );
-		return "login";	
+
+		Boolean resutado = usuarioService.insert( usuModel );
+
+		if (resutado){
+			return "login";	
+		}
+		else {
+			model.addAttribute( "mensagem", "Erro ao cadastrar o usuário.");
+			model.addAttribute( "possui_erro", true);
+			return "signup";
+		}
+
 	}
 	
 	@GetMapping("/exibirImagem/{id}")

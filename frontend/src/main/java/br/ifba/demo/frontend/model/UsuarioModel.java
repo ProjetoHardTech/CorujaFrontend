@@ -21,10 +21,5 @@ public class UsuarioModel {
 	private Date data_modificacao;
 	private Date data_criacao;
 	private Date data_conclusao;
-	private Boolean status;
-
-	
-
-
-	
+	// private Boolean status;
 }

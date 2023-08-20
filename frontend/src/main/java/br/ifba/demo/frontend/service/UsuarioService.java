@@ -82,15 +82,15 @@ public class UsuarioService {
 		return result;
 	}
 	
-	public UsuarioModel insert(UsuarioModel usuarioModel) {
-		Mono<UsuarioModel> usuario = this.webClient
+	public Boolean insert(UsuarioModel usuarioModel) {
+		Mono<Boolean> usuario = this.webClient
 									.method(HttpMethod.POST)
 									.uri("usuario/")
 									.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
 									.body(Mono.just(usuarioModel), UsuarioModel.class)
 									.retrieve()
-									.bodyToMono(UsuarioModel.class);
-		UsuarioModel result = usuario.block();
+									.bodyToMono(Boolean.class);
+		Boolean result = usuario.block();
 		return result;
 	}
 	
