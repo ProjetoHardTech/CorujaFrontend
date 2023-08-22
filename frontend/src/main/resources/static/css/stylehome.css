@@ -89,6 +89,14 @@ nav{
     top: 0;
     z-index: 10;
 }
+.box-img-header {
+    height: 100%;
+}
+
+.img-logo {
+    height: 100%;
+}
+
 nav .container{
     display: flex;
     align-items: center;
@@ -390,7 +398,7 @@ uma animação igual ao da notificação para sobressair na tela
     display: grid;
     place-items: center;
     font-size: 0.9rem;
-    display: none;
+   
 }
 
 .customize-theme .card{
