@@ -1186,7 +1186,8 @@ a:focus {
     color: #f36743;
     text-align: center;
     font-size: 16px;
-    text-decoration: underline
+    text-decoration: underline;
+    padding-bottom: 10px;
 }
 
 .recuperar-senha{
@@ -3083,6 +3084,10 @@ body.signin {
     align-items: center;
 }
 
+.btn-newconta::before{
+    content: "Ainda não possui conta? Crie sua conta agora!";
+}
+
 .btn-newconta:hover, .active {
     color:#ffffff!important;
 }
@@ -3120,6 +3125,7 @@ body.signin {
 .panel-signin .panel-body,
 .panel-signup .panel-body {
     padding: 40px;
+    padding-bottom: 10px;
 }
 
 .panel-signin .panel-footer,
