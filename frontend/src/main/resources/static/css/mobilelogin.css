@@ -13,6 +13,11 @@ body {
     height: 100vh;
 }
 
+.panel-body {
+    padding-bottom: 15px;
+    margin: auto;
+}
+
 .panel-signin {
     max-width: 400px;
     width: 90%;
@@ -41,13 +46,10 @@ body {
     border: none;
     color: #fff;
     padding: 10px 20px;
+    padding-left: 10px;
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.pull-left, .pull-right {
-    width: 49%;
 }
 
 .recuperar-senha{
@@ -72,6 +74,17 @@ body {
 
     .pull-right{
         text-align: right;
+        padding-left: 15px;
+    }
+
+    .pull-left{
+        padding-right: 15px;
+    }
+
+    .pull-left i{
+        display: flexbox;
+        justify-content: left;
+        align-items: left;
     }
 
     .btn-newconta{
@@ -85,13 +98,14 @@ body {
         content: "Crie sua conta";
     }
 
-    .panel-body {
-        padding: 15px;
-    }
-
     .imagem{
         width: 300px;
-        height: 120px;
+    }
+
+    .text-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
