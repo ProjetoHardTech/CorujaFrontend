@@ -12,6 +12,10 @@
     --orange: #f36743;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #fff;
     height: 100vh;
