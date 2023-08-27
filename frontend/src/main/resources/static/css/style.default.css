@@ -3077,6 +3077,9 @@ body.signin {
 .panel-signin .panel-body,
 .panel-signup .panel-body {
     padding: 40px;
+}
+
+#one{
     padding-bottom: 10px;
 }
 
