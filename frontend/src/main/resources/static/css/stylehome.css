@@ -40,7 +40,7 @@ body{
     overflow-x: hidden;
 }
 
-.container{
+    .container{
     width: 80%;
     margin: 0 auto;
 }
@@ -89,6 +89,14 @@ nav{
     top: 0;
     z-index: 10;
 }
+.box-img-header {
+    height: 100%;
+}
+
+.img-logo {
+    height: 100%;
+}
+
 nav .container{
     display: flex;
     align-items: center;
@@ -297,8 +305,12 @@ main .container .left .profile{
     border-radius: var(--card-border-radius);
     overflow: hidden;
     margin: 0.7rem 0;
-    height: 500px;
-    width: 750px;
+   
+}
+.middle .feed .photo img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 .middle .feed .action-buttons{
     display: flex;
@@ -386,6 +398,7 @@ uma animação igual ao da notificação para sobressair na tela
     display: grid;
     place-items: center;
     font-size: 0.9rem;
+   
 }
 
 .customize-theme .card{
@@ -393,6 +406,7 @@ uma animação igual ao da notificação para sobressair na tela
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 
 .customize-theme .font-size{
@@ -571,6 +585,9 @@ uma animação igual ao da notificação para sobressair na tela
     .left .btn{
         display: none;
     }
+    .customize-theme .card{
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 844px){
@@ -603,6 +620,10 @@ uma animação igual ao da notificação para sobressair na tela
 
     main .container .right{
         display: none;
+    }
+
+    .customize-theme .card{
+        width: 92vw;
     }
 
 }
