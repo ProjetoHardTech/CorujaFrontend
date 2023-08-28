@@ -16,6 +16,7 @@ body {
 .panel-body {
     padding-bottom: 15px;
     margin: auto;
+    background-color: #221328;
 }
 
 .panel-signin {
@@ -45,7 +46,7 @@ body {
 .btn-success {
     border: none;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 10px;
     padding-left: 10px;
     border-radius: 3px;
     cursor: pointer;
@@ -98,14 +99,16 @@ body {
         content: "Crie sua conta";
     }
 
-    .imagem{
-        width: 300px;
-    }
-
     .text-center{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    
+
+    .imagem{
+        width: 90%;
     }
 }
 

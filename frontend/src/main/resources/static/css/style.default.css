@@ -1120,6 +1120,7 @@ a:focus {
 
 .btn-success{
     background-color: #f36743;
+    padding-left: 17px;
 }
 
 .btn-group .btn.btn-bordered + .btn.btn-bordered,
@@ -3077,6 +3078,12 @@ body.signin {
 .panel-signin .panel-body,
 .panel-signup .panel-body {
     padding: 40px;
+}
+
+.panel-body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #one{
