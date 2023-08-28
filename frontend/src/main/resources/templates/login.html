@@ -27,14 +27,19 @@
         <section>
             
             <div class="panel panel-signin">
-                <div class="panel-body">
+                <div class="panel-body" id="one">
                     <div class="logo text-center">
-                        <img src="images/coruja_images/logos/400X160/cOM bORDA/Ativo 9.png" alt="Cooruja Logo">
+                        <img class="imagem" src="images/coruja_images/logos/400X160/cOM bORDA/Ativo 9.png" alt="Cooruja Logo">
                     </div>
                     <h4 class="text-center-titulo">Possui cadastro?</h4>
                     <p class="text-center">Entre em sua conta</p>
                     
                     <div class="mb30"></div>
+
+                    <div th:if="${possui_erro}" class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Atenção!</strong> <span th:text="${mensagem}"></span>
+                    </div>
                     
                     <form action="/process_login" method="post">
                         <div class="input-group-a">
@@ -59,12 +64,12 @@
                     </form>
                     
                 </div><!-- panel-body -->
-                <div class="panel-body">
-                    <a href="/signup" class="btn-newconta">Ainda não possui conta? Crie sua conta agora!</a>
-                </div><!-- panel-footer -->
                 <div class="recuperar-senha">
                     <a href="/esquecisenha" class="esqueci-senha">Esqueci minha senha!</a>
                 </div>
+                <div class="panel-body">
+                    <a href="/signup" class="btn-newconta"></a>
+                </div><!-- panel-footer -->
             </div><!-- panel -->
             
         </section>

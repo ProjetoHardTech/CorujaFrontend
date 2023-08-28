@@ -11,16 +11,16 @@
     
     <h5 class="leftpanel-title">Navigation</h5>
     <ul class="nav nav-pills nav-stacked">
-        <li class="active">
+        <li th:classappend="${currentPage == 'dashboard'} ? 'active' : ''">
         	<a href="/dashboard">
         		<i class="fa fa-home"></i>
         		<span>Dashboard</span>
         	</a>
         </li>
-        <li>
-        	<a href="/cadastro_livro">
+        <li th:classappend="${currentPage == 'novo_post'} ? 'active' : ''">
+        	<a href="/novo_post">
         		<i class="fa fa-envelope-o"></i> 
-        		<span>Cadastro de Livros</span>
+        		<span>Upload</span>
         	</a>
         </li>
 		<li>

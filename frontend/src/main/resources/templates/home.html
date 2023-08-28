@@ -1,115 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-     <meta>
-     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE-edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-     <title>Home</title>
-
-     <link rel="stylesheet" type="text/css" href="css\stylehome.css">
-     <link rel="icon" href="images/coruja_images/icons/32x32/Sem/Ativo 73.png" type="image/png">
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-<head>
+    <!-- header -->
+    <div th:replace="~{/common/header(_,_)}"></div>
     <body>
-            <nav>
-                <div class="container">
-                    <div class="box-img-header">
-                        <img class="img-logo" src="images\coruja_images\logos\187x75\Sem Borda\Ativo 33.png" alt="Logo cooruja">
-                    </div>
-                    
-                    <div class="create">
-                        <label class="btn btn-primary" for="create-post">Criar</label>
-                        <div class="profile-photo">
-                           <img src="\images\coruja_images\icons\48x48\com\Ativo 60.png" alt="">
-                        </div>
-                    </div>
-                </div>
-           </nav>
-           <main>
-                <div class="container">
-                    <div class="left">
-
-                        <a href="" class="profile">
-                            <div class="profile-photo">
-                              <img src="/images/coruja_images/icons/48x48/com/Ativo 60.png" alt="">
-                            </div>
-                            <div class="handle">
-                                <h4>HardTech</h4>
-                                <p class="text-muted">
-                                    @hardtech2023
-                                </p>
-                            </div>
-                        </a>
-                   
-
-                    <div class="sidebar">
-                        <a class="menu-item active">
-                            <span><i class='bx bx-home'></i></span><h3>Home</h3> 
-                        </a>
-                        <a class="menu-item" id="notifications">
-                            <span><i class='bx bx-bell'><small class="notification-count">+5</small></i></span><h3>Notificações</h3> 
-                            <div class="notification-popup">
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="#" alt="" class="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <b> MALU </b> comentou no seu relato
-                                        <small class="text-muted">5 MINUTO ATRÁS</small> 
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="#" alt="" class="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <b> GLASSESGIRL </b> repostou o seu relato
-                                        <small class="text-muted">2 HORAS ATRÁS </small> 
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="#" alt="" class="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <b> MUR1LOVE </b> curtiu o seu relato
-                                        <small class="text-muted">3 HORAS ATRÁS</small> 
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="#" alt="" class="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <b> TRIZBEA </b> curtiu o seu relato
-                                        <small class="text-muted">3 HORAS ATRÁS</small> 
-                                    </div>
-                                </div>
-                            </div>
-                        </a>    
-                        <a class="menu-item">
-                            <span><i class='bx bx-analyse' ></i></span><h3>Filtros</h3> 
-                        </a>
-                        <a class="menu-item">
-                            <span><i class='bx bx-user-check'></i></span><h3>Perfil</h3>
-                        </a>
-                        <a class="menu-item">
-                            <span><i class='bx bx-cog' ></i></span><h3>Configurações</h3>
-                        </a>
-                        
-                        <a class="menu-item" id="theme">
-                            <span><i class='bx bx-palette bx-tada bx-rotate-90' ></i></span><h3>Temas</h3>
-                        </a>  
-                    </div>
-                    <label for="create-post" class="btn btn-primary">Criar Relato</label>
-
-                </div>
+        <div th:replace="~{/common/nav}"></div>
+        <main>
+            <div class="container">
+                <!-- Left -> Menu -->
+                <div th:replace="~{/common/left}"></div>
+                
 
                 <div class="middle">
-                    
                     <form class="create-post">
                         <div class="profile-photo">
                             <img src="#" alt="">
@@ -119,175 +20,17 @@
                     </form>
 
                     <div class="feeds">
-                        <!--------POST 1------>
-                        <div class="feed">
-                            <div class="head">
-                                <div class="user">
-                                    <div class="profile-photo">
-                                        <img src="\images\coruja_images\icons\48x48\com\Ativo 60.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h3>HardTech</h3>
-                                        <small>Paulo Afonso, 1 MINUTO ATRÁS</small>
-                                    </div>
-                                </div>
-                                <span class="edit">
-                                    <i class='bx bx-dots-horizontal-rounded'></i>
-                                </span>
-                            </div>
-                            <div class="photo">
-                                <img src="\images\info4.png" alt="">
-                            </div>
-                            <div class="action-buttons">
-                                <div class="interaction-buttons">
-                                    <span><i class='bx bxs-upvote bx-flip-horizontal' ></i></span>
-                                    <span><i class='bx bxs-upvote bx-rotate-180' ></i></span>
-                                    <span><i class='bx bx-comment-error' ></i></span>
-                                </div>
-                            </div>
-                            <div class="number-liked">
-                                <p>15 <b>up</b> e 1 <b>down</b></p>
-                            </div>
-                            <div class="captions">
-                                <p><b>HardTech</b> A turma mais linda <span class="harsh-tag">#ganhador</span></p>
-                            </div>
-                            <div class="comnents text-muted">Olhar os comentários</div>
-                        </div> 
-                         <!--------fim------>
-                         <!--------POST 2------>
-                         <div class="feed">
-                            <div class="head">
-                                <div class="user">
-                                    <div class="profile-photo">
-                                        <img src="\images\coruja_images\icons\48x48\com\Ativo 60.png" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <h3>HardTech</h3>
-                                        <small>Paulo Afonso, 4 MINUTO ATRÁS</small>
-                                    </div>
-                                </div>
-                                <span class="edit">
-                                    <i class='bx bx-dots-horizontal-rounded'></i>
-                                </span>
-                            </div>
-                            <div class="photo">
-                                <img src="\images\gustavocaua.pic.jpg" alt="">
-                            </div>
-                            <div class="action-buttons">
-                                <div class="interaction-buttons">
-                                    <span><i class='bx bxs-upvote bx-flip-horizontal' ></i></span>
-                                    <span><i class='bx bxs-upvote bx-rotate-180' ></i></span>
-                                    <span><i class='bx bx-comment-error' ></i></span>
-                                </div>
-                            </div>
-                            <div class="number-liked">
-                                <p>60 <b>up</b> e 1 <b>down</b></p>
-                            </div>
-                            <div class="captions">
-                                <p><b>HardTech</b> Gustavo e Caua plenos antes da primeira vitória <span class="harsh-tag">#ganhador</span></p>
-                            </div>
-                            <div class="comnents text-muted">Olhar os comentários</div>
-                        </div> 
-                         <!--------fim------>
-
+                    
+                        <div th:replace="~{/common/feed}"></div>
+                        
                     </div>
                 </div>
 
-                <div class="right">
-
-                    <div class="filters">
-                        <div class="heading">
-                            <h4>Filtros</h4><i class='bx bx-analyse' ></i>
-                        </div>
-                        <div class="search-bar">
-                            <img src="\images\coruja_images\icons\16x16\sem\lupa.png" alt="">
-                            <input type="search" placeholder="Pesquise por relato" id="post-search">
-                        </div>
-                    </div>
-                
-                    <div class="users-relevant">
-                        <h4>Usuários mais relevantes</h4>
-                        <div class="user">
-                            <div class="info">
-                                <div class="profile-photo">
-                                    <img src="\images\coruja_images\icons\48x48\com\Ativo 60.png" alt="">
-                                </div>
-                                <div>
-                                    <h5>Ramon Rodrigues</h5>
-                                    <p class="text-muted">
-                                       3 relatos em #1 essa semana 
-                                    </p>
-                                    
-                                </div>
-                            </div>
-                            <div class="action">
-                                <button class="btn btn-primary">
-                                    Seguindo
-                                </button>
-                                <button class="btn">
-                                    Seguir
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-----final do right---->
-                </div>
-           </main>
-           <script src="js\home.js"></script>
-
-           <div class="customize-theme">
-            <div class="card">
-                <h2>Personalize a sua visualização</h2>
-                <p class="text-muted">Configure o tamanho da sua fonte, a cor e o fundo</p>
-
-                <div class="font-size">
-                    <h4>Tamanho da fonte</h4>
-                    <div>
-                        <h6>Aa</h6> 
-                        <div class="choose-size">
-                            <span class="font-size-1"></span>
-                            <span class="font-size-2 active"></span>
-                            <span class="font-size-3"></span>
-                            <span class="font-size-4"></span>
-                            <span class="font-size-5"></span>
-                        </div>
-                        <h3>Aa</h3>
-                    </div>
-                </div>
-
-                <div class="color">
-                    <h4>Cores</h4>
-                    <div class="choose-color">
-                        <span class="color-1 active"></span>
-                        <span class="color-2"></span>
-                        <span class="color-3"></span>
-                        <span class="color-4"></span>
-                        <span class="color-5"></span>
-                    </div>
-                </div>
-
-                <div class="background">
-                    <h4>Fundo</h4>
-                    <div class="choose-bg">
-                        <div class="bg-1 active">
-                            <span></span>
-                            <h5 for="bg-1">Light</h5>
-                        </div>
-                        <div class="bg-2">
-                            <span></span>
-                            <h5 for="bg-2">Dim</h5>
-                        </div>
-                        <div class="bg-3">
-                            <span></span>
-                            <h5 for="bg-3">Ligths Out</h5>
-                        </div>
-                    </div>
-                </div>
+                <!-- Right -->
+                <div th:replace="~{/common/right}"></div>
             </div>
-                                    
-           </div>       
+        </main>
+        <script src="js\home.js"></script>
 
-         
      </body>
 </html>
-
