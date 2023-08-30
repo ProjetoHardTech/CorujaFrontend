@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<<<<<<< HEAD
+    <!-- header -->
+    <div th:replace="~{common/header(_,_)}"></div>
+=======
     <div th:replace="~{/common/header(_,_)}"></div>
+>>>>>>> a3229e95c689f84f57e309b53b9ddea3058b6348
     <body>
-        <div th:replace="~{/common/nav}"></div>
+        <div th:replace="~{common/nav}"></div>
         <main>
             <div class="container">
                 <!-- Left -> Menu -->
-                <div th:replace="~{/common/left}"></div>
+                <div th:replace="~{common/left}"></div>
                 
 
                 <div class="middle">
@@ -43,15 +48,17 @@
 
                     <div class="feeds">
                     
-                        <div th:replace="~{/common/feed}"></div>
+                        <div th:replace="~{common/feed}"></div>
                         
                     </div>
                 </div>
 
                 <!-- Right -->
-                <div th:replace="~{/common/right}"></div>
+                <div th:replace="~{common/right}"></div>
             </div>
         </main>
+
+        
         <script src="js\home.js"></script>
         <link rel="stylesheet" type="text/css" href="\css\stylehome.css">
      </body>

@@ -12,7 +12,7 @@
         </a>
    
         <div class="sidebar">
-            <a class="menu-item active">
+            <a href="/home" class="menu-item" th:classappend="${currentPage == 'home'} ? 'active' : ''">
                 <span><i class='bx bx-home'></i></span><h3>Home</h3> 
             </a>
             <a class="menu-item" id="notifications">
@@ -56,8 +56,8 @@
                     </div>
                 </div>
             </a>
-            <a class="menu-item">
-                <span><i class='bx bx-analyse' ></i></span><h3>Filtros</h3> 
+            <a href="/novo_post" class="menu-item" th:classappend="${currentPage == 'novo_post'} ? 'active' : ''">
+                <span><i class='bx bx-analyse' ></i></span><h3>Upload</h3> 
             </a>
             <a class="menu-item">
                 <span><i class='bx bx-user-check'></i></span><h3>Perfil</h3>

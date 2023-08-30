@@ -30,71 +30,80 @@ public class HomeController{
 	private UsuarioService usuarioService;
 	@Autowired
 	private PostService postService;
-
 	@Autowired
 	private ArquivoService arquivoService;
 
-	 @GetMapping
-    public String index() {
-        return "index";
+	@GetMapping
+    public ModelAndView index() {
+		return new ModelAndView("index");
     }
+
     @GetMapping("/dashboard")
-	public String dashboard(HttpServletRequest request, Model model) {
-		// HttpSession session = request.getSession();
+	public ModelAndView dashboard(HttpServletRequest request, Model model) {
 		List<PostResponse> list = postService.listall();
-		model.addAttribute( "posts", list);
-		model.addAttribute( "currentPage", "dashboard");
-		return "dashboard";
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("posts", list);
+		mav.addObject("currentPage", "dashboard");
+		return new ModelAndView("dashboard");
 	}
 
     @GetMapping("/login")
-	public String login() {
-		return "login";
+	public ModelAndView login() {
+		return new ModelAndView("login");
 	}
 
 	@GetMapping("/logout")
-	public String logout(HttpSession session) {
+	public ModelAndView logout(HttpSession session) {
 		session.invalidate();
-		return "index";
+		return new ModelAndView("index");
 	}
 	
 	@GetMapping("/signup")
-	public String signup() {
-		return "signup";
+	public ModelAndView signup() {
+		return new ModelAndView("signup");
 	}
 
 	@GetMapping("/erro")
-	public String erro() {
-		return "erro";
+	public ModelAndView erro() {
+		return new ModelAndView("erro");
 	}
 	
 	@GetMapping("/termosdeuso")
-	public String termosdeuso(){
-		return "termosdeuso";
+	public ModelAndView termosdeuso(){
+		return new ModelAndView("termosdeuso");
 	}
 
 	@GetMapping("/esquecisenha")
-	public String esquecisenha() {
-		return "esquecisenha";
+	public ModelAndView esquecisenha() {
+		return new ModelAndView("esquecisenha");
 	}
+
 	@GetMapping("/home")
-	public String home() {
-		return "home";
+	public ModelAndView home(HttpServletRequest request, Model model) {
+		List<PostResponse> list = postService.listall();
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("posts", list);
+		mav.addObject("currentPage", "home");
+		HttpSession session = request.getSession();
+		if ( session == null ){
+        	mav.setViewName("redirect:/login");
+		}
+		else {
+			mav.setViewName("home");
+		}
+		return mav;
 	}
 
 	@GetMapping("/timeline")
-	public String timeline() {
-		return "timeline";
+	public ModelAndView timeline() {
+		return new ModelAndView("timeline");
 	}
 
 	@GetMapping("/novo_post")
 	public ModelAndView upload_page(Model model) {
-		// model.addAttribute( "currentPage", "novo_post");
-		// return "/post/novo_post";
-
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("currentPage", "novo_post");
-		modelAndView.setViewName("/post/novo_post");
+		modelAndView.setViewName("post/novo_post");
 		return modelAndView;
 	}
 
@@ -107,8 +116,9 @@ public class HomeController{
 		HttpSession session = request.getSession();
 		ModelAndView mav = new ModelAndView();
 		Long id_usuario = (Long)session.getAttribute("id_usuario");
-		// System.out.println(id_usuario);
+		System.out.println(id_usuario);
 		postForm.setId_usuario(id_usuario);
+		System.out.println("postForm: ");
 		System.out.println(postForm);
 
 		Boolean retorno = postService.add(postForm);
@@ -119,12 +129,12 @@ public class HomeController{
 			System.out.println("Post nao CRIANDO");
 		}
 
-		mav.setViewName("redirect:/dashboard");
+		mav.setViewName("redirect:/home");
 		return mav;
 	}
 
 	@PostMapping("/process_login")
-	public String process_login(HttpServletRequest request, Model model) {
+	public ModelAndView process_login(HttpServletRequest request, Model model) {
 		String usuario = request.getParameter( "usuario" );
 		String senha   = request.getParameter( "senha" );
 		
@@ -132,23 +142,25 @@ public class HomeController{
 		UsuarioModel uModel = usuarioService.login(loginRequest);
 		
 		HttpSession session = request.getSession();
-		if (uModel != null) {
+		ModelAndView mav = new ModelAndView();
+        if (uModel != null) {
 			session.setAttribute("id_usuario", uModel.getId());
 			session.setAttribute("email", uModel.getEmail());
 			session.setAttribute("nome" , uModel.getNome());
 			session.setAttribute("perfil" , uModel.getId_perfil());
-			model.addAttribute( "nome", uModel.getNome());
-			return "redirect:/dashboard";
+			// mav.setViewName("home");
+			mav.setViewName("redirect:/home");
 		}
 		else {
-			model.addAttribute( "possui_erro", true);
-			model.addAttribute( "mensagem", "Usuário ou Senha Invalida");
-			return "login";
+			mav.addObject("possui_erro", true);
+			mav.addObject("mensagem", "Usuário ou Senha Invalida");
+			mav.setViewName("login");
 		}
+		return mav;
 	}
 
 	@PostMapping("/process_add")
-	public String process_add(HttpServletRequest request, Model model) {
+	public ModelAndView process_add(HttpServletRequest request, Model model) {
 		String nome = request.getParameter( "nome" );
 		String sobrenome = request.getParameter( "sobrenome" );
 		String email   = request.getParameter( "email" );
@@ -160,14 +172,20 @@ public class HomeController{
 		System.out.println("nome.............: " + nome);
 		System.out.println("sobrenome........: " + sobrenome);
 		System.out.println("email............: " + email);
-		System.out.println("agree...........: " + agree);
+		System.out.println("agree............: " + agree);
 		System.out.println("senha............: " + senha);
 		System.out.println("confirmacao_senha: " + confirmacao_senha);
 
+		ModelAndView mav = new ModelAndView();
+		
 		if (agree == null){
-			model.addAttribute( "mensagem", "Termos e condições é de preenchimento obrigatório!");
-			model.addAttribute( "possui_erro", true);
-			return "signup";
+			// model.addAttribute( "mensagem", "Termos e condições é de preenchimento obrigatório!");
+			// model.addAttribute( "possui_erro", true);
+			// return "signup";
+			mav.addObject("mensagem", "Termos e condições é de preenchimento obrigatório!");
+			mav.addObject("possui_erro", true);
+			mav.setViewName("signup");
+			return mav;
 		}
 		
 		UsuarioModel usuModel = new UsuarioModel();
@@ -181,12 +199,18 @@ public class HomeController{
 		Boolean resutado = usuarioService.insert( usuModel );
 
 		if (resutado){
-			return "login";	
+			mav.setViewName("login");
+			return mav;
 		}
 		else {
-			model.addAttribute( "mensagem", "Erro ao cadastrar o usuário.");
-			model.addAttribute( "possui_erro", true);
-			return "signup";
+			// model.addAttribute( "mensagem", "Erro ao cadastrar o usuário.");
+			// model.addAttribute( "possui_erro", true);
+			// return "signup";
+
+			mav.addObject("mensagem", "Erro ao cadastrar o usuário.");
+			mav.addObject("possui_erro", true);
+			mav.setViewName("signup");
+			return mav;
 		}
 
 	}
@@ -203,8 +227,8 @@ public class HomeController{
 		String comentario = request.getParameter( "comentario" );
 		String id_post    = request.getParameter( "id_post" );
 
-		// System.out.println("comentario: " + comentario);
-		// System.out.println("id_post...: " + id_post);
+		System.out.println("comentario: " + comentario);
+		System.out.println("id_post...: " + id_post);
 		// System.out.println("tags......: " + tags);
 
 		ModelAndView mav = new ModelAndView();
@@ -217,6 +241,12 @@ public class HomeController{
 		}
 
 		Long id_usuario = (Long)session.getAttribute("id_usuario");
+		if ( id_usuario == null ){
+			mav.addObject("message", "Efetue o Login Novamente");
+        	mav.setViewName("login");
+			return mav;
+		}
+		System.out.println("id_usuario...: " + id_usuario);
 		
 		ComentarioDTO comentarioDTO = new ComentarioDTO();
 		comentarioDTO.setComentario(comentario);
@@ -226,7 +256,7 @@ public class HomeController{
 		if ( !postService.add_comentario(comentarioDTO) ) {
 			System.out.println("Erro no cadastro do comentarios");
 		}
-		mav.setViewName("redirect:/dashboard");
+		mav.setViewName("redirect:/home");
 		return mav;
 	}
 }

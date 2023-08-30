@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
@@ -20,12 +21,9 @@ import br.ifba.demo.frontend.dto.ComentarioDTO;
 import br.ifba.demo.frontend.dto.PostForm;
 import br.ifba.demo.frontend.dto.PostResponse;
 import reactor.core.publisher.Mono;
-
-
 	
 @Service
 public class PostService {
-
 	@Autowired
 	private WebClient webClient;
 
@@ -46,7 +44,6 @@ public class PostService {
 		formData.add("comentario", postForm.getComentario());
 		formData.add("tags", postForm.getTags());
 		formData.add("file", new FileSystemResource(convert(postForm.getFile())));
-		
 		Mono<Boolean> retorno = this.webClient
 									.method(HttpMethod.POST)
 									.uri("post")
@@ -69,17 +66,12 @@ public class PostService {
 		return list;
 	}
 
-	public boolean add_comentario(ComentarioDTO comentarioDTO) {
-		MultiValueMap<String, Object> formData = new LinkedMultiValueMap<>();
-		formData.add("id_usuario", comentarioDTO.getId_usuario());
-		formData.add("comentario", comentarioDTO.getComentario());
-		formData.add("id_post", comentarioDTO.getId_post());
-		
+	public boolean add_comentario(ComentarioDTO comentarioModel) {
 		Mono<Boolean> retorno = this.webClient
 									.method(HttpMethod.POST)
 									.uri("post/add_comentario")
-									.contentType(MediaType.MULTIPART_FORM_DATA)
-									.body(BodyInserters.fromMultipartData(formData))
+									.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+									.body(Mono.just(comentarioModel), ComentarioDTO.class)
 									.retrieve()
 									.bodyToMono(Boolean.class);
 		Boolean tm = retorno.block();
