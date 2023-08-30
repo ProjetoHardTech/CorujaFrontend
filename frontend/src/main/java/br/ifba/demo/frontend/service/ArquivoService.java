@@ -3,7 +3,7 @@ package br.ifba.demo.frontend.service;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Base64;
+// import java.util.Base64;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
@@ -50,7 +50,6 @@ public class ArquivoService {
 	}
 
 	public ResponseEntity<byte[]> get_imagem(String id) {
-		
 		byte[] imageBytes = this.webClient
 								.method(HttpMethod.GET)
 								.uri("arquivo/displayImage/{id}", id)
@@ -59,7 +58,7 @@ public class ArquivoService {
 								// .exchangeStrategies(exchangeStrategies)
 								.block();
 
-		String imageBase64 = Base64.getEncoder().encodeToString(imageBytes);
+		// String imageBase64 = Base64.getEncoder().encodeToString(imageBytes);
 
 		return ResponseEntity.ok()
 				.contentType(MediaType.parseMediaType(id))
@@ -72,7 +71,6 @@ public class ArquivoService {
 								.uri("arquivo/view/{filename}", "teste.png")
 								.retrieve()
 								.bodyToMono(String.class)
-								// .exchangeStrategies(exchangeStrategies)
 								.block();
 		return url;
 	}

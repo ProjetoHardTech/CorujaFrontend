@@ -1,12 +1,13 @@
-<div class="feed">
+<div class="feed" th:each="post : ${posts}">
     <div class="head">
         <div class="user">
             <div class="profile-photo">
                 <img src="\images\coruja_images\icons\48x48\com\Ativo 60.png" alt="">
             </div>
             <div class="info">
-                <h3>HardTech</h3>
-                <small>Paulo Afonso, 1 MINUTO ATRÁS</small>
+                <h3 th:text="${post.nome}">HardTech</h3>
+                <strong th:text="${post.titulo}">Comentário</strong>
+                <small th:text="${post.data_cadastro}" class="text-muted">December 25 at 3:18pm</small>
             </div>
         </div>
         <span class="edit">
@@ -14,20 +15,39 @@
         </span>
     </div>
     <div class="photo">
-        <img src="\images\info4.png" alt="">
+        <!-- <img src="\images\info4.png" alt=""> -->
+        <!-- <img th:src="${post.path_arquivo}" class="thumbnail img-responsive" style="width:50%; height:auto;" alt="" /> -->
+        <img th:src="${post.path_arquivo}" alt="" />
     </div>
     <div class="action-buttons">
         <div class="interaction-buttons">
             <span><i class='bx bxs-upvote bx-flip-horizontal' ></i></span>
             <span><i class='bx bxs-upvote bx-rotate-180' ></i></span>
             <span><i class='bx bx-comment-error' ></i></span>
+            <!-- <a href="/" class="menu-item" data-toggle="modal" data-target=".bs-example-modal-lg">
+                <span><i class='bx bx-comment-error' ></i></span>
+            </a> -->
         </div>
     </div>
     <div class="number-liked">
         <p>15 <b>up</b> e 1 <b>down</b></p>
     </div>
-    <div class="captions">
-        <p><b>HardTech</b> A turma mais linda <span class="harsh-tag">#ganhador</span></p>
+    <form class="form_comentario" id="form_add_comentario" method="post" action="/add_comentario">
+        <input hidden id="id_post" name="id_post" type="text"  th:value="${post.id}" />
+        <input id="comentario" name="comentario" type="text" />
+        <button class="btn_comentario" type="submit">
+            <i class="bx bx-comment"></i>
+        </button>
+    </form>
+    
+    <!-- <button name="meusBotoes" class="btn btn-dark btn-sm mr5" th:value="${post.id}" data-toggle="modal" data-target=".bs-example-modal-lg">Comente</button> -->
+    <div class="captions" th:each="cmt : ${post.comentarios}">
+        <p>
+            <b th:text="${cmt.nome_usuario}">HardTech</b> 
+            <small th:text=" ' - ' + ${cmt.data_cadastro}"></small>
+            <br/>
+            <span th:text="${cmt.comentario}" class="harsh-tag">#ganhador</span>
+        </p>
     </div>
     <div class="comnents text-muted">Olhar os comentários</div>
 </div> 
