@@ -3045,7 +3045,7 @@ btn btn-info btn-block{
 
 body.signin {
     background-color: #221328;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .panel-body{
@@ -3064,10 +3064,10 @@ body.signin {
 }
 
 .btn-newconta{
-    width: 100%;
-    padding: 16px 2px;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin: 25px;
     border: none;
     border-radius: 8px;

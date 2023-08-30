@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
 
 :root{
-    --color-white: hsl(252,30%, 100%);
-    --color-light: hsl(252,30%, 95%);
-    --color-grey: hsl(252, 15%, 65%);
-    --color-primary: hsl(36, 89%, 48%);
+    --primary-color-hue: 252;
+    --dark-color-lightness: 17%;
+    --light-color-lightness: 95%;
+    --white-color-lightness: 100%;
+
+    --color-white: hsl(252,30%, var(--white-color-lightness));
+    --color-light: hsl(252,30%, var(--light-color-lightness));
+    --color-grey: hsl(var(--primary-color-hue), 15%, 65%);
+    --color-primary: hsl(var(--primary-color-hue), 89%, 48%);
     --color-dange: hsl(255, 70%, 46%);
     --color-danger: hsl(0, 67%, 45%);
-    --color-dark: hsl(252, 30%, 17%);
+    --color-dark: hsl(252, 30%, var(--dark-color-lightness));
     --color-black: hsl(252, 30%, 10%);
 
     --border-radius: 2rem;
@@ -40,7 +45,7 @@ body{
     overflow-x: hidden;
 }
 
-.container{
+    .container{
     width: 80%;
     margin: 0 auto;
 }
@@ -89,6 +94,14 @@ nav{
     top: 0;
     z-index: 10;
 }
+.box-img-header {
+    height: 100%;
+}
+
+.img-logo {
+    height: 100%;
+}
+
 nav .container{
     display: flex;
     align-items: center;
@@ -255,6 +268,112 @@ main .container .left .profile{
     display: block;
 }
 
+
+.middle .wrapper{
+    background: #fff;
+    padding: 25px 25px 15px 25px;
+    width: 100%;
+    border-radius: var(--card-border-radius);
+}
+.middle .input-box{
+    padding-top: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.middle .twee-area{
+    position: relative;
+    min-width: 130px;
+}
+.middle .twee-area .placeholder{
+    position: absolute;
+    margin-top: -3px;
+    font-size: 22px;
+    color: #98a5b1;
+    pointer-events: none;
+}
+.middle .twee-area .input{
+    outline: none;
+    font: 17px;
+    word-wrap: break-word;
+}
+.middle .twee-area .readonly{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.middle .input-box .privacy{
+    color: #1da1f2;
+    margin: 45px 0 15px 0;
+    padding: 7px 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50px;
+    transition: background 0.2s ease ;
+}
+.middle .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+
+.middle .bottom .icons{
+    display: inline-flex;
+}
+.icons li{
+    color: #1da1f2;
+    list-style: none;
+    height: 38px;
+    width: 38px;
+    margin: 0 2px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+.middle .input-box .privacy:hover,
+.icons li:hover{
+    background-color: #e7f5fe;
+}
+.middle .input-box .privacy i{
+    font-size: 18px;
+}
+
+.middle .input-box .privacy span{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 7px;
+}
+.bottom .content{
+    display: flex;
+    align-items: center;
+}
+.content .counter{
+    display: none;
+    margin-right: 15px;
+    padding-right: 15px;
+    color: #333;
+    border-right: 1px solid #aab8c3;
+}
+
+.content button{
+    padding: 9px 18px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    background: #1da1f2;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+}
 .middle .create-post{
     width: 100%;
     display: flex;
@@ -309,8 +428,12 @@ main .container .left .profile{
     border-radius: var(--card-border-radius);
     overflow: hidden;
     margin: 0.7rem 0;
-    height: 500px;
-    width: 750px;
+   
+}
+.middle .feed .photo img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 .middle .feed .action-buttons{
     display: flex;
@@ -398,6 +521,8 @@ uma animação igual ao da notificação para sobressair na tela
     display: grid;
     place-items: center;
     font-size: 0.9rem;
+    display: none;
+   
 }
 
 .customize-theme .card{
@@ -405,6 +530,7 @@ uma animação igual ao da notificação para sobressair na tela
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 
 .customize-theme .font-size{
@@ -583,6 +709,9 @@ uma animação igual ao da notificação para sobressair na tela
     .left .btn{
         display: none;
     }
+    .customize-theme .card{
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 844px){
@@ -617,6 +746,7 @@ uma animação igual ao da notificação para sobressair na tela
         display: none;
     }
 
+<<<<<<< HEAD
 }
 
 .form_comentario {
@@ -663,3 +793,10 @@ uma animação igual ao da notificação para sobressair na tela
     border-radius: 2px;
   }
   */
+=======
+    .customize-theme .card{
+        width: 92vw;
+    }
+
+}
+>>>>>>> a3229e95c689f84f57e309b53b9ddea3058b6348
