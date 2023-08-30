@@ -24,6 +24,10 @@ body {
     margin-bottom: 20px;
 }
 
+.text-center-titulo{
+    font-size: 18px;
+}
+
 .input-group-a {
     margin-bottom: 15px;
 }
@@ -67,6 +71,7 @@ body {
 
 @media (max-width: 523px) {
     .btn-newconta {
+        font-family: 'Poppins', sans-serif;
         border: none;
         color: #fff;
         padding: 16px 10px;
