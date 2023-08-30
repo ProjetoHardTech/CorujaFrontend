@@ -212,8 +212,9 @@ section {
 }
 
 .img-profile {
-    max-width: 100%;
+    width: 600px;
     height: auto;
+
 }
 
 h1 {
@@ -431,6 +432,10 @@ footer>div {
 
     .first-section p {
         font-size: 16px;
+    }
+
+    .img-profile {
+        width: 100%;
     }
 
 }
