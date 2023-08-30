@@ -31,9 +31,11 @@ header {
     flex-wrap: wrap;
     padding: 15px 15px;
     background-color: #221328;
-    height: 6vh;
-
-}
+    height: 5vh;
+    position: fixed;
+    width: 100%;
+        
+    }
 
 i#burguer {
     display: none;
@@ -80,6 +82,14 @@ ul {
 
 }
 
+.box-btn-actions-menu{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
 
 @media (max-width: 930px) {
     i#burguer {
@@ -108,7 +118,7 @@ ul {
         z-index: 2;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        width: 40vw;
+        width: 55vw;
         height: 94vh;
         background-color: #221328;
         flex-direction: column;
@@ -121,6 +131,8 @@ ul {
         padding-top: 25px;
         padding-left: 30px;
     }
+  
+    
 }
 
 nav {
@@ -188,7 +200,8 @@ section {
     justify-content: center;
     gap: 6rem;
     align-items: center;
-    min-height: 450px;
+    min-height: 400px;
+    margin-top: 70px;
 }
 
 .first-section>div {
@@ -199,8 +212,9 @@ section {
 }
 
 .img-profile {
-    max-width: 100%;
+    width: 600px;
     height: auto;
+
 }
 
 h1 {
@@ -289,7 +303,7 @@ strong {
     border-radius: 8px;
     width: 100%;
     max-width: 250px;
-    min-height: 300px;
+    max-height: 400px;
 
 
 }
@@ -418,6 +432,10 @@ footer>div {
 
     .first-section p {
         font-size: 16px;
+    }
+
+    .img-profile {
+        width: 100%;
     }
 
 }

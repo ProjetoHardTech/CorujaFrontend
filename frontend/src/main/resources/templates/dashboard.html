@@ -24,8 +24,6 @@
     </head>
 
     <body>
-		
-		<!-- <div th:replace="/comum/header"></div> -->
         <div th:replace="~{/comum/header}"></div>
         
         <section>
@@ -52,9 +50,30 @@
                     
                     <div class="contentpanel">
                         <div class="row">
-                            <!-- Colocar aqui os botoes de filtro e/ou ordenacao -->
+                            <div class="col-sm-12">
+                                <div class="media-options">
+                                    <div class="pull-left">
+                                        <div class="btn-toolbar">
+                                            <div class="btn-group">
+                                                <a id="selectAll" class="btn btn-default btn-sm" type="button">Select All</a>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-default btn-sm" type="button">
+                                                    <i style="font-size: 32px;" class="fa fa-bars mr5"></i>
+                                                </button>
+                                                <button class="btn btn-default btn-sm disabled" type="button">
+                                                    <i style="font-size: 32px;" class="fa fa-th-large mr5"></i>
+                                                </button>
+                                            </div>
+                                            <div class="btn-group">
+                                                <button class="btn btn-default btn-sm disabled" type="button"><i class="fa fa-pencil mr5"></i> Edit</button>
+                                                <button class="btn btn-default btn-sm disabled" type="button"><i class="fa fa-trash-o mr5"></i> Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- media-options -->
+                            </div>
                         </div>
-                        
 
                         <div class="row" th:each="post : ${posts}">
                             <div class="col-sm-12">
@@ -68,23 +87,11 @@
                                             <strong th:text="${post.titulo}">Comentário</strong>
                                             <br/>
                                             <small th:text="${post.data_cadastro}" class="text-muted">December 25 at 3:18pm</small>
-                                            
                                             <div class="media blog-media">
                                                 <!-- <a th:href="@{post.path_arquivo}" data-rel="prettyPhoto" class="img-single"> -->
                                                     <img th:src="${post.path_arquivo}" class="thumbnail img-responsive" style="width:50%; height:auto;" alt="" />
                                                 <!-- </a> -->
                                                 <button name="meusBotoes" class="btn btn-dark btn-sm mr5" th:value="${post.id}" data-toggle="modal" data-target=".bs-example-modal-lg">Comente</button>
-                                                <!-- <div class="media-body">
-                                                    <form id="form_comentario_add" method="post" action="/add_comentario" enctype="multipart/form-data">
-                                                        <div class="form-group">
-                                                            <div class="col-sm-5">
-                                                                <input id="id_post_x"    nome="id_post_x"    type="hidden" th:value="${post.id}" />
-                                                                <input id="comentario_x" nome="comentario_x" type="text"   class="form-control" placeholder="Comentários" required />
-                                                            </div>
-                                                            <button type="submit" class="btn btn-dark btn-sm mr5">Comentar</button>
-                                                        </div>
-                                                    </form>
-                                                </div> -->
                                                 <br/>
                                                 <br/>
                                                 <div class="media-body" th:each="cmt : ${post.comentarios}">
@@ -95,27 +102,9 @@
                                                     <p th:text="${cmt.comentario}">Lorem ipsum dolor sit amet</p>
                                                 </div>
                                             </div>
-                                            <!-- Envie seu comentario
-                                            <div class="media">
-                                                <a class="pull-left" href="#">
-                                                    <img class="media-object img-circle" src="images/photos/user4.png" alt="" />
-                                                </a>
-                                                <div class="media-body">
-                                                    <div class="col-sm-6 ">
-                                                        <form classe="form-inline">
-                                                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                                                            <button type="submit" class="btn btn-primary mr5">Enviar</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div> 
-                                            -->
                                         </div>
                                     </div><!-- media -->
-
-                                    
                                 </div><!-- activity-list -->
-                                
                             </div><!-- col-sm-9 -->
                         </div><!-- row -->                          
                     </div><!-- contentpanel -->

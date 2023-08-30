@@ -396,7 +396,19 @@ main .container .left .profile{
     background: transparent;
     color: var(--color-dark);
     margin-right: 1rem;
+    font-size: 1.5rem;
+    background: var(--color-white);
+}
 
+.middle .create-post textarea{
+    justify-content: start;
+    width: 100%;
+    padding-left: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    background: var(--color-white);
 }
 
 .middle .feeds .feed{
@@ -738,8 +750,57 @@ uma animação igual ao da notificação para sobressair na tela
         display: none;
     }
 
+<<<<<<< HEAD
+}
+
+.form_comentario {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.form_comentario input{
+    background: var(--color-light);
+    width: 40vw;
+    font-size: 0.7rem;
+    color: var(--color-dark);
+    padding: var(--search-padding);
+}
+
+.form_comentario button{
+    background-color: --color-grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 2px;
+}
+
+
+/* .input_comentario {
+    background: var(--color-light);
+    width: 40vw;
+    font-size: 0.7rem;
+    color: var(--color-dark);
+    padding: var(--search-padding);
+} */
+
+/* 
+.btn_comentario {
+    width: 50px;
+    height: 50px;
+    background-color: --color-grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 2px;
+  }
+  */
+=======
     .customize-theme .card{
         width: 92vw;
     }
 
 }
+>>>>>>> a3229e95c689f84f57e309b53b9ddea3058b6348
