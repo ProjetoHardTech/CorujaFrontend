@@ -367,12 +367,6 @@ a:focus {
     background-color: #ffffff00;
 }
 
-.imagem{
-    width: 30%;
-}
-
-
-
 /***** 4.1 LEFT PANEL STYLES *****/
 
 .leftpanel {
@@ -3081,7 +3075,6 @@ body.signin {
 .panel-signin .panel-body,
 .panel-signup .panel-body {
     padding: 40px;
-    width: 80%;
 }
 
 #num_one{
