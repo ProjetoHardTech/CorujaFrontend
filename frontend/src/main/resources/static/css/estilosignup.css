@@ -1,14 +1,25 @@
 .btn-cadastro{
-    background-color: #f36743;
-   color: white;
-   font-weight: 800;
-    letter-spacing: 2.5px;
-    box-shadow: 0 0 10px #f36743;
-  -webkit-box-shadow: 0 0 10px #f36743;
-    margin-left: 410px;
-    border-radius: 10px;
-    padding: 10px;
+    padding: 16px 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #ffffff;
+    background: #f36743;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #a5422a;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
 
+.btn-cadastro:hover, .active {
+    color:#ffffff!important;
 }
 .btn-criar{
     content: "\f0a9";
@@ -34,29 +45,43 @@
 }
 .letras-miudas{
     color: #ffffff;
-    font-weight: 800;
+    font-weight: 400;
     text-align: center;
     font-size: 15px;
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 .sub-titulo{
     color: #ffffff;
     font-weight: 800;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 .caixa-texto{
     border: 0;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 2.5px;
-    width: 350px;
-    padding-left: 30px;
+    width: 100%;
+    padding-left: 8px;
     height: 40px;
     font-size: 14px;
    
 }
+
+.caixa-texto-2{
+    border: 0;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 2.5px;
+    width: 100%;
+    padding-left: 8px;
+    height: 40px;
+    font-size: 14px;
+   
+}
+
 .caixa-texto2{
     border: 0;
     -moz-border-radius: 50px;
@@ -83,327 +108,8 @@
     background: #fff;
 }
 .largura{
-    width: 900px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-@media screen and (max-width: 991px) {
-    
-        .imagem
-        { 
-         width: 110%;
-         margin-bottom: 5px;       
-         margin-left: -20px;
-         border: 0px;
-     }
-     .caixa-texto{
-        width:150%;
-        padding: 45px;
-        font-size: 2em;
-        margin-left: -170px;
-        border-radius: 2.5px;
-     }
-     .caixa-texto2{
-        width:150%;
-        padding: 45px;
-        font-size: 2em;
-        margin-left: -170px;
-        border-radius: 2.5px;
-
-    }
-    .btn-cadastro{
-        padding: 27px;
-        font-size: 2em;
-        margin-left: 270px;
-        
-        
-    }
-    .btn-criar{
-        padding: 19px;
-        font-size: 25px;
-       margin-right: -190px;
-       margin-bottom: 40px;
-    }
-
-    .letras-miudas{
-        font-size: 30px;
-    }
-    .sub-titulo{
-        margin-top: -30px;
-        font-size: 50px;
-    }
-    
-    .texto{
-        font-size: 19px;
-        margin-top: -720px;
-    
-    }
-
-}
-     
-@media screen and (max-width: 768px){
-    
-
-    .imagem{
-    
-        width: 110%;
-        margin-bottom: 5px;       
-        margin-left: -40px;
-        border: 0px;
-}
-
-.caixa-texto{
-width:150%;
-padding: 55px;
-font-size: 3em;
-margin-left: -170px;
-border-radius: 2.5px;
-}
-.caixa-texto2{
-width:150%;
-padding: 55px;
-font-size: 3em;
-margin-left: -170px;
-border-radius: 2.5px;
-
-}
-.btn-cadastro{
-    padding: 34px;
-    font-size: 2.4em;
-    margin-left: 150px;
-    
-}
-.btn-criar{
-    padding: 23px;
-    font-size: 27px;
-   margin-right: -210px;
-   margin-bottom: 40px;
-}
-
-.letras-miudas{
-font-size: 40px;
-}
-.sub-titulo{
-margin-top: -30px;
-font-size: 60px;
-}
-.texto{
-    font-size: 20.5px;
-    margin-top: -24px;
-    margin-left: -164px;
-    }
-   .ckbox label:before{
-    width: 25px;
-    height: 25px;
-    margin-left: -120px;
-   }
-}
-@media screen and (max-width: 640px)  {
-
-    .caixa-texto{
-        width:120%;
-        padding: 46px;
-        font-size: 2.5em;
-        margin-left: -35px;
-    }
-    .caixa-texto2{
-        width:120%;
-        padding: 46px;
-        font-size: 2.5em;
-        margin-left: -35px;
-    }
-    .btn-cadastro{
-        padding-right: 33px;
-        padding-left: 33px;
-        padding-bottom: 40px;
-        padding-top: 40px;
-        font-size: 2.3em;
-        margin-left: 60px;
-    }
-    .btn-criar{
-        padding: 19px;
-        font-size: 26px;
-       margin-bottom: 40px;
-       margin-right: -80px;
-    }
-
-    .texto{
-        font-size: 23px;
-        margin-top: -22px;
-        margin-left: 20px;
-    }
-   
-   .letras-miudas{
-    font-size: 30px;
-    }
-   .sub-titulo{
-    font-size: 55px;
-    margin-top: -30px;
-
-   }
-    
-
-}
-
-@media screen and (max-width: 480px){
-    
-
-    .imagem{
-        width: 120%;
-        margin-bottom: -30px;
-        margin-left: -28px;
-    }
-    .caixa-texto{
-        width:135%;
-        padding: 64px;
-        font-size: 3.3em;
-        margin-left: -35px;
-    }
-    .caixa-texto2{
-        width:135%;
-        padding: 64px;
-        font-size: 3.3em;
-        margin-left: -35px;
-    }
-    .btn-cadastro{
-        padding-top: 38px;
-        padding-bottom: 38px;
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 2.6em;
-       margin-left: 100px;
-       
-    }
-    .btn-criar{
-        padding: 23px;
-        font-size: 34px;
-       margin-bottom: 50px;
-       margin-right: -200px;
-    }
-    .letras-miudas{
-        font-size: 40px;
-        margin-left: 150px;
-        }
-  .sub-titulo{
-        font-size: 65px;
-        margin-top: -30px;
-        margin-left: 200px;
-    
-       }
-    .texto{
-        font-size: 25px;
-        margin-top: -2px;
-        margin-left: -1px;
-    }
-   
-   
-    }
-    @media screen and (max-width: 360px) {
-            
-        .caixa-texto{
-            width:140%;
-            padding: 80px;
-            font-size: 4em;
-            margin-left: -35px;
-        }
-        .caixa-texto2{
-            width:140%;
-            padding: 80px;
-            font-size: 4em;
-            margin-left: -35px;
-        }
-        .btn-cadastro{
-            padding-top: 53px;
-            padding-bottom: 53px;
-            padding-left: 27px;
-            padding-right: 27px;
-            font-size:2.7em;
-           margin-left: 20px;
-           
-        }
-        .btn-criar{
-            padding: 38px;
-            font-size: 40px;
-           margin-bottom: 50px;
-           margin-top: -50px;
-           margin-right: -690px;
-           border-radius: 20px;
-        }
-    
-        .texto{
-            font-size: 30px;
-            margin-top: 0px;
-            margin-left: -350px;
-        }
-       
-       .letras-miudas{
-        font-size: 50px;
-       }
-       .sub-titulo{
-        font-size: 69px;
-       }
-        
-    }
-    
-
- @media screen and (max-width: 320px){
-    
-    .largura{
-        width: 1300px;
-    }
-    .imagem{
-                width: 130%;
-                height: 600px;
-                margin-bottom: -30px;
-                margin-left: -28px;
-            }
-            .caixa-texto{
-                width:150%;
-                padding: 130px;
-                font-size: 5em;
-                margin-left: -20px;
-            }
-            .caixa-texto2{
-                width:150%;
-                padding: 130px;
-                font-size: 5em;
-                margin-left: -20px;
-            }
-            .btn-cadastro{
-                padding-top: 54px;
-                padding-bottom: 54px;
-                padding-left: 20px;
-                padding-right: 20px;
-                font-size: 4em;
-               margin-left: 0px;
-               
-            }
-            .btn-criar{
-                padding-bottom: 45px;
-                padding-top: 45px;
-                padding-left: 30px;
-                padding-right: 40px;
-                font-size: 55px;
-               margin-bottom: 100px;
-               margin-top: 33px;
-               margin-right: -790px;
-               border-radius: 20px;
-            }
-        
-            
-         
-           .letras-miudas{
-            font-size: 50px;
-           }
-           .sub-titulo{
-            font-size: 69px;
-           }
-            }
-        
-
-        
-        
-        
-       
-        
-        
-        

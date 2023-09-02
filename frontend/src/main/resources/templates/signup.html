@@ -32,9 +32,7 @@
                     
                     <div class="panel-body" style="width: 800px">
                         
-                        <div class="logo text-center imagem">
-                            <img src="images/coruja_images/logos/400X160/Com Borda/Ativo 9.png" class="imagem">
-                        </div>
+                        <img src="images/coruja_images/logos/400X160/Com Borda/Ativo 9.png" class="imagem">
                         
                         <div th:if="${possui_erro}" class="alert alert-danger">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -54,9 +52,8 @@
                             </font>
                         </font>
 
-                        <div class="mb30"></div>
-
-                        <form action="/process_add" method="post">
+                        <div id="form-boxs">
+                        <form action="/process_add" method="post" >
                             <div class="row">
                                 <div class="col-sm-12 col-lg-6 col-md-6">
                                     <div class="input mb15">
@@ -77,7 +74,7 @@
                                 <div class="col-sm-12 col-xs-12">
                                     <div class="input mb15">
                                         <font face="Segoe UI">
-                                            <input id="email" name="email" type="email" class="caixa-texto2" placeholder="E-mail" required>
+                                            <input id="email" name="email" type="email"  class="caixa-texto-2" placeholder="E-mail" required>
                                         </font>
                                     </div><!-- input-group -->
                                 </div>
@@ -122,6 +119,8 @@
                                 </button>
                             </div>
                         </form>
+                    </div>
+
                     </div><!-- panel-body -->
                         <div class="largura">
                             <div  style="background-color:#221328">

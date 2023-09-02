@@ -367,8 +367,6 @@ a:focus {
     background-color: #ffffff00;
 }
 
-
-
 /***** 4.1 LEFT PANEL STYLES *****/
 
 .leftpanel {
@@ -1138,7 +1136,7 @@ a:focus {
 .esqueci-senha{
     color: #f36743;
     text-align: center;
-    font-size: 16px;
+    font-size: 12px;
     text-decoration: underline;
     padding-bottom: 10px;
 }
@@ -3018,7 +3016,6 @@ body.signin {
 }
 
 .btn-newconta{
-    width: 100%;
     padding: 16px 2px;
     padding-left: 10px;
     padding-right: 10px;
@@ -3038,7 +3035,7 @@ body.signin {
 }
 
 .btn-newconta::before{
-    content: "Ainda não possui conta? Crie sua conta agora!";
+    content: "Crie sua conta agora!";
 }
 
 .btn-newconta:hover, .active {
@@ -3049,12 +3046,12 @@ body.signin {
     color: #ffffff;
     font-weight: 800;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .text-center{
     color: #ffffff;
-    font-weight: 800;
+    font-weight: 400;
     text-align: center;
     font-size: 15px;
     margin-top: 10px;
@@ -3078,6 +3075,10 @@ body.signin {
 .panel-signin .panel-body,
 .panel-signup .panel-body {
     padding: 40px;
+}
+
+#num_one{
+    padding-bottom: 5px;
 }
 
 .panel-body{
