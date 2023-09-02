@@ -719,8 +719,77 @@ uma animação igual ao da notificação para sobressair na tela
 }
 
 @media screen and (max-width: 844px){
+
+    .left .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        background: var(--color-white);
+        z-index: 5;
+    }
+
+    .left .sidebar .menu-item.active::before {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background: var(--color-primary);
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .bx-home:before {
+        margin-left: -75%;
+        content: "\eb12";
+    }
+
+    .bx-bell:before {
+        margin-left: -75%;
+        content: "\e9d2";
+    }
+
+    .left .sidebar i .notification-count {
+        display: none;
+        background: var(--color-danger);
+        color: white;
+        font-size: 0.7rem;
+        width: fit-content;
+        border-radius: 0.8rem;
+        padding: 0.1rem 0.4rem;
+        position: absolute;
+        top: -0.2rem;
+        right: -0.3rem;
+    }
+
+    .bx-analyse:before {
+        margin-left: -75%;
+        content: "\e9ab";
+    }
+
+    .bx-user-check:before {
+        margin-left: -75%;
+        content: "\ec64";
+    }
+
+    .bx-cog:before {
+        margin-left: -75%;
+        content: "\ea6e";
+    }
+
+    .bx-palette:before {
+        margin-left: -75%;
+        content: "\eba9";
+    }
+
     main .container{
-        grid-template-columns: 0 auto 5rem;
+        width: 100%;
+        grid-template-columns: 0rem auto 0rem;
         gap: 0;
     }
     main .container .left{
@@ -730,17 +799,19 @@ uma animação igual ao da notificação para sobressair na tela
         right: 0;
     }
 
-    .left .notification-popup{
+    /* .left .notification-popup{
         position: absolute;
         left: -20rem;
         width: 20rem;
-    }
-    .left .notification-popup::before{
-        display: absolute;
+    } */
+
+
+    /* .left .notification-popup::before{
+        display: none;
         top: 1.3rem;
         left: calc(20rem - 0.6rem);
         display: block;
-    }
+    } */
 
     main .container .middle{
         grid-column: 1/3;
@@ -750,7 +821,6 @@ uma animação igual ao da notificação para sobressair na tela
         display: none;
     }
 
-<<<<<<< HEAD
 }
 
 .form_comentario {
@@ -797,10 +867,6 @@ uma animação igual ao da notificação para sobressair na tela
     border-radius: 2px;
   }
   */
-=======
     .customize-theme .card{
         width: 92vw;
     }
-
-}
->>>>>>> a3229e95c689f84f57e309b53b9ddea3058b6348
