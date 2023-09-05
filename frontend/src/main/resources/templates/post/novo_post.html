@@ -11,22 +11,18 @@
                 
                 <div class="middle">
                         <form class="create-post" id="basicForm" method="post" action="/upload" enctype="multipart/form-data">
-                            <div class="head">
-                                <h4 class="panel-title">Adicionar Post</h4>
-                                <p>Crie um novo post.</p>
-                            
-                                <label class="col-sm-2 control-label">Título <span class="asterisk">*</span></label>
-                                <input type="text" id="titulo" name="titulo" placeholder="Informe um Título..." required />
-                                <label class="col-sm-2 control-label">Escolha o arquivo <span class="asterisk">*</span></label>
+                            <div class="head-newpost">
+                                <h4 class="panel-title">Criar Relato</h4>
+
+                                <input style= "padding: 3px; margin-bottom: 5%;"
+                                type="text" id="titulo" name="titulo" placeholder="Título do seu relato..." required />
                                 <br/>
                                 <input id="file" name="file" type="file" accept="image/png, image/jpeg, image/jpg, image/gif">
                                 <br/>
-                                <label class="col-sm-2 control-label">Comentário <span class="asterisk">*</span></label>
                                 <br/>
-                                <textarea id="comentario" name="comentario" rows="5"  placeholder="Digite o seu comentário..." required></textarea>
-                                <label class="col-sm-2 control-label">Tags</label>
+                                <textarea id="comentario" name="comentario" rows="5"  placeholder="Primeiro comentário..."></textarea>
                                 <br/>
-                                <input type="text" name="tags" id="tags" />
+                                <input type="text" name="tags" id="tags" rows="2" placeholder="#grave #urgente #problema"/>
                                 <br/>
                                 <br/>
                                 <button class="btn btn-primary mr5">Criar</button>
