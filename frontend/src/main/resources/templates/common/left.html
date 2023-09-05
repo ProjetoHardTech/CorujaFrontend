@@ -57,7 +57,7 @@
                 </div>
             </a>
             <a href="/novo_post" class="menu-item" th:classappend="${currentPage == 'novo_post'} ? 'active' : ''">
-                <span><i class='bx bx-analyse' ></i></span><h3>Upload</h3> 
+                <span><i class='bx bx-analyse' ></i></span><h3>Relatar</h3> 
             </a>
             <a class="menu-item">
                 <span><i class='bx bx-user-check'></i></span><h3>Perfil</h3>
@@ -122,5 +122,5 @@
                 </div>
             </a>
         </div>
-        <label for="create-post" class="btn btn-primary">Criar Relato</label>
+        <a href="/novo_post" class="btn btn-primary">Criar Relato</a>
 </div>

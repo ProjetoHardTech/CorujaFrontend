@@ -46,6 +46,10 @@ body{
     overflow-x: hidden;
 }
 
+.head-newpost{
+
+}
+
     .container{
     width: 80%;
     margin: 0 auto;
@@ -378,11 +382,19 @@ main .container .left .profile{
     opacity: 1;
     pointer-events: auto;
 }
+
+.panel-title{
+    font-size: 150%;
+    text-align: center;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
 .middle .create-post{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 0.03rem;
     background: var(--color-white);
     padding: 0.4rem var(--card-padding);
@@ -390,24 +402,38 @@ main .container .left .profile{
 }
 
 .middle .create-post input[type="text"]{
-    justify-content: start;
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 0rem;
     background: transparent;
     color: var(--color-dark);
-    margin-right: 1rem;
-    font-size: 1.5rem;
+    margin-right: 0rem;
+    font-weight: 500;
+    font-size: 16px;
     background: var(--color-white);
 }
+
+
+input[type="file"] {
+
+    background: var(--color-primary);
+    color: white;
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+  }
 
 .middle .create-post textarea{
     justify-content: start;
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 0rem;
     background: transparent;
     color: var(--color-dark);
     margin-right: 1rem;
-    font-size: 1.5rem;
+    font-size: 16px;
     background: var(--color-white);
 }
 
@@ -506,6 +532,12 @@ padding-bottom: 0.5rem;
     display: flex;
     gap: 0.5rem;
 }
+
+.head-newpost{
+    align-items: center;
+}
+
+
 
 
 /*    TEMAS     
