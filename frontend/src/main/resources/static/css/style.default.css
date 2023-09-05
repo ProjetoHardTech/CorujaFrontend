@@ -3431,13 +3431,13 @@ body.signin {
     .ckbox label:before {
         width: 22px;
         height: 22px;
-        margin-left: 1px;
         margin-top: -4px;
 
     }
-    .texto{
+    .texto{   
         margin-top: -10px;
         margin-left: 7px;
+        font-size: 19px;
     }
 
    
