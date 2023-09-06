@@ -148,11 +148,7 @@
             font-size: 50px;
         }
         
-        .texto{   
-            margin-top: -10px;
-            margin-left: 7px;
-            font-size: 19px;
-        }
+     
         
     
     }
@@ -204,11 +200,7 @@
     font-size: 60px;
     }
     
-       .ckbox label:before{
-        width: 25px;
-        height: 25px;
-        margin-left: -120px;
-       }
+       
     }
     @media   (max-width: 640px)  {
     
@@ -264,7 +256,7 @@
         .imagem{
             width: 130%;
             margin-bottom: -30px;
-            margin-left: -48px;
+            margin-left: -58px;
         }
         .caixa-texto{
             width:120%;
@@ -296,12 +288,12 @@
         }
         .letras-miudas{
             font-size: 16px;
-            margin-left: 40px;
+            margin-left: -30px;
             }
       .sub-titulo{
             font-size: 20px;
             margin-top: 0px;
-            margin-left: 30px;
+            margin-left: -30px;
         
            }  
 
