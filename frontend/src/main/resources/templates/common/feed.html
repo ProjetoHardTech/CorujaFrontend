@@ -7,7 +7,7 @@
             <div class="info">
                 <h3 th:text="${post.nome}">HardTech</h3>
                 <strong th:text="${post.titulo}">Comentário</strong>
-                <small th:text="${post.data_cadastro}" class="text-muted">December 25 at 3:18pm</small>
+                <small th:text="${#dates.format(post.data_cadastro, 'dd-MM-yyyy HH:mm')}" class="text-muted">December 25 at 3:18pm</small>
             </div>
         </div>
         <span class="edit">
@@ -44,7 +44,7 @@
     <div class="captions" th:each="cmt : ${post.comentarios}">
         <p>
             <b th:text="${cmt.nome_usuario}">HardTech</b> 
-            <small th:text=" ' - ' + ${cmt.data_cadastro}"></small>
+            <small th:text=" ' - ' + ${#dates.format(cmt.data_cadastro, 'dd-MM-yyyy HH:mm')}"></small>
             <br/>
             <span th:text="${cmt.comentario}" class="harsh-tag">#ganhador</span>
         </p>
