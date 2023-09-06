@@ -3435,7 +3435,7 @@ body.signin {
 
     }
     .texto{   
-        margin-top: -10px;
+        margin-top: -30px;
         margin-left: 7px;
         font-size: 19px;
     }
@@ -3462,8 +3462,9 @@ body.signin {
     .texto{
         font-size: 20.5px;
         margin-top: -10px;
-        margin-left: 20px;
+        margin-left: 40px;
     }
+    
     
     .headerwrapper .header-left,
     .headerwrapper .header-right {
@@ -3526,7 +3527,11 @@ body.signin {
 }
 
 @media screen and (max-width: 640px) {
-
+    .texto{
+        font-size: 23px;
+        margin-top: -32px;
+        margin-left: 20px;
+    }
     /* media manager */
     .media-options div.pull-left,
     .media-options div.pull-right {
@@ -3600,16 +3605,16 @@ body.signin {
         margin-right: -62px;
     }
     .ckbox label:before {
-        width: 30px;
-        height: 30px;
-        margin-left: 0px;
-        margin-top: -4px;
+        width: 15px;
+        height: 15px;
+        margin-left: 3px;
+        margin-top: 4px;
+        
 
     }
     .texto{
-        margin-top: -5px;
-        margin-left: 22px;
-        font-size: 25px;
+        font-size: 12px;
+        margin-left: 0px;
     }
     
     .headerwrapper .header-right .btn-group-notification .dropdown-menu:after {

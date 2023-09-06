@@ -102,7 +102,7 @@
         width: 1200px;
     }
     
-    @media screen and (max-width: 991px) {
+    @media  (max-width: 991px) {
         
             .imagem
             { 
@@ -148,14 +148,14 @@
             font-size: 50px;
         }
         
-        
+     
         
     
     }
          
-    @media screen and (max-width: 768px){
-        
-    
+    @media   (max-width: 768px){
+      
+     
         .imagem{
         
             width: 110%;
@@ -199,19 +199,12 @@
     margin-top: -30px;
     font-size: 60px;
     }
-    .texto{
-        font-size: 20.5px;
-        margin-top: -24px;
-        margin-left: -164px;
-        }
-       .ckbox label:before{
-        width: 25px;
-        height: 25px;
-        margin-left: -120px;
-       }
-    }
-    @media screen and (max-width: 640px)  {
     
+       
+    }
+    @media   (max-width: 640px)  {
+    
+        
         .caixa-texto{
             width:115%;
             padding: 46px;
@@ -238,11 +231,6 @@
            margin-right: -80px;
         }
     
-        .texto{
-            font-size: 23px;
-            margin-top: -22px;
-            margin-left: 20px;
-        }
        
        .letras-miudas{
         font-size: 30px;
@@ -259,64 +247,64 @@
     
     }
     
-    @media screen and (max-width: 480px){
+    @media (max-width: 480px){
         
-    
+        .panel-body {
+            max-width: 380px;
+        }
+        
         .imagem{
-            width: 120%;
+            width: 130%;
             margin-bottom: -30px;
-            margin-left: -28px;
+            margin-left: -58px;
         }
         .caixa-texto{
-            width:130%;
-            padding: 64px;
-            font-size: 3.3em;
-            margin-left: -35px;
+            width:120%;
+            padding: 14px;
+            font-size: 1em;
+            margin-left: -45px;
         }
         .caixa-texto2{
-            width:130%;
-            padding: 64px;
-            font-size: 3.3em;
-            margin-left: -35px;
+            width:120%;
+            padding: 14px;
+            font-size: 1em;
+            margin-left: -45px;
         }
         .btn-cadastro{
-            padding-top: 38px;
-            padding-bottom: 38px;
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 2.6em;
-           margin-left: 100px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 11px;
+            padding-right: 11px;
+            font-size: 0.7em;
+           margin-left: 40px;
+           
            
         }
         .btn-criar{
-            padding: 23px;
-            font-size: 34px;
-           margin-bottom: 50px;
-           margin-right: -200px;
+            padding: 11.5px;
+            font-size: 13px;
+           margin-bottom: 0px;
+           margin-right: -20px;
         }
         .letras-miudas{
-            font-size: 40px;
-            margin-left: 150px;
+            font-size: 16px;
+            margin-left: -30px;
             }
       .sub-titulo{
-            font-size: 65px;
-            margin-top: -30px;
-            margin-left: 200px;
+            font-size: 20px;
+            margin-top: 0px;
+            margin-left: -30px;
         
-           }
-        .texto{
-            font-size: 25px;
-            margin-top: -2px;
-            margin-left: -1px;
-        }
+           }  
+
         .largura{
-            width: 900px;
+            width: 380px;
            }
        
        
         }
-        @media screen and (max-width: 360px) {
-                
+        @media   (max-width: 360px) {
+            
             .caixa-texto{
                 width:140%;
                 padding: 80px;
@@ -359,7 +347,7 @@
         }
         
     
-     @media screen and (max-width: 320px){
+     @media   (max-width: 320px){
         
         .largura{
             width: 1300px;
