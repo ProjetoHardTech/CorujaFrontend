@@ -268,30 +268,30 @@
         }
         .caixa-texto{
             width:120%;
-            padding: 54px;
-            font-size: 1.7em;
+            padding: 14px;
+            font-size: 1em;
             margin-left: -45px;
         }
         .caixa-texto2{
             width:120%;
-            padding: 54px;
-            font-size: 1.7em;
+            padding: 14px;
+            font-size: 1em;
             margin-left: -45px;
         }
         .btn-cadastro{
-            padding-top: 24px;
-            padding-bottom: 24px;
-            padding-left: 18px;
-            padding-right: 18px;
-            font-size: 1em;
-           margin-left: -15px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 11px;
+            padding-right: 11px;
+            font-size: 0.7em;
+           margin-left: 40px;
            
            
         }
         .btn-criar{
-            padding: 17px;
-            font-size: 17px;
-           margin-bottom: 20px;
+            padding: 11.5px;
+            font-size: 13px;
+           margin-bottom: 0px;
            margin-right: -20px;
         }
         .letras-miudas{
