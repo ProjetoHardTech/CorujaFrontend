@@ -1,0 +1,22 @@
+.config-options {
+    list-style: none;
+    padding: 0;
+}
+
+.config-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.config-option a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+}
+
+.config-option i {
+    font-size: 20px;
+}

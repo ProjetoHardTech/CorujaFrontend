@@ -103,9 +103,52 @@ public class HomeController{
 	public ModelAndView upload_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("currentPage", "novo_post");
-		modelAndView.setViewName("post/novo_post");
+		modelAndView.setViewName("leftmenu/novo_post");
 		return modelAndView;
 	}
+
+
+	// MAPEAMENTOS PARA A TELA DE CONFIGURACOES
+	@GetMapping("/config")
+	public ModelAndView config_page(Model model) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "config");
+		modelAndView.setViewName("leftmenu/config");
+		return modelAndView;
+	}
+
+	@GetMapping("/config_my_account")
+	public ModelAndView config_my_account_page(Model model) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "config_my_account");
+		modelAndView.setViewName("leftmenu/config_menu/config_my_account");
+		return modelAndView;
+	}
+
+	@GetMapping("/config_notifications")
+	public ModelAndView config_notifications_page(Model model) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "config_notifications");
+		modelAndView.setViewName("leftmenu/config_menu/config_notifications");
+		return modelAndView;
+	}
+
+	@GetMapping("/config_security")
+	public ModelAndView config_security_page(Model model) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "config_security");
+		modelAndView.setViewName("leftmenu/config_menu/config_security");
+		return modelAndView;
+	}
+
+	@GetMapping("/config_privacy")
+	public ModelAndView config_privacy_page(Model model) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "config_privacy");
+		modelAndView.setViewName("leftmenu/config_menu/config_privacy");
+		return modelAndView;
+	}
+
 
 	@PostMapping("/upload")
 	public ModelAndView upload(

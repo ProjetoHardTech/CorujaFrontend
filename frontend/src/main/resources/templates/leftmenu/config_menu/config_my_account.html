@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- header -->
+    <div th:replace="~{common/header(_,_)}"></div>
+    <body>
+        <div th:replace="~{common/nav}"></div>
+        <main>
+            <div class="container">
+                <!-- Left -> Menu -->
+                <div th:replace="~{common/left}"></div>
+                
+                <div class="middle">
+                    <form class="my-account" id="my-accout-Form" method="post">
+                        <div class="head-my-account">
+                            <div class="my-account-title">
+                                <h4 class="panel-title">Minha Conta</h4>
+                            </div>
+                        </div>
+                        <!-- AQUI FICARÃO INFORMAÇÕES PESSOAIS, EMAIL, USUARIO, DATA DE CRIAÇÃO ETC -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+     </body>
+</html>

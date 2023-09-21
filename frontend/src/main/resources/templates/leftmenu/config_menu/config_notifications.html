@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- header -->
+    <div th:replace="~{common/header(_,_)}"></div>
+    <body>
+        <div th:replace="~{common/nav}"></div>
+        <main>
+            <div class="container">
+                <!-- Left -> Menu -->
+                <div th:replace="~{common/left}"></div>
+                
+                <div class="middle">
+                    <form class="notifications" id="notifications-Form" method="post">
+                        <div class="head-config-notifications">
+                            <div class="config-notifications-title">
+                                <h4 class="panel-title">Notificações</h4>
+                            </div>
+                        </div>
+                        <!-- AQUI FICARÃO SWITCHES PARA DESATIVAR CERTOS TIPOS DE NOTIFICACOES -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+     </body>
+</html>

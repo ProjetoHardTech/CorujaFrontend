@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- header -->
+    <div th:replace="~{common/header(_,_)}"></div>
+    <body>
+        <div th:replace="~{common/nav}"></div>
+        <main>
+            <div class="container">
+                <!-- Left -> Menu -->
+                <div th:replace="~{common/left}"></div>
+                
+                <div class="middle">
+                    <form class="configure" id="configForm" method="post">
+                        <div class="head-config">
+                            <div class="config-title">
+                                <h4 class="panel-title">Configurações</h4>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <ul class="config-options">
+                                <li class="config-option">
+                                    <i class="bx bx-user"></i>
+                                    <a href="/config_my_account" th:classappend="${currentPage == 'config_menu/config_my_account'} ? 'active' : ''">Minha Conta</a>
+                                </li>
+                                <li class="config-option">
+                                    <i class="bx bx-bell"></i>
+                                    <a href="/config_notifications" th:classappend="${currentPage == 'config_menu/config_notifications'} ? 'active' : ''">Notificações</a>
+                                </li>
+                                <li class="config-option">
+                                    <i class='bx bx-lock-alt' ></i>
+                                    <a href="/config_security" th:classappend="${currentPage == 'config_menu/config_security'} ? 'active' : ''">Segurança</a>
+                                </li>
+                                <li class="config-option">
+                                    <i class="bx bx-shield"></i>
+                                    <a href="/config_privacy" th:classappend="${currentPage == 'config_menu/config_privacy'} ? 'active' : ''">Privacidade</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+     </body>
+</html>

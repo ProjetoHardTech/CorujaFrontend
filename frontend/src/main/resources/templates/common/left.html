@@ -60,14 +60,14 @@
                 <span><i class='bx bx-analyse' ></i></span><h3>Relatar</h3> 
             </a>
             <a class="menu-item">
-                <span><i class='bx bx-user-check'></i></span><h3>Perfil</h3>
+                <span><i class='bx bx-user'></i></span><h3>Perfil</h3>
             </a>
-            <a class="menu-item">
-                <span><i class='bx bx-cog' ></i></span><h3>Configurações</h3>
+            <a href="/config" class="menu-item" th:classappend="${currentPage == 'config'} ? 'active' : ''">
+                <span><i class='bx bx-cog' ></i></span><h3>Configurações</h3> 
             </a>
             
             <a class="menu-item" id="themes">
-                <span><i class='bx bx-palette bx-tada bx-rotate-90' ></i></span><h3>Temas</h3>
+                <span><i class='bx bx-palette' ></i></span><h3>Temas</h3>
                 <div class="themes-popup">
                     <div class="customize-theme">
                         <div class="card">
