@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- header -->
+    <div th:replace="~{common/header(_,_)}"></div>
+    <body>
+        <div th:replace="~{common/nav}"></div>
+        <main>
+            <div class="container">
+                <!-- Left -> Menu -->
+                <div th:replace="~{common/left}"></div>
+                
+                <div class="middle">
+                    <form class="privacy" id="privacy-Form" method="post">
+                        <div class="head-privacy">
+                            <div class="config-privacy-title">
+                                <h4 class="panel-title">Privacidade</h4>
+                            </div>
+                        </div>
+                        <!-- AQUI O USUARIO PODERA DEIXAR SUA CONTA PRIVADA E VER USUARIOS BLOQUEADOS-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+     </body>
+</html>
