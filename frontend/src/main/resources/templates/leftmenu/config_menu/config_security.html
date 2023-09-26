@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- header -->
+    <div th:replace="~{common/header(_,_)}"></div>
+    <body>
+        <div th:replace="~{common/nav}"></div>
+        <main>
+            <div class="container">
+                <!-- Left -> Menu -->
+                <div th:replace="~{common/left}"></div>
+                
+                <div class="middle">
+                    <form class="security" id="security-Form" method="post">
+                        <div class="head-config-security">
+                            <div class="config-security-title">
+                                <h4 class="panel-title">Segurança</h4>
+                            </div>
+                        </div>
+                        <!-- AQUI O USUARIO PODERA MUDAR SUA SENHA -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+     </body>
+</html>
