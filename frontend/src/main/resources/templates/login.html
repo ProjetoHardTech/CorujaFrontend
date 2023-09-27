@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
-<!-- Mirrored from themepixels.com/demo/webpage/chain/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:22:35 GMT -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -12,39 +10,39 @@
 
     <link href="css/stylelogin.css" rel="stylesheet">
     <link rel="icon" href="images/coruja_images/icons/32x32/Sem/Ativo 73.png" type="image/png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
-    <body class="signin"> 
-        <section class="section_login">
 
+<body class="signin">
+    <section class="section_login">
+        <div class="panel panel-signin">
+            <div class="panel-body" id="num_one">
+                <div class="logo text-center">
+                    <img class="imagem" src="images/coruja_images/logos/400X160/cOM bORDA/Ativo 9.png"
+                        alt="Cooruja Logo">
+                </div>
+                <h4 class="text-center-titulo">Possui cadastro?</h4>
+                <p class="text-center">Entre em sua conta</p>
 
-        <div class="painel-rigth">
-            <div class="panel panel-signin">
-                <div class="panel-body" id="num_one">
-                    <div class="logo text-center">
-                        <img class="imagem" src="images/coruja_images/logos/400X160/cOM bORDA/Ativo 9.png" alt="Cooruja Logo">
-                    </div>
-                    <h4 class="text-center-titulo">Possui cadastro?</h4>
-                    <p class="text-center">Entre em sua conta</p>
-                    
-                    <div class="mb30"></div>
+                <div class="mb30"></div>
 
-                    <div th:if="${possui_erro}" class="alert alert-danger">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>Atenção!</strong> <span th:text="${mensagem}"></span>
-                    </div>
-                    
-                    <form action="/process_login" method="post">
-                        <div class="input-group-a">
-                            <input name="usuario" id="usuario" type="text" class="form-control" placeholder="Email">
-                        </div><!-- input-group -->
-                        <br>
-                        <div class="input-group-a">
-                            <input name="senha" id="senha" type="password" class="form-control" placeholder="Senha">
-                        </div><!-- input-group -->
-                        <br>
-                    </form>
+                <div th:if="${possui_erro}" class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Atenção!</strong> <span th:text="${mensagem}"></span>
+                </div>
+
+                <form action="/process_login" method="post">
+                    <div class="input-group-a">
+                        <input name="usuario" id="usuario" type="text" class="form-control" placeholder="Email">
+                    </div><!-- input-group -->
+                    <br>
+                    <div class="input-group-a">
+                        <input name="senha" id="senha" type="password" class="form-control" placeholder="Senha">
+                    </div><!-- input-group -->
+                    <br>
+                </form>
 
                 <div class="botoes">
                     <div class="pull-left">
@@ -55,19 +53,17 @@
                     </div>
                 </div>
 
-                </div><!-- panel-body -->
-                <div class="recuperar-senha">
-                    <a href="/esquecisenha" class="esqueci-senha">Esqueci minha senha!</a>
-                </div>
-                <div class="panel-body" id="num_two">
-                    <a href="/signup" class="btn-newconta">Crie sua conta agora!</a>
-                </div><!-- panel-footer -->
-            </div><!-- panel -->
-        </div>
-        </section>
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-    </body>
+            </div><!-- panel-body -->
+            <div class="recuperar-senha">
+                <a href="/esquecisenha" class="esqueci-senha">Esqueci minha senha!</a>
+            </div>
+            <div class="panel-body" id="num_two">
+                <a href="/signup" class="btn-newconta">Crie sua conta agora!</a>
+            </div><!-- panel-footer -->
+        </div><!-- panel -->
 
-<!-- Mirrored from themepixels.com/demo/webpage/chain/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:22:37 GMT -->
+    </section>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
 </html>

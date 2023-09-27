@@ -217,6 +217,10 @@ a {
     text-align: right;
 }
 
+.section_login{
+    background-color: #000;
+}
+
 @media (max-width: 768px) {
     .panel-signin {
         max-width: 100%;
