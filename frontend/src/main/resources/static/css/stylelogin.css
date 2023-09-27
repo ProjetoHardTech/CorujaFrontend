@@ -217,39 +217,9 @@ a {
     text-align: right;
 }
 
-img{
-    width: 20%;
-    height: 50%;
-}
-
-.painel-rigth{
-    border-color: #1e0a25;
-    border-style: solid;
-    border-width: 10px;
-    align-items: center;
-}
-
-.section_login{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    width: 100vw;
-    height: 100vh;
-    background: #6C7A89;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #221328;
-}
-
 @media (max-width: 768px) {
     .panel-signin {
         max-width: 100%;
-    }
-
-    .btn-success {
-        width: 66%;
     }
 
     .pull-left, .pull-right {
@@ -279,10 +249,6 @@ img{
         padding: 10px;
     }
 
-    .btn-newconta::before {
-        content: "Crie sua conta";
-    }
-
     .text-center{
         display: flex;
         justify-content: center;
@@ -290,6 +256,12 @@ img{
     }
 
     .imagem{
-        width: 90%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 424px) {
+    form{
+        width: 95%;
     }
 }
