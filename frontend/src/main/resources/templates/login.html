@@ -22,6 +22,7 @@
 </head>
     <body class="signin"> 
         <section class="section_login">
+        <div class="painel-rigth">
             <div class="panel panel-signin">
                 <div class="panel-body" id="num_one">
                     <div class="logo text-center">
@@ -46,17 +47,17 @@
                             <input name="senha" id="senha" type="password" class="form-control" placeholder="Senha">
                         </div><!-- input-group -->
                         <br>
-                        <div class="clearfix" id="">
-                            <div class="pull-le">
-                            	<a href="/" class="btn btn-success btn-block">Voltar</a>
-                            </div>
-                            
-                            <div class="pull-le">
-                                <button type="submit" class="btn btn-success btn-block">Login</button>
-                            </div>
-                        </div>                      
                     </form>
-                    
+
+                <div class="botoes">
+                    <div class="pull-left">
+                        <a href="/" class="btn btn-success btn-block">Voltar</a>
+                    </div>
+                    <div class="pull-rigth">
+                        <button type="submit" class="btn btn-success btn-block">Login</button>
+                    </div>
+                </div>
+
                 </div><!-- panel-body -->
                 <div class="recuperar-senha">
                     <a href="/esquecisenha" class="esqueci-senha">Esqueci minha senha!</a>
@@ -65,6 +66,7 @@
                     <a href="/signup" class="btn-newconta">Crie sua conta agora!</a>
                 </div><!-- panel-footer -->
             </div><!-- panel -->
+        </div>
         </section>
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

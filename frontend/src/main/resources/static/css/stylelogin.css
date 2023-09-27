@@ -25,7 +25,6 @@ a:focus {
     text-align: center;
     font-size: 12px;
     text-decoration: underline;
-    padding-bottom: 10px;
 }
 
 .recuperar-senha{
@@ -36,7 +35,6 @@ a:focus {
 
 body.signin {
     background-color: #221328;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn-newconta{
@@ -117,36 +115,22 @@ h4, .h4, h5, .h5, h6, .h6 {
    font-family: inherit;
 }
 
-* {
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-}
-
 p {
    margin: 0 0 10px;
 }
 
-body {
-   line-height: 1.42857143;
-}
-
 .form-control {
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
    border-radius: 3px;
    padding: 10px;
    height: auto;
-   -moz-box-shadow: none;
-   -webkit-box-shadow: none;
    box-shadow: none;
    font-size: 13px;
 }
 
 .form-control {
    display: block;
-   width: 100%;
-   height: 34px;
+   width: 96.5%;
+   height: 23px;
    padding: 6px 12px;
    font-size: 14px;
    line-height: 1.42857143;
@@ -155,10 +139,7 @@ body {
    background-image: none;
    border: 1px solid #ccc;
    border-radius: 4px;
-   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-   -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
@@ -177,7 +158,6 @@ body {
 }
 
 .btn {
-    display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
@@ -198,23 +178,7 @@ a {
     text-decoration: none;
 }
 
-.pull-left{
-    width: 10%;
-}
-
-.pull-rigth{
-    width: 10%;
-}
-
-.clearfix {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-}
-
 .alert {
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 .alert-danger {
@@ -237,4 +201,71 @@ a {
     text-shadow: 0 1px 0 #fff;
     filter: alpha(opacity=20);
     opacity: .2;
+}
+
+.botoes {
+    display: flex;
+}
+
+.pull-left, .pull-rigth {
+    flex: 1;
+}
+
+.pull-left{
+    text-align: left;
+}
+
+.pull-rigth{
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .panel-signin {
+        max-width: 100%;
+    }
+
+    .btn-success {
+        width: 66%;
+    }
+
+    .pull-left, .pull-right {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .pull-right{
+        text-align: right;
+        padding-left: 15px;
+    }
+
+    .pull-left{
+        padding-right: 15px;
+    }
+
+    .pull-left i{
+        display: flexbox;
+        justify-content: left;
+        align-items: left;
+    }
+
+    .btn-newconta{
+        margin: 0;
+        font-size: 90%;
+        width: 100px;
+        padding: 10px;
+    }
+
+    .btn-newconta::before {
+        content: "Crie sua conta";
+    }
+
+    .text-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem{
+        width: 90%;
+    }
 }
