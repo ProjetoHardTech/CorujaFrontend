@@ -6,6 +6,7 @@
 
 body {
     font-size: 13px;
+    display: flex;
 }
 
 a {
@@ -79,8 +80,9 @@ body.signin {
 
 .panel-signin {
     width: 800px;
-    border: none;
-    background-color: #221328;
+    background-color: #1c0624;
+    border: 5px solid #f36743;
+    box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.445);
 }
 
 .panel-signup {
@@ -218,7 +220,29 @@ a {
 }
 
 .section_login{
-    background-color: #000;
+    background-color: #221328;
+}
+
+.section_login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desenho {
+    flex: 1; 
+}
+
+.desenho img{
+    flex: 1; 
+    padding-left: 200px;
+    margin-right: 100px;
+    padding-top: 200px;
+    height: 350px;
+}
+
+.panel-body {
+    flex: 1; 
 }
 
 @media (max-width: 768px) {
