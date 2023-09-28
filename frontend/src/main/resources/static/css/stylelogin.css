@@ -33,7 +33,7 @@ a:focus {
 }
 
 body.signin {
-    background-color: #221328;
+    background-color: #100415;
 }
 
 .btn-newconta{
@@ -80,7 +80,7 @@ body.signin {
 
 .panel-signin {
     width: 800px;
-    background-color: #1c0624;
+    background-color: #221328;
     border: 5px solid #f36743;
     box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.445);
 }
@@ -220,7 +220,7 @@ a {
 }
 
 .section_login{
-    background-color: #221328;
+    background-color: #100415;
 }
 
 .section_login {
