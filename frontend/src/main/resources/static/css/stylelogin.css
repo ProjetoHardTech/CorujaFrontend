@@ -83,9 +83,9 @@ body.signin {
 }
 
 .panel-signin {
-    width: 800px;
-    background-color: #3f366c;
-    box-shadow:  30px 40px rgba(0, 0, 0, 0.445);
+    width: 700px;
+    background-color: #52375d;
+    box-shadow: 9px 15px 9px 4px rgba(0, 0, 0, 0.445);
     border-radius: 8px;
     position: absolute;
     top: 46%;
@@ -232,10 +232,10 @@ a {
 
 .desenho img{
     position: absolute;
-    top: 47%;
-    left: 24%;
+    top: 49%;
+    left: 26%;
     transform: translate(-50%, -50%);
-    width: 30%;
+    width: 36%;
 }
 
 
@@ -286,7 +286,12 @@ a {
     }
 
     .desenho img{
-        width: 30%;
+        width: 33%;
+    }
+
+    .pull-rigth{
+        text-align: right;
+        width: 36%;
     }
 }
 
@@ -326,9 +331,9 @@ a {
     }
 
     .btn-newconta{
-        margin: 0;
+        display: inline-flex;
         font-size: 90%;
-        width: 100px;
+        width: 220px;
         padding: 10px;
     }
 
