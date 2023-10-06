@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
 
+
 * {
     font-family: 'Poppins', sans-serif;
 }
@@ -96,6 +97,7 @@ body.signin {
 .panel-signin .panel-body,
 .panel-signup .panel-body {
     padding: 40px;
+    padding-left: 20px;
 }
 
 #num_one{
@@ -133,7 +135,7 @@ p {
 
 .form-control {
    display: block;
-   width: 96.5%;
+   width: 100%;
    height: 23px;
    padding: 6px 12px;
    font-size: 14px;
@@ -221,6 +223,8 @@ a {
 
 .pull-rigth{
     text-align: right;
+    margin-top: -7px;
+    margin-right: -25px;
 }
 
 .section_login {
@@ -235,7 +239,7 @@ a {
     top: 49%;
     left: 26%;
     transform: translate(-50%, -50%);
-    width: 36%;
+    width: 30%;
 }
 
 
@@ -266,13 +270,6 @@ a {
         display: flexbox;
         justify-content: left;
         align-items: left;
-    }
-
-    .btn-newconta{
-        margin: 0;
-        font-size: 90%;
-        width: 100px;
-        padding: 10px;
     }
 
     .text-center{
@@ -330,13 +327,6 @@ a {
         align-items: left;
     }
 
-    .btn-newconta{
-        display: inline-flex;
-        font-size: 90%;
-        width: 220px;
-        padding: 10px;
-    }
-
     .text-center{
         display: flex;
         justify-content: center;
@@ -354,4 +344,26 @@ a {
     .desenho img{
         display: none;
     }
+}
+
+@media (max-width: 472px) {
+    .btn-newconta{
+        display: inline-block;
+        padding: 16px 2px;
+        padding-right: 10px;
+        margin: 25px;
+        border: none;
+        border-radius: 8px;
+        letter-spacing: 3px;
+        padding-left: 10px;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: #f36743;
+        font-weight: 800;
+        box-shadow: 0px 10px 40px -12px #a5422a;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }   
 }
