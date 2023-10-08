@@ -28,10 +28,8 @@ a:focus {
     transform: translate(-50%, -50%);
 }
 
-.panel-signin .panel-body,
-.panel-signup .panel-body {
+.panel-signin .panel-body {
     padding: 40px;
-    padding-left: 20px;
 }
 
 .panel-body{
@@ -40,11 +38,12 @@ a:focus {
     align-items: center;
     background-color: #52375d;
     border-radius: 12px;
+    display: grid;
 }
 
 .btn-newconta{
     font-family: 'Poppins', sans-serif;
-    width: 500px;
+    width: 178px;
     padding: 16px 10px;
     padding-left: 30px;
     padding-right: 30px;
@@ -75,18 +74,19 @@ a:focus {
     font-weight: 800;
     text-align: center;
     font-size: 25px;
+    margin: 17px;
 }
 
 .text-center{
     color: #ffffff;
     font-weight: 800;
     text-align: center;
-    font-size: 25px;   
+    font-size: 21px;   
      margin-top: 10px;
 }
 
 .panel-signin {
-    width: 90%;
+    width: 45%;
     border: none;
     background-color: #221328;
 }
@@ -115,28 +115,76 @@ a:focus {
 .back_login{
     color: #f36743;
     font-size: 18px;
-    position: absolute;
-    left: 43.5%;
 }
 
-@media (max-width: 768px) {
-    .panel-signin {
-        max-width: 100%;
+@media screen and (max-width: 828px) {
+    .imagem{
+        width: 70%;
     }
 
-    .panel-signin .panel-body, .panel-signup .panel-body {
-        padding: 40px;
-        padding-top: 10px;
+    .panel-signin{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 604px) {
+    .imagem{
+        width: 70%;
+    }
+
+    .text-center-titulo{
+        font-size: 20px;
+    }
+
+    .text-center{
+        font-size: 17px;
+    }
+
+    .form-control{
+        height: 25px;
+        width: 70%;
     }
 
     .btn-newconta{
+        width: 120px;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .back_login{
+        font-size: 10px;
+    }
+
+    .panel-signin{
         width: 70%;
-        font-size: 15px;
     }
 }
 
-@media (max-width: 523px) {
+@media screen and (max-width: 384px) {
+    .panel-signin{
+        width: 85%;
+    }
+
     .imagem{
+        width: 60%;
+    }
+
+    .text-center-titulo{
+        font-size: 15px;
+    }
+
+    .text-center{
+        font-size: 15px;
+    }
+
+    .form-control{
+        height: 25px;
         width: 70%;
+    }
+
+    .btn-newconta{
+        width: 141px;
+        padding: 12px 18px;
+        font-size: 14px;
     }
 }
