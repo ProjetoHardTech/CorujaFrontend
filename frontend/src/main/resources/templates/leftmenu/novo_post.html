@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <!-- header -->
-    <div th:replace="~{common/header(_,_)}"></div>
-    <body>
-        <div th:replace="~{common/nav}"></div>
-        <main>
-            <div class="container">
-                <!-- Left -> Menu -->
-                <div th:replace="~{common/left}"></div>
-                
-                <div class="middle">
-                        <form class="create-post" id="basicForm" method="post" action="/upload" enctype="multipart/form-data">
-                            <div class="head-newpost">
-                                <h4 class="panel-title">Criar Relato</h4>
+<!-- header -->
+<div th:replace="~{common/header(_,_)}"></div>
 
-                                <input style= "padding: 3px; margin-bottom: 5%;"
-                                type="text" id="titulo" name="titulo" placeholder="Título do seu relato..." required />
-                                <br/>
-                                <input id="file" name="file" type="file" accept="image/png, image/jpeg, image/jpg, image/gif">
-                                <br/>
-                                <br/>
-                                <textarea id="comentario" name="comentario" rows="5"  placeholder="Primeiro comentário..."></textarea>
-                                <br/>
-                                <input type="text" name="tags" id="tags" rows="2" placeholder="#grave #urgente #problema"/>
-                                <br/>
-                                <br/>
-                                <button class="btn btn-primary mr5">Criar</button>
-                                <button type="reset" class="btn btn-dark">Limpar</button>
-                            </div>
-                            
-                <!-- </div> -->
-                <!-- Right -->
-                <!-- <div th:replace="~{common/right}"></div> -->
+<body>
+    <div th:replace="~{common/nav}"></div>
+    <main>
+        <div class="container">
+            <!-- Left -> Menu -->
+            <div th:replace="~{common/left}"></div>
+
+            <div class="middle">
+                <form class="create-post" id="basicForm" method="post" action="/upload" enctype="multipart/form-data">
+                    <div class="head-newpost">
+                        <h4 class="panel-title">Criar Relato</h4>
+
+                        <input style="padding: 3px; margin-bottom: 5%;" type="text" id="titulo" name="titulo"
+                            placeholder="Título do seu relato..." required />
+                        <br />
+                        <input id="file" name="file" type="file" accept="image/png, image/jpeg, image/jpg, image/gif">
+                        <br />
+                        <br />
+                        <textarea id="comentario" name="comentario" rows="5"
+                            placeholder="Primeiro comentário..."></textarea>
+                        <br />
+                        <input type="text" name="tags" id="tags" rows="2" placeholder="Exmplos: #grave #urgente #problema..." />
+                        <br />
+                        <br />
+                        <button class="btn btn-primary mr5">Criar</button>
+                        <button type="reset" class="btn btn-dark">Limpar</button>
+                    </div>
+
+                    <!-- </div> -->
+                    <!-- Right -->
+                    <!-- <div th:replace="~{common/right}"></div> -->
             </div>
-        </main>
-        <script src="js\home.js"></script>
-     </body>
+    </main>
+    <script src="js\home.js"></script>
+</body>
+
 </html>

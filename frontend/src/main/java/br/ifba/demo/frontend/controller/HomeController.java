@@ -51,6 +51,7 @@ public class HomeController{
 	public ModelAndView login() {
 		return new ModelAndView("login");
 	}
+	
 
 	@GetMapping("/logout")
 	public ModelAndView logout(HttpSession session) {
@@ -104,6 +105,14 @@ public class HomeController{
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("currentPage", "novo_post");
 		modelAndView.setViewName("leftmenu/novo_post");
+		return modelAndView;
+	}
+
+	@GetMapping("/configure-perf")
+	public ModelAndView perfil(){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "configure-perf");
+		modelAndView.setViewName("leftmenu/configure-perf");
 		return modelAndView;
 	}
 
