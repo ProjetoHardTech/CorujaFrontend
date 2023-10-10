@@ -83,6 +83,9 @@ public class HomeController{
 	public ModelAndView home(HttpServletRequest request, Model model) {
 		List<PostResponse> list = postService.listall();
 		ModelAndView mav = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	mav.addObject("usuario", usuario);
 		mav.addObject("posts", list);
 		mav.addObject("currentPage", "home");
 		HttpSession session = request.getSession();
@@ -103,24 +106,44 @@ public class HomeController{
 	@GetMapping("/novo_post")
 	public ModelAndView upload_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "novo_post");
 		modelAndView.setViewName("leftmenu/novo_post");
 		return modelAndView;
 	}
 
-	@GetMapping("/configure-perf")
-	public ModelAndView perfil(){
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("currentPage", "configure-perf");
-		modelAndView.setViewName("leftmenu/configure-perf");
-		return modelAndView;
-	}
 
+	
+	@GetMapping("/configure-perf")
+	public ModelAndView exibirPerfilAutomatico() {
+    Long iduser = 1L;
+    ModelAndView modelAndView = new ModelAndView();
+	modelAndView.addObject("currentPage", "configure-perf");
+	modelAndView.setViewName("leftmenu/configure-perf");
+    UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    modelAndView.addObject("usuario", usuario);
+    return modelAndView;
+}
+
+	@PostMapping("/update")
+	public ModelAndView atualizarUsuario() {
+	ModelAndView modelAndView = new ModelAndView();
+	Long iduser = 1L;
+	UsuarioModel usuarioModel = usuarioService.getUsuario(iduser);
+	UsuarioModel att = usuarioService.update(usuarioModel);
+	modelAndView.addObject("usuario", att);
+	return modelAndView;
+}
 
 	// MAPEAMENTOS PARA A TELA DE CONFIGURACOES
 	@GetMapping("/config")
 	public ModelAndView config_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config");
 		modelAndView.setViewName("leftmenu/config");
 		return modelAndView;
@@ -129,6 +152,9 @@ public class HomeController{
 	@GetMapping("/config_my_account")
 	public ModelAndView config_my_account_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_my_account");
 		modelAndView.setViewName("leftmenu/config_menu/config_my_account");
 		return modelAndView;
@@ -137,6 +163,9 @@ public class HomeController{
 	@GetMapping("/config_notifications")
 	public ModelAndView config_notifications_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_notifications");
 		modelAndView.setViewName("leftmenu/config_menu/config_notifications");
 		return modelAndView;
@@ -145,6 +174,9 @@ public class HomeController{
 	@GetMapping("/config_security")
 	public ModelAndView config_security_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_security");
 		modelAndView.setViewName("leftmenu/config_menu/config_security");
 		return modelAndView;
@@ -153,6 +185,9 @@ public class HomeController{
 	@GetMapping("/config_privacy")
 	public ModelAndView config_privacy_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_privacy");
 		modelAndView.setViewName("leftmenu/config_menu/config_privacy");
 		return modelAndView;

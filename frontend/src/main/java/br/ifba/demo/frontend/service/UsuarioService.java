@@ -98,7 +98,7 @@ public class UsuarioService {
 		System.out.println("update: " + usuarioModel);
 		Mono<UsuarioModel> usuario = this.webClient
 									.method(HttpMethod.PUT)
-									.uri("tarefa/{id}", usuarioModel.getId())
+									.uri("usuario/{id}", usuarioModel.getId())
 									.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
 									.body(Mono.just(usuarioModel), UsuarioModel.class)
 									.retrieve()

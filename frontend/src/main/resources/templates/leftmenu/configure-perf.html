@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <!-- header -->
-    <div th:replace="~{common/header(_,_)}"></div>
-    <body>
-        <div th:replace="~{common/nav}"></div>
-        <main>
-            <div class="container">
-                <!-- Left -> Menu -->
-                <div th:replace="~{common/left}"></div>
+<!-- header -->
+<div th:replace="~{common/header(_,_)}"></div>
+
+<body>
+    <div th:replace="~{common/nav}"></div>
+    <main>
+        <div class="container">
+            <!-- Left -> Menu -->
+            <div th:replace="~{common/left}"></div>
+
+            <div class="middle">
+                <form class="painel" method="post" action="update" enctype="multipart/form-data">
+                    <h4 class="titulo">Personalizar Perfil</h4>
+
+                    <input type="text" id="nome" class="caixa-texto" name="nome" placeholder="Nome"
+                        th:value="${usuario.nome}">
+
+                    <input type="text" id="sobrenome" class="caixa-texto" name="sobrenome" placeholder="Sobrenome"
+                        th:value="${usuario.sobrenome}">
+
+                    <input type="email" id="email" class="caixa-texto" name="email" placeholder="Email" th:value="${usuario.email}">
+
+                    <input type="text" id="arroba" class="caixa-texto" name="arroba" placeholder=""
+                        value="@hardtech2023" disabled>
+                    <label for="foto" class="photo">Mudar Foto do Perfil:</label>
+                    <input id="foto" name="file" type="file" accept="image/png, image/jpeg, image/jpg">
+
+
+                    <button type="submit" id="Salvar" class="butao">Salvar</button>
                 
-                <div class="middle">
-                    <form class="painel" method="post" action="/update" enctype="multipart/form-data">
-                        <h4 class="titulo">Gerenciar Perfil</h4>
-                        
-                        <input type="text" id="nome" class="caixa-texto" name="nome" placeholder="Nome" value="">
-
-                        <input type="text"   id="sobrenome"  class="caixa-texto" name="sobrenome" placeholder="Sobrenome" value="">
-    
-                        <input type="email" id="email"class="caixa-texto" name="email" placeholder="Email" value="">
-
-                        <input type="text" id="arroba"class="caixa-texto" name="arroba" placeholder="" value="@hardtech2023" disabled>
-                        <label for="foto" class="photo">Mudar Foto do Perfil:</label>
-                        <input id="foto" name="file" type="file" accept="image/png, image/jpeg, image/jpg">
-                        
-
-                        <button type="submit" id="Salvar" class="butao">Salvar</button>
-                    </form>
-                </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'css/perfil.css'; 
-            document.head.appendChild(link);
-        </script>
-    </body>
-    </html>
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'css/perfil.css';
+        document.head.appendChild(link);
+    </script>
+</body>
+
+</html>
