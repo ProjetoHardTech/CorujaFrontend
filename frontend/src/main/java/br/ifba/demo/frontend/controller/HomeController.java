@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -128,13 +129,13 @@ public class HomeController{
 }
 
 	@PostMapping("/update")
-	public ModelAndView atualizarUsuario() {
-	ModelAndView modelAndView = new ModelAndView();
-	Long iduser = 1L;
-	UsuarioModel usuarioModel = usuarioService.getUsuario(iduser);
-	UsuarioModel att = usuarioService.update(usuarioModel);
-	modelAndView.addObject("usuario", att);
-	return modelAndView;
+	public ModelAndView atualizarUsuario(@ModelAttribute UsuarioModel usuario) {
+	ModelAndView mav = new ModelAndView();
+	usuario.setId(1l);
+	mav.addObject("usuario", usuario);
+	usuarioService.update(usuario);
+	mav.setViewName("redirect:/configure-perf");
+	return mav;	
 }
 
 	// MAPEAMENTOS PARA A TELA DE CONFIGURACOES

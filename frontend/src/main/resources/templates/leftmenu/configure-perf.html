@@ -28,7 +28,7 @@
                     <input id="foto" name="file" type="file" accept="image/png, image/jpeg, image/jpg">
 
 
-                    <button type="submit" id="Salvar" class="butao">Salvar</button>
+                    <button type="submit" th:action="@{update}" th:object="${usuario}"id="Salvar" class="butao">Salvar</button>
                 
             </div>
         </div>
