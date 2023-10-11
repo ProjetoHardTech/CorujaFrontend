@@ -46,10 +46,6 @@ body{
     overflow-x: hidden;
 }
 
-.head-newpost{
-
-}
-
     .container{
     width: 80%;
     margin: 0 auto;
@@ -881,7 +877,7 @@ uma animação igual ao da notificação para sobressair na tela
 .card-emergencia{
     width: 200px;
     height: 200px;
-    border: 2px solid #007bff; 
+    border: 2px solid #f36743; 
     border-radius: 10px;
     padding: 20px;
     background-color: #f0f0f0; 
@@ -891,20 +887,33 @@ uma animação igual ao da notificação para sobressair na tela
     align-items: center;
 }
 
-.material-symbols-outlined{
-    font-size: 17px;
-}
-
 .galeria{
-    border: 2px solid #007bff; 
+    border: 2px solid #f36743; 
     border-radius: 10px;
     padding: 20px;
-    background-color: #f0f0f0; 
+    background-color: #fff; 
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
     position: relative;
     left: 87%;
     width: 1036px;
     height: 611px;
+    display: grid;  
+    grid-template-columns: repeat(4, 1fr); /* Define 3 colunas com tamanhos iguais */
+}
+
+.icons_emergencia{
+    width: 50px;
+}
+
+.disk{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+h1{
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 
