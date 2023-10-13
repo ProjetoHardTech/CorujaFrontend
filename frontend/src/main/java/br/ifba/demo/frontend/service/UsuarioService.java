@@ -106,4 +106,5 @@ public class UsuarioService {
 		UsuarioModel result = usuario.block();
 		return result;
 	}
+
 }
