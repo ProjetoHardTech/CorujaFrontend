@@ -121,26 +121,6 @@ public class HomeController{
 	}
 
 
-	// @PostMapping("/imagem")
-	// @ResponseStatus(HttpStatus.CREATED)
-	// public ModelAndView imageUpdate(@ModelAttribute UsuarioModel usuarioModel, @RequestParam("file") MultipartFile imagem) {
-	// 	ModelAndView modelAndView = new ModelAndView("leftmenu/configure-perf");
-	// 	try {
-	// 		if(UpdateUtil.enviarImagem(imagem)){
-	// 			usuarioModel.setImagem(imagem.getOriginalFilename());
-	// 		}
-	// 		modelAndView.addObject("usuarioModel.getImagem()", usuarioModel.getImagem());
-	// 		usuarioService.update(usuarioModel);
-	// 		System.out.println("imagem salva com sucesso: " +usuarioModel.getImagem());
-	// 	} catch (Exception e) {
-
-			
-	// 		System.out.println("erro ao salvar" + e.getMessage());
-
-	// 	}
-	// 				return modelAndView;
-
-	// }
 
 	
 	@GetMapping("/configure-perf")
@@ -169,7 +149,7 @@ public class HomeController{
 			System.out.println("erro ao salvar" + e.getMessage());
 
 		}
-	
+
 	mav.setViewName("redirect:/configure-perf");
 	return mav;	
 
