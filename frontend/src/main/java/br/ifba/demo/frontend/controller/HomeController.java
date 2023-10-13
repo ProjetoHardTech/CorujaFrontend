@@ -57,7 +57,7 @@ public class HomeController{
 		session.invalidate();
 		return new ModelAndView("index");
 	}
-	
+
 	@GetMapping("/signup")
 	public ModelAndView signup() {
 		return new ModelAndView("signup");
@@ -67,7 +67,8 @@ public class HomeController{
 	public ModelAndView erro() {
 		return new ModelAndView("erro");
 	}
-	
+
+
 	@GetMapping("/termosdeuso")
 	public ModelAndView termosdeuso(){
 		return new ModelAndView("termosdeuso");
@@ -92,6 +93,14 @@ public class HomeController{
 			mav.setViewName("home");
 		}
 		return mav;
+	}
+	@GetMapping("/comments")
+	public ModelAndView comments(Model model) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "comments");
+		modelAndView.setViewName("comments");
+		return modelAndView;
+		// return new ModelAndView("comments");
 	}
 
 	@GetMapping("/timeline")
@@ -152,8 +161,8 @@ public class HomeController{
 
 	@PostMapping("/upload")
 	public ModelAndView upload(
-		@ModelAttribute PostForm postForm, 	
-		HttpServletRequest request,	
+		@ModelAttribute PostForm postForm,
+		HttpServletRequest request,
 		RedirectAttributes redirectAttributes)
 	{
 		HttpSession session = request.getSession();
@@ -180,10 +189,10 @@ public class HomeController{
 	public ModelAndView process_login(HttpServletRequest request, Model model) {
 		String usuario = request.getParameter( "usuario" );
 		String senha   = request.getParameter( "senha" );
-		
+
 		LoginRequest loginRequest = new LoginRequest(usuario, senha);
 		UsuarioModel uModel = usuarioService.login(loginRequest);
-		
+
 		HttpSession session = request.getSession();
 		ModelAndView mav = new ModelAndView();
         if (uModel != null) {
@@ -211,7 +220,7 @@ public class HomeController{
 		String confirmacao_senha   = request.getParameter( "confirmacao_senha" );
 		String agree   = request.getParameter( "agree" );
 		boolean termos = agree == "1" ? true : false;
-		
+
 		System.out.println("nome.............: " + nome);
 		System.out.println("sobrenome........: " + sobrenome);
 		System.out.println("email............: " + email);
@@ -220,7 +229,7 @@ public class HomeController{
 		System.out.println("confirmacao_senha: " + confirmacao_senha);
 
 		ModelAndView mav = new ModelAndView();
-		
+
 		if (agree == null){
 			// model.addAttribute( "mensagem", "Termos e condições é de preenchimento obrigatório!");
 			// model.addAttribute( "possui_erro", true);
@@ -230,7 +239,7 @@ public class HomeController{
 			mav.setViewName("signup");
 			return mav;
 		}
-		
+
 		UsuarioModel usuModel = new UsuarioModel();
 		usuModel.setNome(nome);
 		usuModel.setSobrenome(sobrenome);
@@ -257,7 +266,7 @@ public class HomeController{
 		}
 
 	}
-	
+
 	@GetMapping("/exibirImagem/{id}")
 	public String  exibir_imagem(@PathVariable String id) {
 		System.out.println("exibir_imagem: " + id);
@@ -275,7 +284,7 @@ public class HomeController{
 		// System.out.println("tags......: " + tags);
 
 		ModelAndView mav = new ModelAndView();
-        
+
 		HttpSession session = request.getSession();
 		if ( session == null ){
 			mav.addObject("message", "Efetue o Login Novamente");
@@ -290,7 +299,7 @@ public class HomeController{
 			return mav;
 		}
 		System.out.println("id_usuario...: " + id_usuario);
-		
+
 		ComentarioDTO comentarioDTO = new ComentarioDTO();
 		comentarioDTO.setComentario(comentario);
 		comentarioDTO.setId_usuario(id_usuario);
