@@ -85,8 +85,6 @@ body.signin {
 
 .panel-signin {
     width: 700px;
-    background-color: #52375d;
-    box-shadow: 9px 15px 9px 4px rgba(0, 0, 0, 0.445);
     border-radius: 8px;
     position: absolute;
     top: 46%;

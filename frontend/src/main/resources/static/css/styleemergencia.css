@@ -75,8 +75,15 @@ img{
     opacity: 0.8;
 }
 .btn-primary{
-    background: var( --color-primary);
+    background: #9681cc;
     color: white;
+}
+
+#btn-emergencia{
+    background: #cc8181;
+    position: fixed;
+    left: 77.5%;
+    top: 1.1%;
 }
 
 .text-bold{
@@ -876,7 +883,7 @@ uma animação igual ao da notificação para sobressair na tela
 
 .card-emergencia{
     width: 200px;
-    height: 200px;
+    height: max-content;
     border: 2px solid #f36743; 
     border-radius: 10px;
     padding: 20px;
@@ -902,7 +909,13 @@ uma animação igual ao da notificação para sobressair na tela
 }
 
 .icons_emergencia{
-    width: 50px;
+    height: 50px; /* Ajuste a altura desejada */
+    width: auto;
+}
+
+.icons_emergencia img{
+    max-width: 100%;
+    height: auto;
 }
 
 .disk{
