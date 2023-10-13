@@ -882,6 +882,14 @@ uma animação igual ao da notificação para sobressair na tela
 }
 
 .card-emergencia{
+    transform-style: preserve-3d;
+}
+
+.card-emergencia:hover{
+    transform: rotateY(180deg);
+}
+
+.frente{
     width: 200px;
     height: max-content;
     border: 2px solid #f36743; 
@@ -892,7 +900,28 @@ uma animação igual ao da notificação para sobressair na tela
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s ease;
+
+    backface-visibility: hidden;
 }
+
+.atras{
+    width: 200px;
+    height: max-content;
+    border: 2px solid #d32a00; 
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
 
 .galeria{
     border: 2px solid #f36743; 
