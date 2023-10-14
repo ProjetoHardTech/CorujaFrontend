@@ -140,7 +140,7 @@ public class HomeController{
 	usuario.setId(1l);
 	try {
 			if(UpdateUtil.enviarImagem(imagem)){
-				usuario.setImagem(imagem.getOriginalFilename());
+				usuario.setImagem_usuario(imagem.getOriginalFilename());
 			}
 	mav.addObject("usuario", usuario);
 	usuarioService.update(usuario);

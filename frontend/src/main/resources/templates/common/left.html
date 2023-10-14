@@ -1,7 +1,7 @@
 <div th:fragment="left()" class="left">
     <a href="" class="profile">
         <div class="profile-photo">
-            <img src="\images\coruja_images\icons\48x48\com\Ativo 60.png" alt="">
+            <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" class="foto-perfil">
         </div>
         <div class="handle">
             <h4 th:text="${usuario.nome + ' ' + usuario.sobrenome}"></h4>

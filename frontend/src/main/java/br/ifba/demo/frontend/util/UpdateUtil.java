@@ -14,7 +14,7 @@ public class UpdateUtil {
         if(!imagem.isEmpty()){
             String arquiveName = imagem.getOriginalFilename();
             try {
-                String diretorio = "C:\\Users\\201910070026\\Projetos\\frontend\\src\\main\\resources\\static\\imagens";
+                String diretorio = "C:\\Users\\diogo\\Documents\\CoorujaFrontend\\frontend\\src\\main\\resources\\static\\imagens";
                 File dir = new File(diretorio);
                 if(!dir.exists()){
                     dir.mkdirs();
@@ -27,8 +27,8 @@ public class UpdateUtil {
                 stream.write(imagem.getBytes());
                 stream.close();
 
-                System.out.println("O arquivo: " +arquiveName + "com sucesso!!");
-
+                System.out.println("O arquivo: " +arquiveName + " foi enviado com sucesso!!");
+                sucessUpload = true;
             } catch (Exception e) {
                 System.out.println("O envio do arquivo:" +arquiveName + "não foi executado com sucesso" +e.getMessage() );
 
@@ -38,6 +38,6 @@ public class UpdateUtil {
         else{
                 System.out.println("O arquivo está vazio!!");
             }
-            return true;
+            return sucessUpload;
     }
 }
