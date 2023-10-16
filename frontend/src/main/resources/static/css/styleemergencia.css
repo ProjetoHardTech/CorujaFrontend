@@ -883,6 +883,10 @@ uma animação igual ao da notificação para sobressair na tela
 
 .card-emergencia{
     transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    position: relative;
+    width: 219px;
+    height: 175px;
 }
 
 .card-emergencia:hover{
@@ -890,8 +894,9 @@ uma animação igual ao da notificação para sobressair na tela
 }
 
 .frente{
+    position: absolute;
     width: 200px;
-    height: max-content;
+    height: 175px;
     border: 2px solid #f36743; 
     border-radius: 10px;
     padding: 20px;
@@ -900,15 +905,15 @@ uma animação igual ao da notificação para sobressair na tela
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
 
     backface-visibility: hidden;
 }
 
 .atras{
+    position: absolute;
     width: 200px;
-    height: max-content;
-    border: 2px solid #d32a00; 
+    height: 175px;
+    border: 2px solid #f36743; 
     border-radius: 10px;
     padding: 20px;
     background-color: #f0f0f0; 
@@ -916,10 +921,10 @@ uma animação igual ao da notificação para sobressair na tela
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
 
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    margin-left: 20px;
 }
 
 
@@ -935,6 +940,7 @@ uma animação igual ao da notificação para sobressair na tela
     height: 611px;
     display: grid;  
     grid-template-columns: repeat(4, 1fr); /* Define 3 colunas com tamanhos iguais */
+    position: relative;
 }
 
 .icons_emergencia{
