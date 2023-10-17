@@ -81,9 +81,13 @@ img{
 
 #btn-emergencia{
     background: #cc8181;
-    position: fixed;
-    left: 77.5%;
-    top: 1.1%;
+    margin-right: 10px;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .text-bold{
@@ -896,7 +900,7 @@ uma animação igual ao da notificação para sobressair na tela
 .frente{
     position: absolute;
     width: 200px;
-    height: 175px;
+    height: 186px;
     border: 2px solid #f36743; 
     border-radius: 10px;
     padding: 20px;
@@ -912,7 +916,7 @@ uma animação igual ao da notificação para sobressair na tela
 .atras{
     position: absolute;
     width: 200px;
-    height: 175px;
+    height: 186px;
     border: 2px solid #f36743; 
     border-radius: 10px;
     padding: 20px;
@@ -927,6 +931,10 @@ uma animação igual ao da notificação para sobressair na tela
     margin-left: 20px;
 }
 
+#telefone{
+    margin-top: 28px;
+}
+
 
 .galeria{
     border: 2px solid #f36743; 
@@ -936,8 +944,8 @@ uma animação igual ao da notificação para sobressair na tela
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
     position: relative;
     left: 87%;
-    width: 1036px;
-    height: 611px;
+    width: 955px;
+    height: 492px;
     display: grid;  
     grid-template-columns: repeat(4, 1fr); /* Define 3 colunas com tamanhos iguais */
     position: relative;
