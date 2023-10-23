@@ -78,6 +78,11 @@ public class HomeController{
 		return new ModelAndView("esquecisenha");
 	}
 
+	@GetMapping("/emergencia")
+	public ModelAndView emergencia() {
+		return new ModelAndView("emergencia");
+	}
+
 	@GetMapping("/home")
 	public ModelAndView home(HttpServletRequest request, Model model) {
 		List<PostResponse> list = postService.listall();
