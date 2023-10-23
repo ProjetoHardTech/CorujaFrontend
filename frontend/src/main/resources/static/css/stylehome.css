@@ -394,52 +394,59 @@ main .container .left .profile{
     padding-bottom: 5%;
 }
 
-.middle .create-post{
-    width: 100%;
+.middle-relato {
+    background: #fff;
+    padding: 25px 25px 15px 25px;
+    border-radius: var(--card-border-radius);
+    height: 300px;
+    
+}
+
+#titulo{
+    padding: 15px;
+    background-color: transparent;
+    font-size: 1.5em;
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#comentario{
+    padding: 20px;
+    font-size: 1.2em;
+    resize: none;
+    width: 800px;
+    height: 70px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#tags{
+    padding: 20px;
+}
+
+.middle-relato .clicks {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.03rem;
-    background: var(--color-white);
-    padding: 0.4rem var(--card-padding);
-    border-radius: var(--border-radius);
+    padding: 20px;
 }
 
-.middle .create-post input[type="text"]{
-    width: 100%;
-    padding-left: 0rem;
-    background: transparent;
-    color: var(--color-dark);
-    margin-right: 0rem;
-    font-weight: 500;
-    font-size: 16px;
-    background: var(--color-white);
+.post-info{
+   
 }
 
+.buttons-post{
+    margin-left: 460px;
+}
 
 input[type="file"] {
-
-    background: var(--color-primary);
-    color: white;
-    display: inline-block;
-    padding: var(--btn-padding);
-    font-weight: 500;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 300ms ease;
-    font-size: 0.9rem;
-  }
-
-.middle .create-post textarea{
-    justify-content: start;
-    width: 100%;
-    padding-left: 0rem;
-    background: transparent;
-    color: var(--color-dark);
-    margin-right: 1rem;
-    font-size: 16px;
-    background: var(--color-white);
+    display: none;
+    
 }
+
+label {
+    cursor: pointer;
+}
+
+
 
 .middle .feeds .feed{
     background: var(--color-white);

@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- header -->
-<div th:replace="~{common/header(_,_)}"></div>
+    <!-- header -->
+    <div th:replace="~{common/header(_,_)}"></div>
+    <body>
+        <div th:replace="~{common/nav}"></div>
+        <main>
+            <div class="container">
+                <!-- Left -> Menu -->
+                <div th:replace="~{common/left}"></div>
+                
+                <div class="middle-relato">
+                        <form class="create-post" id="basicForm" method="post" action="/upload" enctype="multipart/form-data">
+                            <div>
+                                <input type="text" id="titulo" name="titulo" placeholder="O que você deseja relatar?" required />
+                            </div>
 
-<body>
-    <div th:replace="~{common/nav}"></div>
-    <main>
-        <div class="container">
-            <!-- Left -> Menu -->
-            <div th:replace="~{common/left}"></div>
+                            <div>
+                                <textarea id="comentario" name="comentario" rows="5" placeholder="Adicione um comentário..."></textarea>
+                            </div>
+                            <div>
+                                <input type="text" name="tags" id="tags" rows="2" placeholder="#grave #urgente #problema"/>
 
-            <div class="middle">
-                <form class="create-post" id="basicForm" method="post" action="/upload" enctype="multipart/form-data">
-                    <div class="head-newpost">
-                        <h4 class="panel-title">Criar Relato</h4>
+                            </div>
+                            <div class="clicks">
+                                <div class="post-info">
+                                <label for="arquivo"><svg xmlns="http://www.w3.org/2000/svg" height="1.4em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#9681cc}</style><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg></label>
+                                <input type="file" name="arquivo" id="arquivo" accept="image/png, image/jpeg, image/jpg, image/gif">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1.4em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#9681cc}</style><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                                </div>
 
-                        <input style="padding: 3px; margin-bottom: 5%;" type="text" id="titulo" name="titulo"
-                            placeholder="Título do seu relato..." required />
-                        <br />
-                        <input id="file" name="file" type="file" accept="image/png, image/jpeg, image/jpg, image/gif">
-                        <br />
-                        <br />
-                        <textarea id="comentario" name="comentario" rows="5"
-                            placeholder="Primeiro comentário..."></textarea>
-                        <br />
-                        <input type="text" name="tags" id="tags" rows="2" placeholder="Exmplos: #grave #urgente #problema..." />
-                        <br />
-                        <br />
-                        <button class="btn btn-primary mr5">Criar</button>
-                        <button type="reset" class="btn btn-dark">Limpar</button>
-                    </div>
+                                <div class="buttons-post">
+                                <button class="btn btn-primary mr5">Criar relato</button>
+                                <button type="reset" class="btn btn-dark">Limpar</button>
+                                </div>
 
-                    <!-- </div> -->
-                    <!-- Right -->
-                    <!-- <div th:replace="~{common/right}"></div> -->
+                            </div>
+
+                        </form>   
+                            
+                <!-- </div> -->
+                <!-- Right -->
+                <!-- <div th:replace="~{common/right}"></div> -->
+
             </div>
     </main>
     <script src="js\home.js"></script>
