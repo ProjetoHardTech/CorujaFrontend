@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\style.comments.css">
+    <script src="\js\comments.js" defer></script>
+
+    <title>Comentários</title>
+</head>
+<body>
+
+<div class="comment-container" th:each="cmt : ${post.comentarios}">
+    <div class="user-avatar"></div>
+    <div class="comment-content">
+        <div class="comment-header">
+            <span class="username" th:text="${cmt.nome_usuario}">HardTech</span>
+            <span class="comment-meta" th:text="${#dates.format(cmt.data_cadastro, 'dd-MM-yyyy HH:mm')}"></span>
+        </div>
+        <div class="comment-text" th:text="${cmt.comentario}"></div>
+    </div>
+</div>
+
+<div class="view-comments text-muted" id="show-comments" onclick="showComments()">Ver todos os comentários</div>
+
+<div class="comments-container" id="commentsContainer">
+    <!-- Aqui vai a estrutura dos comentários -->
+</div>
+
+</body>
+</html>
