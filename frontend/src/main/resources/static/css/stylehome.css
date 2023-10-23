@@ -46,6 +46,11 @@ body{
     overflow-x: hidden;
 }
 
+.foto-perfil{
+width: 43px;
+height: 43px;
+}
+
 .head-newpost{
 
 }
