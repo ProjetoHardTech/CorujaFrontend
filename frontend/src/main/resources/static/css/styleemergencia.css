@@ -46,15 +46,6 @@ body{
     overflow-x: hidden;
 }
 
-.foto-perfil{
-width: 43px;
-height: 43px;
-}
-
-.head-newpost{
-
-}
-
     .container{
     width: 80%;
     margin: 0 auto;
@@ -84,8 +75,19 @@ img{
     opacity: 0.8;
 }
 .btn-primary{
-    background: var( --color-primary);
+    background: #9681cc;
     color: white;
+}
+
+#btn-emergencia{
+    background: #cc8181;
+    margin-right: 10px;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .text-bold{
@@ -138,7 +140,7 @@ main .container{
 
 main .container .left{
     height: max-content;
-    position: sticky;
+    position: fixed;
     top: var(--stick-top-left);
 }
 
@@ -392,61 +394,55 @@ main .container .left .profile{
     font-size: 150%;
     text-align: center;
     padding-bottom: 5%;
+    padding-top: 5%;
 }
 
-.middle-relato {
-    background: #fff;
-    padding: 25px 25px 15px 25px;
-    border-radius: var(--card-border-radius);
-    height: 300px;
-    
-}
-
-#titulo{
-    padding: 15px;
-    background-color: transparent;
-    font-size: 1.5em;
-    width: 600px;
-    font-family: 'Poppins', sans-serif;
-}
-
-#comentario{
-    padding: 20px;
-    font-size: 1.2em;
-    resize: none;
-    width: 800px;
-    height: 70px;
-    font-family: 'Poppins', sans-serif;
-
-}
-
-#tags{
-    padding: 20px;
-}
-
-.middle-relato .clicks {
+.middle .create-post{
+    width: 100%;
     display: flex;
-    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.03rem;
+    background: var(--color-white);
+    padding: 0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
 }
 
-.post-info{
-   
+.middle .create-post input[type="text"]{
+    width: 100%;
+    padding-left: 0rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin-right: 0rem;
+    font-weight: 500;
+    font-size: 16px;
+    background: var(--color-white);
 }
 
-.buttons-post{
-    margin-left: 460px;
-}
 
 input[type="file"] {
-    display: none;
-    
-}
 
-label {
+    background: var(--color-primary);
+    color: white;
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
     cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+  }
+
+.middle .create-post textarea{
+    justify-content: start;
+    width: 100%;
+    padding-left: 0rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin-right: 1rem;
+    font-size: 16px;
+    background: var(--color-white);
 }
-
-
 
 .middle .feeds .feed{
     background: var(--color-white);
@@ -732,115 +728,6 @@ uma animação igual ao da notificação para sobressair na tela
     display: block;
 }
 
-/* ESTILO CONFIGURAÇÕES */
-
-.middle .configure{
-    display: block;
-    margin-top: 0.03rem;
-    background: var(--color-white);
-    padding: 0.4rem var(--card-padding);
-    border-radius: var(--border-radius);
-}
-
-.config-options {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.config-option {
-    font-size: 130%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-}
-
-.config-option a {
-    color: #333;
-    margin-left: 10px;
-}
-
-.config-option i {
-    font-size: 20px;
-}
-
-.config-title {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px;
-}
-
-/* Exemplo de estilos de fonte para cada opção */
-.config-option:nth-child(1) a,
-.config-option:nth-child(2) a,
-.config-option:nth-child(3) a,
-.config-option:nth-child(4) a {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* ESTILO CONFIGURAÇÕES -> MINHA CONTA */
-
-.middle .my-account{
-    display: block;
-    margin-top: 0.03rem;
-    background: var(--color-white);
-    padding: 0.4rem var(--card-padding);
-    border-radius: var(--border-radius);
-}
-
-.my-account-title {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px;
-}
-
-/* ESTILO CONFIGURAÇÕES -> NOTIFICACOES */
-
-.middle .notifications{
-    display: block;
-    margin-top: 0.03rem;
-    background: var(--color-white);
-    padding: 0.4rem var(--card-padding);
-    border-radius: var(--border-radius);
-}
-
-.config-notifications-title {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px;
-}
-
-/* ESTILO CONFIGURAÇÕES -> SEGURANCA */
-
-.middle .security{
-    display: block;
-    margin-top: 0.03rem;
-    background: var(--color-white);
-    padding: 0.4rem var(--card-padding);
-    border-radius: var(--border-radius);
-}
-
-.config-security-title {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px;
-}
-
-/* ESTILO CONFIGURAÇÕES -> PRIVACIDADE */
-
-.middle .privacy{
-    display: block;
-    margin-top: 0.03rem;
-    background: var(--color-white);
-    padding: 0.4rem var(--card-padding);
-    border-radius: var(--border-radius);
-}
-
-.config-privacy-title {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px;
-}
-
-
-
 /*    RESPONSIVIDADE   */
 
 @media screen and (max-width: 1200px) {
@@ -996,6 +883,93 @@ uma animação igual ao da notificação para sobressair na tela
     cursor: pointer;
     font-size: 24px;
     border-radius: 2px;
+}
+
+.card-emergencia{
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    position: relative;
+    width: 219px;
+    height: 175px;
+}
+
+.card-emergencia:hover{
+    transform: rotateY(180deg);
+}
+
+.frente{
+    position: absolute;
+    width: 200px;
+    height: 186px;
+    border: 2px solid #f36743; 
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    backface-visibility: hidden;
+}
+
+.atras{
+    position: absolute;
+    width: 200px;
+    height: 186px;
+    border: 2px solid #f36743; 
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f0f0f0; 
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    margin-left: 20px;
+}
+
+#telefone{
+    margin-top: 28px;
+}
+
+
+.galeria{
+    border: 2px solid #f36743; 
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff; 
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.5);
+    position: relative;
+    left: 87%;
+    width: 955px;
+    height: 492px;
+    display: grid;  
+    grid-template-columns: repeat(4, 1fr); /* Define 3 colunas com tamanhos iguais */
+    position: relative;
+}
+
+.icons_emergencia{
+    height: 50px; /* Ajuste a altura desejada */
+    width: auto;
+}
+
+.icons_emergencia img{
+    max-width: 100%;
+    height: auto;
+}
+
+.disk{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+h1{
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 

@@ -21,5 +21,6 @@ public class UsuarioModel {
 	private Date data_modificacao;
 	private Date data_criacao;
 	private Date data_conclusao;
+	private String imagem_usuario;
 	// private Boolean status;
 }
