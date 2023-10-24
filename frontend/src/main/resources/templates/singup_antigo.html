@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from themepixels.com/demo/webpage/chain/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:22:37 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cooruja | Cadastro</title>
+
+    <link href="css/style.default.css" rel="stylesheet">
+    <link rel="icon" href="images\coruja_images\icons\32x32\Sem\Ativo 73.png">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body class="signup">
+
+    <body style="background-color:#221328">
+
+        <section>
+
+            <div class="panel panel-signup" style="background-color:#221328">
+                <div style="background-color:#221328">
+                    
+                    <div class="panel-body" style="width: 800px">
+                        
+                        <img src="images\coruja_images\logos\400X160\cOM bORDA\Ativo 9.png" class="imagem">
+                        
+                        <div th:if="${possui_erro}" class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Atenção!</strong> <span th:text="${mensagem}"></span>
+                        </div>
+                        
+                        <div th:if="${possui_erro}" class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Atenção!</strong> <span th:text="${mensagem}"></span>
+                        </div>
+
+                        <font face="Segoe UI">
+                            <p class="sub-titulo">Crie uma conta nova</p>
+                            </style>
+                            <font size="3">
+                                <p class="letras-miudas">Entre com os seus dados</p>
+                            </font>
+                        </font>
+
+                        <div id="form-boxs">
+                        <form action="/process_add" method="post" >
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-6 col-md-6">
+                                    <div class="input mb15">
+                                        <font face="Segoe UI">
+                                            <input id="nome" name="nome" type="text" class="caixa-texto" placeholder="Nome" required>
+                                        </font>
+                                    </div><!-- input-group -->
+                                </div>
+                                <div class="col-sm-12 col-lg-6 col-md-6">
+                                    <div class="input mb15">
+                                        <font face="Segoe UI">
+                                            <input id="sobrenome" name="sobrenome" type="text" class="caixa-texto" placeholder="Sobrenome">
+                                        </font>
+                                    </div><!-- input-group -->
+                                </div>
+                            </div><!-- row -->
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="input mb15">
+                                        <font face="Segoe UI">
+                                            <input id="email" name="email" type="email"  class="caixa-texto2" placeholder="E-mail" required>
+                                        </font>
+                                    </div><!-- input-group -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-6 col-md-6">
+                                    <div class="input mb15">
+                                        <font face="Segoe UI">
+                                            <input id="senha" 
+                                                name="senha" 
+                                                type="password" 
+                                                class="caixa-texto" 
+                                                placeholder="Senha" required>
+                                        </font>
+                                    </div><!-- input-group -->
+                                </div>
+                                <div class="col-sm-12 col-lg-6 col-md-6">
+                                    <div class="input mb15">
+                                        <font face="Segoe UI">
+                                            <input id="confirmacao_senha" name="confirmacao_senha" type="password" class="caixa-texto"
+                                                placeholder="Confirmação da Senha" required>
+                                        </font>
+                                    </div><!-- input-group -->
+                                </div>
+                            </div><!-- row -->
+                            <br />
+                            <div class="pull-left">
+                                <div class="ckbox ckbox-primary mt5">
+                                    <input id="agree" name="agree" type="checkbox" value="1">
+                                    <label for="agree" class="texto">
+                                        <font color="white" face="Segoe UI">Aceito os </font>
+                                        <a href="/termosdeuso">
+                                            <font face="Segoe UI">Termos e Condições</font>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="pull-right">
+                                <button type="submit" class="btn-criar" style="background-color: #f36743">
+                                    <font face="Segoe UI"><strong>Criar uma nova conta</font>
+                                    <i class="fa fa-arrow-circle-right ml5"></i></strong>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    </div><!-- panel-body -->
+                        <div class="largura">
+                            <div  style="background-color:#221328">
+                                <a href="/login" class="btn-cadastro"  >
+                                 <font face="Segoe UI">JÁ POSSUI CADASTRO? FAÇA O LOGIN </font>
+                                 </a>         
+                            </div>  
+                        </div>                                                     
+                    </div><!-- panel-footer -->
+                </div><!-- panel -->
+
+        </section>
+
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/pace.min.js"></script>
+        <script src="js/retina.min.js"></script>
+        <script src="js/jquery.cookies.js"></script>
+
+        <script src="js/custom.js"></script>
+
+    </body>
+
+    <!-- Mirrored from themepixels.com/demo/webpage/chain/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:22:37 GMT -->
+
+</html>
