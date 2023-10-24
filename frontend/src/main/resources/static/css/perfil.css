@@ -1,93 +1,31 @@
-.painel{
-    width: 100%;
-    height: 128%;
-    display: flex;
-    margin-top: 0.03rem;
-    background-color: hsl(252,30%, 100%);
-    padding: 5rem;
-    border-radius: 2rem;
+/* O CSS anterior permanece o mesmo */
 
+.posts {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
-.butao{
-   padding: 18px;
-    left: 45%;
-    border: none;
-    border-radius: 8px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: #ffffff;
-    cursor: pointer;
-    text-align: center;
-    justify-content: center;
-    align-items: bottom;
-    font-size: 17px;
-    position: absolute;
-    bottom: -20%;
-    background: #9681cc;
+h2 {
+    font-size: 20px;
 }
 
-
-
-.titulo{
-position: absolute;
-text-align: center;
-margin-left: 13%;
-margin-bottom: 10%;
-font-size: 22px;
-color: hsl(252, 30%, 10%);
+.post {
+    margin-bottom: 20px;
 }
 
-input[type="file"] {
-
-    width: 380px;
-    height: 45px;
-    position: absolute;
-    top: 80%;
-    left: 43%;
-    
-  }
-
-  .caixa-texto{
-    border: solid 1px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 5px;
-    padding: 15px;
-    height: 5%;
-   position: absolute;
-    /* width: 100%;
-    padding-left: 8px;
-    height: 40px;
-    font-size: 14px; */
-    
-   
-}
-.photo{
-    position: absolute;
-    top: 82%;
-    left: 31%;
+h3 {
+    font-size: 18px;
+    margin: 0;
 }
 
-#nome{
-    width: 15%;
-    left: 30%;
-    top: 40%;
-}
-#sobrenome{
- left: 50%;
- width: 15%;
- top: 40%;
-}
-#email{
-    width: 15%;
-    left: 30%;
-    top: 55%;
+p {
+    font-size: 16px;
+    margin: 0;
 }
 
-#arroba{
-    width: 15%;
-    left: 50%;
-    top: 55%;
+a {
+    text-decoration: none;
+    color: #0077b5; /* Cor do link para o LinkedIn */
 }
