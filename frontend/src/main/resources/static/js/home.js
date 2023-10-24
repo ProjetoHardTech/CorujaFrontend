@@ -1,11 +1,28 @@
 //side-bar
 const menuItems = document.querySelectorAll('.menu-item');
 
+
+//theme change 
+const themeBtn = document.querySelector('.theme-btn');
+
+themeBtn.addEventListener('click',() => {
+
+    document.body.classList.toggle('dark-theme');
+
+    themeBtn.querySelector('span:first-child').classList.toggle('active');
+    themeBtn.querySelector('span:last-child').classList.toggle('active');
+    
+
+
+
+})
 //theme
 const theme = document.querySelector('#theme');
 const themeModal = document.querySelector('.customize-theme');
 const fontSizes = document.querySelectorAll('.choose-size span');
 var root = document.querySelector(':root');
+
+
 // trunk-ignore(git-diff-check/error)
 const colorPalette = document.querySelectorAll('.choose-color span'); 
 const Bg1 = document.querySelector('.bg-1');

@@ -1,4 +1,5 @@
 <div th:fragment="left()" class="left">
+  
     <a href="" class="profile">
         <div class="profile-photo">
             <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" class="foto-perfil">
@@ -15,6 +16,7 @@
         <a href="/home" class="menu-item" th:classappend="${currentPage == 'home'} ? 'active' : ''">
             <span><i class='bx bx-home'></i></span>
             <h3>Home</h3>
+
         </a>
         <a class="menu-item" id="notifications">
             <span><i class='bx bx-bell'><small class="notification-count">+5</small></i></span>
@@ -56,6 +58,7 @@
                         <small class="text-muted">3 HORAS ATRÁS</small>
                     </div>
                 </div>
+
             </div>
         </a>
         <a href="/novo_post" class="menu-item" th:classappend="${currentPage == 'novo_post'} ? 'active' : ''">
@@ -130,4 +133,5 @@
         </a>
     </div>
     <a href="/novo_post" class="btn btn-primary">Criar Relato</a>
+  
 </div>
