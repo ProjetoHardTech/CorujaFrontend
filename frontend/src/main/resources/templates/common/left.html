@@ -62,8 +62,9 @@
             </div>
         </a>
         <a href="/novo_post" class="menu-item" th:classappend="${currentPage == 'novo_post'} ? 'active' : ''">
-            <span><i class='bx bx-analyse'></i></span>
-            <h3>Relatar</h3>
+            <span class="material-symbols-outlined">
+                campaign
+                </span><h3>Relatar</h3> 
         </a>
         <a href="/configure-perf" a class="menu-item"
             th:classappend=" ${currentPage == 'configure-perf'} ? 'active' : ''">
