@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- header -->
+<div th:replace="~{common/header(_,_)}"></div>
+
+<body>
+    <div th:replace="~{common/nav}"></div>
+
+    <main>
+        <div class="container">
+            <!-- Left -> Menu -->
+            <div th:replace="~{common/left}"></div>
+
+            <div class="middle">
+
+                <div class="profile-container">
+                    <div class="profile-picture">
+                        <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" alt="Sua Foto de Perfil">
+                    </div>
+                    <div class="profile-info">
+                        <h1 th:text="${usuario.nome} + ${usuario.sobrenome}">Nome da Pessoa</h1>
+                        <!-- para quando o usuario mudar -->
+                        <!-- <p th:text="${usuario}">@hardtech2023</p> -->
+                        <p>@hardtech2023</p>
+                    </div>
+                    <div class="edit-profile-button">
+                        <a href="/configure-perf">Editar Perfil</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'css/perfil.css';
+        document.head.appendChild(link);
+    </script>
+
+</body>
+
+</html>
