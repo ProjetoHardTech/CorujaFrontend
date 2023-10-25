@@ -8,7 +8,7 @@ body {
 .middle{
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza no eixo horizontal */
+    align-items: center;
     background: #fff;
     padding: 25px 25px 15px 25px;
     width: 100%;
@@ -57,11 +57,11 @@ body {
 .photo{
      display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza no eixo horizontal */
+    align-items: center;
     margin-bottom: 20px;
      display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza no eixo horizontal */
+    align-items: center;
     margin-bottom: 20px;
 }
 
