@@ -31,6 +31,7 @@ body {
     width: 100%;
     border-radius: var(--card-border-radius);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .profile-form {
@@ -56,6 +57,7 @@ body {
 }
 
 .profile-picture img {
+    margin-top: 10px;
     width: 150px;
     border: 3px solid #fff;
     height: 150px;
@@ -137,22 +139,27 @@ body {
     background-color: #ccc;
     margin: 20px 0;
 }
+
 /* TELA DE PERFIL */
 
 .profile-container{
     text-align: center;
     position: relative;
     align-items: center;
-}
-.blur-background{
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    padding: 10px;
 }
 
+/* .blur-background{ */
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    /* backdrop-filter: blur(10px); */
+    /* background: rgba(255, 255, 255, 0.8); */
+/* } */
+
+
 .profile-info{
-    margin-top: 20px;
+    margin-top: 1%px;
 }
 
 .edit-profile-button a {
