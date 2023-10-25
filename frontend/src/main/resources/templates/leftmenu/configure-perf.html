@@ -13,10 +13,9 @@
             <div class="middle">
                 <form class="profile-form" method="post" th:action="@{update}" enctype="multipart/form-data">
                     <h4 class="titulo"></h4>
-
                     <div class="profile-picture">
                         <div class="photo">
-                            <img th:src="@{${avatarUrl}}" alt="Sua Foto de Perfil">
+                            <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" alt="Sua Foto de Perfil">
                         </div>
                         <label for="upload-photo" class="upload-label">Escolher Foto</label>
                         <input type="file" id="upload-photo" name="file" accept="image/png, image/jpeg, image/jpg" style="display: none;">
