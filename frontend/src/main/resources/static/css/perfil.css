@@ -5,6 +5,23 @@ body {
     background-color: #f8f8f8;
 }
 
+.middle .image-button {
+    position: absolute;
+    top: 7px;
+    left: 315px;
+    z-index: 1;
+}
+
+.image-button img{
+    width: 40px;
+    height: 40px;
+    background-color: #9681cc;
+    border-radius: var(--border-radius);
+}
+.image-button :hover{
+    background-color: #8a6ada;
+}
+
 .middle{
     display: flex;
     flex-direction: column;
@@ -40,6 +57,7 @@ body {
 
 .profile-picture img {
     width: 150px;
+    border: 3px solid #fff;
     height: 150px;
     border-radius: 50%;
     border: 3px solid #fff;
@@ -113,16 +131,26 @@ body {
     display: none;
 }
 
-
+.custom-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
 /* TELA DE PERFIL */
 
 .profile-container{
     text-align: center;
-    backdrop-filter: blur(5px);
-    background-color: rgba(188, 27, 27, 0.5);
+    position: relative;
     align-items: center;
-
 }
+.blur-background{
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+}
+
 .profile-info{
     margin-top: 20px;
 }
