@@ -1,16 +1,17 @@
 <nav>
     <div class="container">
         <h2 class="log">COORUJA</h2>
-        <div >
+        <div class="botoes">
             <form class="create" action="/logout" method="get" >
                 <button class="btn btn-primary" for="create-post">Sair</button>
                  
                 <div class="profile-photo">
                     <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" class="foto-perfil">
                 </div>
-             </form><!--<form lass="create" action="/emergencia" method="get" >
+             </form>
+             <form lass="create" action="/emergencia" method="get" >
             <button class="btn btn-primary" id="btn-emergencia">Emergência</button>
-        </form> -->
+        </form>
         </div>
     </div>
     <!-- <script>
@@ -19,6 +20,8 @@
         link.href = 'css/perfil.css';
         document.head.appendChild(link);
     </script> -->
+
+    <link rel="stylesheet" href="\css\stylenav.css">
     
 </nav>
 
