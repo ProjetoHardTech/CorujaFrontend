@@ -70,7 +70,6 @@ img{
 }
 
 .btn{
-
     display: inline-block;
     padding: var(--btn-padding);
     font-weight: 500;
@@ -79,14 +78,15 @@ img{
     transition: all 300ms ease;
     font-size: 0.9rem;
 }
+
 .btn :hover{
-    opacity: 0.8;
+    opacity: 1;
 }
+
 .btn-primary{
     background: var( --color-primary);
     color: white;
 }
-
 .text-bold{
     font-weight: 500;
 }
@@ -384,6 +384,7 @@ main .container .left .profile{
     opacity: 0.5;
     pointer-events: none;
 }
+
 .content button.active{
     opacity: 1;
     pointer-events: auto;
@@ -395,20 +396,21 @@ main .container .left .profile{
     padding-bottom: 5%;
 }
 
-
+/* estilizarção do /novo_post */
 .middle-relato {
     background: #fff;
     padding: 25px 25px 15px 25px;
     border-radius: var(--card-border-radius);
-    height: 300px;
+    width: 100%;
+    min-width: 100px;
+    height: 200px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-
 }
 
 #titulo{
     padding: 15px;
     background-color: transparent;
-    font-size: 1.5em;
+    font-size: 1.3rem;
     width: 600px;
     font-family: 'Poppins', sans-serif;
 }
@@ -420,7 +422,6 @@ main .container .left .profile{
     width: 800px;
     height: 70px;
     font-family: 'Poppins', sans-serif;
-
 }
 
 #tags{
@@ -430,26 +431,31 @@ main .container .left .profile{
 .middle-relato .clicks {
     display: flex;
     padding: 20px;
+    margin-top: 35px;
+    align-items: flex-end;
+
 }
-
 .post-info{
-
+    flex-direction: column;
 }
 
 .buttons-post{
-    margin-left: 460px;
+    margin-left: 200px;
 }
 
+.mr5 :hover{
+    background-color: #8a6ada;
+
+}
 input[type="file"] {
     display: none;
-
 }
 
 label {
     cursor: pointer;
 }
 
-
+/* ---------------- */
 
 .middle .feeds .feed{
     background: var(--color-white);
