@@ -3,23 +3,10 @@
         <h2 class="log">COORUJA</h2>
         <div >
             <form class="create" action="/logout" method="get" >
-                <a class="themes" >
-                    <div class="theme-btn">
-                        <span class="material-symbols-outlined">
-                            light_mode
-                            </span>
-                        <span class="material-symbols-outlined">
-                            dark_mode
-                            </span>
-          
-                      
-                    </div>
-                </a>
                 <button class="btn btn-primary" for="create-post">Sair</button>
                 <div class="profile-photo">
                     <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" class="foto-perfil">
                 </div>
-                
             </form>
         </div>
     </div>
