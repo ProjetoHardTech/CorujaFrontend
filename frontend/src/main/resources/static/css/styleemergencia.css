@@ -154,11 +154,11 @@ h1{
         }
     }
 
-    @media (max-width: 422px) {
+    @media (max-width: 752px) {
         .galeria{
-            width: 100px;
+            width: 456px;
             height: 941px;
             grid-template-columns: repeat(2, 1fr);
-            left: 15%;
+            margin-left: 5px;
         }
     }
