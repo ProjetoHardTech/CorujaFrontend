@@ -86,6 +86,11 @@ public class HomeController{
 		return new ModelAndView("esquecisenha");
 	}
 
+	@GetMapping("/confirmaremail")
+	public ModelAndView confirmaremail() {
+		return new ModelAndView("confirmaremail");
+	}
+
 	@GetMapping("/emergencia")
 	public ModelAndView emergencia() {
 		ModelAndView mav = new ModelAndView();
