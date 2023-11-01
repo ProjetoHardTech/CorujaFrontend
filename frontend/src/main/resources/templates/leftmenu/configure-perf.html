@@ -5,31 +5,45 @@
 
 <body>
     <div th:replace="~{common/nav}"></div>
+
     <main>
         <div class="container">
             <!-- Left -> Menu -->
             <div th:replace="~{common/left}"></div>
 
             <div class="middle">
-                <form class="painel" method="post" th:action="@{update}" enctype="multipart/form-data">
-                    <h4 class="titulo">Personalizar Perfil</h4>
 
-                    <input type="text" id="nome" class="caixa-texto" name="nome" placeholder="Nome"
-                        th:value="${usuario.nome}" autocomplete="on" required>
+                <a href="/profile" class="image-button">
+                    <img src="  \images\icons\angulo-pequeno-esquerdo (1).png" alt="Descrição da Imagem">
+                </a>
 
-                    <input type="text" id="sobrenome" class="caixa-texto" name="sobrenome" placeholder="Sobrenome"
-                        th:value="${usuario.sobrenome}" autocomplete="on" required>
+                <form class="profile-form" method="post" th:action="@{update}" enctype="multipart/form-data">
+                    <h4 class="titulo"></h4>
+                    <div class="profile-picture">
+                        <div class="photo">
+                            <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" alt="Sua Foto de Perfil">
+                        </div>
+                        <label for="upload-photo" class="upload-label">Escolher Foto</label>
+                        <input type="file" id="upload-photo" name="file" accept="image/png, image/jpeg, image/jpg" style="display: none;">
+                    </div>
 
-                    <input type="email" id="email" class="caixa-texto" name="email" placeholder="Email" th:value="${usuario.email}" required>
+                    <div class="form-group">
+                        <input type="text" id="nome" class="caixa-texto" name="nome" th:value="${usuario.nome}" placeholder="Nome" autocomplete="on" required>
+                    </div>
 
-                    <input type="text" id="arroba" class="caixa-texto" name="arroba" placeholder=""
-                        value="@hardtech2023" disabled >
-                    <label for="foto" class="photo" >Mudar Foto do Perfil:</label>
-                    <input id="foto"  name="file" type="file" accept="image/png, image/jpeg, image/jpg">
+                    <div class="form-group">
+                        <input type="text" id="sobrenome" class="caixa-texto" name="sobrenome" th:value="${usuario.sobrenome}" placeholder="Sobrenome" autocomplete="on" required>
+                    </div>
 
+                    <div class="form-group">
+                        <input type="email" id="email" class="caixa-texto" name="email" th:value="${usuario.email}" placeholder="Email" required>
+                    </div>
 
-                    <button type="submit"  th:object="${usuario}"id="Salvar" class="butao">Salvar</button>
-                
+                    <input type="text" id="arroba" class="caixa-texto" name="arroba" value="@hardtech2023" disabled>
+
+                    <button type="submit" th:object="${usuario}" id="Salvar" class="butao">Salvar</button>
+                </form>
+
             </div>
         </div>
     </main>

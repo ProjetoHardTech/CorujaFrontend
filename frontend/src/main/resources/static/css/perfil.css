@@ -1,93 +1,178 @@
-.painel{
-    width: 100%;
-    height: 128%;
-    display: flex;
-    margin-top: 0.03rem;
-    background-color: hsl(252,30%, 100%);
-    padding: 5rem;
-    border-radius: 2rem;
-
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
 }
 
-.butao{
-   padding: 18px;
-    left: 45%;
+.middle .image-button {
+    position: absolute;
+    top: 7px;
+    left: 315px;
+    z-index: 1;
+}
+
+.image-button img{
+    width: 40px;
+    height: 40px;
+    background-color: #9681cc;
+    border-radius: var(--border-radius);
+}
+.image-button :hover{
+    background-color: #8a6ada;
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 25px 25px 15px 25px;
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.profile-form {
+    text-align: center;;
+}
+
+.titulo {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #0077b5;
+}
+
+.edit-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-picture {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    margin-top: 10px;
+    width: 150px;
+    border: 3px solid #fff;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    margin-top: 10px;
+    position: relative;
+    bottom: 2px;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: #9681cc;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.upload-label:hover {
+    background-color: #8a6ada;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+.caixa-texto {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#nome, #sobrenome, #email, #arroba {
+    width: 100%;
+    text-align: center;
+}
+
+.butao {
+    width: 100%;
+    padding: 15px;
     border: none;
     border-radius: 8px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 800;
-    color: #ffffff;
+    font-weight: 700;
+    background-color: #9681cc;
+    color: #fff;
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.butao:hover {
+    background-color: #8a6ada;
+}
+
+#upload-photo {
+    display: none;
+}
+
+.custom-divider {
+    width: 70%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+/* TELA DE PERFIL */
+
+.profile-container{
     text-align: center;
-    justify-content: center;
-    align-items: bottom;
-    font-size: 17px;
-    position: absolute;
-    bottom: -20%;
-    background: #9681cc;
+    position: relative;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
 }
 
+/* .blur-background{ */
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    /* backdrop-filter: blur(10px); */
+    /* background: rgba(255, 255, 255, 0.8); */
+/* } */
 
 
-.titulo{
-position: absolute;
-text-align: center;
-margin-left: 13%;
-margin-bottom: 10%;
-font-size: 22px;
-color: hsl(252, 30%, 10%);
+.profile-info{
+    margin-top: 1%px;
 }
 
-input[type="file"] {
-
-    width: 380px;
-    height: 45px;
-    position: absolute;
-    top: 80%;
-    left: 43%;
-    
-  }
-
-  .caixa-texto{
-    border: solid 1px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
+.edit-profile-button a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #9681cc;
+    color: #fff;
+    text-decoration: none;
     border-radius: 5px;
-    padding: 15px;
-    height: 5%;
-   position: absolute;
-    /* width: 100%;
-    padding-left: 8px;
-    height: 40px;
-    font-size: 14px; */
-    
-   
-}
-.photo{
-    position: absolute;
-    top: 82%;
-    left: 31%;
+
 }
 
-#nome{
-    width: 15%;
-    left: 30%;
-    top: 40%;
-}
-#sobrenome{
- left: 50%;
- width: 15%;
- top: 40%;
-}
-#email{
-    width: 15%;
-    left: 30%;
-    top: 55%;
-}
-
-#arroba{
-    width: 15%;
-    left: 50%;
-    top: 55%;
+.edit-profile-button a:hover{
+    background-color: #8a6ada;
 }
