@@ -15,5 +15,4 @@ Como **nossos supervisores**, o professor Igor Costa (Banco de Dados, Sistemas O
 
 Os membros do nosso projeto são os alunos do 4º ano de Informática do IFBA Campus Paulo Afonso, do ano 2019.1.
 
-Scrum master: @Murilo Leal; Membros gerais: @Luana Braga, @Beatriz Andrade, @Júlia Castor ... e mais. 
-
+Scrum master: @Murilo Leal; Membros gerais: @Beatriz Andrade, @Júlia Castor, @Lucas Gabriel, @Arthur Henrique, @Alisson Santos, @Diogo Fernandes, @Luana Braga, @Karine Ferreira, @Carla Fernanda, @Tony Carlos, @Jailson de Matos, @Amanda Riany. 
