@@ -15,18 +15,55 @@
     --color-danger: hsl(0, 67%, 45%);
     --color-dark: hsl(252, 30%, var(--dark-color-lightness));
     --color-black: hsl(252, 30%, 10%);
+    --white: #fff;
 
-    /* 2rem antes */
-    --border-radius: 8px;
+    --border-radius: 2rem;
     --card-border-radius: 1rem;
     --btn-padding: 0.6rem 2rem;
     --search-padding: 0.6rem 1rem;
-    --card-padding: 1rem;
+    --card-padding: 1rem; 
 
     --stick-top-left: 5.4rem;
     --stick-top-right: -18rem;
 }
 
+.dark-theme{
+    --color-white: #131316;
+    --color-light: #23232a;
+    --color-dark: #ddd;
+    ---white: #131316;
+
+}
+nav .create .themes .theme-btn{
+
+    display:flex;
+}
+
+.sidebar .menu-item .material-symbols-outlined{
+    font-size: 1.5rem;
+     margin-left: 2rem;
+    position:relative;
+    color: var(--color-grey);
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+
+
+}
+
+.material-symbols-outlined {
+    font-size: 1.4rem;
+     margin-left: 0.5rem;
+    position:relative;
+    color: var(--color-grey);
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 *,
 *::before,
 *::after {
