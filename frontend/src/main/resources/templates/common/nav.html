@@ -4,6 +4,16 @@
         <div class="botoes">
             <form class="create" action="/logout" method="get" >
                 <button class="btn btn-primary" for="create-post">Sair</button>
+                <a class="themes" >
+                    <div class="theme-btn">
+                        <span class="material-symbols-outlined">
+                            LM
+                            </span>
+                        <span class="material-symbols-outlined">
+                            DM
+                            </span>
+                    </div>
+                </a>
                  
                 <div class="profile-photo">
                     <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" class="foto-perfil">
