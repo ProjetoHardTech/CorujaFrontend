@@ -11,7 +11,7 @@ themeBtn.addEventListener('click',() => {
 
     themeBtn.querySelector('span:first-child').classList.toggle('active');
     themeBtn.querySelector('span:last-child').classList.toggle('active');
-    
+
 
 
 

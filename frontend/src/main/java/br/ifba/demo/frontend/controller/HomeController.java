@@ -57,7 +57,7 @@ public class HomeController{
 	public ModelAndView login() {
 		return new ModelAndView("login");
 	}
-	
+
 
 	@GetMapping("/logout")
 	public ModelAndView logout(HttpSession session) {
@@ -86,9 +86,21 @@ public class HomeController{
 		return new ModelAndView("esquecisenha");
 	}
 
+	@GetMapping("/confirmaremail")
+	public ModelAndView confirmaremail() {
+		return new ModelAndView("confirmaremail");
+	}
+
 	@GetMapping("/emergencia")
 	public ModelAndView emergencia() {
-		return new ModelAndView("emergencia");
+		ModelAndView mav = new ModelAndView();
+		UsuarioModel usuario = new UsuarioModel();
+		Long idUser = 1l;
+		usuario = usuarioService.getUsuario(idUser);
+		mav.addObject("usuario", usuario);
+		mav.addObject("currentPage", "emergencia");
+		mav.setViewName("leftmenu/emergencia");
+		return mav;
 	}
 
 	@GetMapping("/home")
@@ -136,9 +148,9 @@ public class HomeController{
 
 
 
-	
+
 	@GetMapping("/configure-perf")
-	public ModelAndView exibirPerfilAutomatico() {
+	public ModelAndView editarPerfilAutomatico() {
     Long iduser = 1L;
     ModelAndView modelAndView = new ModelAndView();
 	modelAndView.addObject("currentPage", "configure-perf");
@@ -146,7 +158,18 @@ public class HomeController{
     UsuarioModel usuario = usuarioService.getUsuario(iduser);
     modelAndView.addObject("usuario", usuario);
     return modelAndView;
-}
+	}
+
+	@GetMapping("/profile")
+	public ModelAndView perfilPessoal() {
+		Long iduser = 1L;
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "profile");
+		modelAndView.setViewName("leftmenu/profile");
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+		modelAndView.addObject("usuario", usuario);
+		return modelAndView;
+	}
 
 	@PostMapping("/update")
 	public ModelAndView atualizarUsuario(@ModelAttribute UsuarioModel usuario, @RequestParam("file") MultipartFile imagem) {
@@ -159,13 +182,13 @@ public class HomeController{
 	mav.addObject("usuario", usuario);
 	usuarioService.update(usuario);
 		}catch (Exception e) {
-			
+
 			System.out.println("erro ao salvar" + e.getMessage());
 
 		}
 
 	mav.setViewName("redirect:/configure-perf");
-	return mav;	
+	return mav;
 
 }
 

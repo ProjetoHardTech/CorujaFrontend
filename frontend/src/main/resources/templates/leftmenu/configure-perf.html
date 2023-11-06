@@ -5,12 +5,14 @@
 
 <body>
     <div th:replace="~{common/nav}"></div>
+
     <main>
         <div class="container">
             <!-- Left -> Menu -->
             <div th:replace="~{common/left}"></div>
 
             <div class="middle">
+
                 <form class="painel" method="post" th:action="@{update}" enctype="multipart/form-data">
                     <h4 class="titulo">Personalizar Perfil</h4>
 
@@ -29,7 +31,7 @@
 
 
                     <button type="submit"  th:object="${usuario}"id="Salvar" class="butao">Salvar</button>
-                
+
             </div>
         </div>
     </main>
