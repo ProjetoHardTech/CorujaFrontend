@@ -3,12 +3,17 @@ package br.ifba.demo.frontend.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -20,6 +25,7 @@ import br.ifba.demo.frontend.model.UsuarioModel;
 import br.ifba.demo.frontend.service.ArquivoService;
 import br.ifba.demo.frontend.service.PostService;
 import br.ifba.demo.frontend.service.UsuarioService;
+import br.ifba.demo.frontend.util.UpdateUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
@@ -51,13 +57,14 @@ public class HomeController{
 	public ModelAndView login() {
 		return new ModelAndView("login");
 	}
+	
 
 	@GetMapping("/logout")
 	public ModelAndView logout(HttpSession session) {
 		session.invalidate();
 		return new ModelAndView("index");
 	}
-	
+
 	@GetMapping("/signup")
 	public ModelAndView signup() {
 		return new ModelAndView("signup");
@@ -67,7 +74,8 @@ public class HomeController{
 	public ModelAndView erro() {
 		return new ModelAndView("erro");
 	}
-	
+
+
 	@GetMapping("/termosdeuso")
 	public ModelAndView termosdeuso(){
 		return new ModelAndView("termosdeuso");
@@ -78,10 +86,18 @@ public class HomeController{
 		return new ModelAndView("esquecisenha");
 	}
 
+	@GetMapping("/emergencia")
+	public ModelAndView emergencia() {
+		return new ModelAndView("emergencia");
+	}
+
 	@GetMapping("/home")
 	public ModelAndView home(HttpServletRequest request, Model model) {
 		List<PostResponse> list = postService.listall();
 		ModelAndView mav = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	mav.addObject("usuario", usuario);
 		mav.addObject("posts", list);
 		mav.addObject("currentPage", "home");
 		HttpSession session = request.getSession();
@@ -93,6 +109,14 @@ public class HomeController{
 		}
 		return mav;
 	}
+	@GetMapping("/comments")
+	public ModelAndView comments(Model model) {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("currentPage", "comments");
+		modelAndView.setViewName("comments");
+		return modelAndView;
+		// return new ModelAndView("comments");
+	}
 
 	@GetMapping("/timeline")
 	public ModelAndView timeline() {
@@ -102,16 +126,57 @@ public class HomeController{
 	@GetMapping("/novo_post")
 	public ModelAndView upload_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "novo_post");
 		modelAndView.setViewName("leftmenu/novo_post");
 		return modelAndView;
 	}
 
 
+
+	
+	@GetMapping("/configure-perf")
+	public ModelAndView exibirPerfilAutomatico() {
+    Long iduser = 1L;
+    ModelAndView modelAndView = new ModelAndView();
+	modelAndView.addObject("currentPage", "configure-perf");
+	modelAndView.setViewName("leftmenu/configure-perf");
+    UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    modelAndView.addObject("usuario", usuario);
+    return modelAndView;
+}
+
+	@PostMapping("/update")
+	public ModelAndView atualizarUsuario(@ModelAttribute UsuarioModel usuario, @RequestParam("file") MultipartFile imagem) {
+	ModelAndView mav = new ModelAndView();
+	usuario.setId(1l);
+	try {
+			if(UpdateUtil.enviarImagem(imagem)){
+				usuario.setImagem_usuario(imagem.getOriginalFilename());
+			}
+	mav.addObject("usuario", usuario);
+	usuarioService.update(usuario);
+		}catch (Exception e) {
+			
+			System.out.println("erro ao salvar" + e.getMessage());
+
+		}
+
+	mav.setViewName("redirect:/configure-perf");
+	return mav;	
+
+}
+
+
 	// MAPEAMENTOS PARA A TELA DE CONFIGURACOES
 	@GetMapping("/config")
 	public ModelAndView config_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config");
 		modelAndView.setViewName("leftmenu/config");
 		return modelAndView;
@@ -120,6 +185,9 @@ public class HomeController{
 	@GetMapping("/config_my_account")
 	public ModelAndView config_my_account_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_my_account");
 		modelAndView.setViewName("leftmenu/config_menu/config_my_account");
 		return modelAndView;
@@ -128,6 +196,9 @@ public class HomeController{
 	@GetMapping("/config_notifications")
 	public ModelAndView config_notifications_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_notifications");
 		modelAndView.setViewName("leftmenu/config_menu/config_notifications");
 		return modelAndView;
@@ -136,6 +207,9 @@ public class HomeController{
 	@GetMapping("/config_security")
 	public ModelAndView config_security_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_security");
 		modelAndView.setViewName("leftmenu/config_menu/config_security");
 		return modelAndView;
@@ -144,6 +218,9 @@ public class HomeController{
 	@GetMapping("/config_privacy")
 	public ModelAndView config_privacy_page(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
+		Long iduser = 1L;
+		UsuarioModel usuario = usuarioService.getUsuario(iduser);
+    	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_privacy");
 		modelAndView.setViewName("leftmenu/config_menu/config_privacy");
 		return modelAndView;
@@ -152,8 +229,8 @@ public class HomeController{
 
 	@PostMapping("/upload")
 	public ModelAndView upload(
-		@ModelAttribute PostForm postForm, 	
-		HttpServletRequest request,	
+		@ModelAttribute PostForm postForm,
+		HttpServletRequest request,
 		RedirectAttributes redirectAttributes)
 	{
 		HttpSession session = request.getSession();
@@ -180,10 +257,10 @@ public class HomeController{
 	public ModelAndView process_login(HttpServletRequest request, Model model) {
 		String usuario = request.getParameter( "usuario" );
 		String senha   = request.getParameter( "senha" );
-		
+
 		LoginRequest loginRequest = new LoginRequest(usuario, senha);
 		UsuarioModel uModel = usuarioService.login(loginRequest);
-		
+
 		HttpSession session = request.getSession();
 		ModelAndView mav = new ModelAndView();
         if (uModel != null) {
@@ -211,7 +288,7 @@ public class HomeController{
 		String confirmacao_senha   = request.getParameter( "confirmacao_senha" );
 		String agree   = request.getParameter( "agree" );
 		boolean termos = agree == "1" ? true : false;
-		
+
 		System.out.println("nome.............: " + nome);
 		System.out.println("sobrenome........: " + sobrenome);
 		System.out.println("email............: " + email);
@@ -220,7 +297,7 @@ public class HomeController{
 		System.out.println("confirmacao_senha: " + confirmacao_senha);
 
 		ModelAndView mav = new ModelAndView();
-		
+
 		if (agree == null){
 			// model.addAttribute( "mensagem", "Termos e condições é de preenchimento obrigatório!");
 			// model.addAttribute( "possui_erro", true);
@@ -230,7 +307,7 @@ public class HomeController{
 			mav.setViewName("signup");
 			return mav;
 		}
-		
+
 		UsuarioModel usuModel = new UsuarioModel();
 		usuModel.setNome(nome);
 		usuModel.setSobrenome(sobrenome);
@@ -257,7 +334,7 @@ public class HomeController{
 		}
 
 	}
-	
+
 	@GetMapping("/exibirImagem/{id}")
 	public String  exibir_imagem(@PathVariable String id) {
 		System.out.println("exibir_imagem: " + id);
@@ -275,7 +352,7 @@ public class HomeController{
 		// System.out.println("tags......: " + tags);
 
 		ModelAndView mav = new ModelAndView();
-        
+
 		HttpSession session = request.getSession();
 		if ( session == null ){
 			mav.addObject("message", "Efetue o Login Novamente");
@@ -290,7 +367,7 @@ public class HomeController{
 			return mav;
 		}
 		System.out.println("id_usuario...: " + id_usuario);
-		
+
 		ComentarioDTO comentarioDTO = new ComentarioDTO();
 		comentarioDTO.setComentario(comentario);
 		comentarioDTO.setId_usuario(id_usuario);

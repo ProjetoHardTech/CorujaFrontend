@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
 
+
 * {
     font-family: 'Poppins', sans-serif;
+}
+
+.desenho {
+    margin-bottom: 20px; /* Adicione algum espaço entre "desenho" e "panel" */
+}
+
+.panel.panel-signin {
+    padding: 20px; /* Adicione algum espaço interno ao painel */
 }
 
 body {
@@ -33,7 +42,7 @@ a:focus {
 }
 
 body.signin {
-    background-color: #100415;
+    background-color: #221328;
 }
 
 .btn-newconta{
@@ -74,24 +83,19 @@ body.signin {
     margin-top: 10px;
 }
 
-.panel-signin{
-    margin: 80px auto 0 auto;
-}
-
 .panel-signin {
-    width: 800px;
-    background-color: #221328;
-    border: 5px solid #f36743;
-    box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.445);
-}
-
-.panel-signup {
-    width: 1200px;
+    width: 700px;
+    border-radius: 8px;
+    position: absolute;
+    top: 46%;
+    left: 71%;
+    transform: translate(-50%, -50%);
 }
 
 .panel-signin .panel-body,
 .panel-signup .panel-body {
     padding: 40px;
+    padding-left: 20px;
 }
 
 #num_one{
@@ -129,7 +133,7 @@ p {
 
 .form-control {
    display: block;
-   width: 96.5%;
+   width: 100%;
    height: 23px;
    padding: 6px 12px;
    font-size: 14px;
@@ -190,7 +194,8 @@ a {
     padding: 15px;
     margin-bottom: 20px;
     border: 1px solid transparent;
-    border-radius: 4px
+    border-radius: 4px;
+    width: 99%;
 }
 
 .close {
@@ -217,37 +222,33 @@ a {
 
 .pull-rigth{
     text-align: right;
-}
-
-.section_login{
-    background-color: #100415;
+    margin-top: -7px;
+    margin-right: -25px;
 }
 
 .section_login {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.desenho {
-    flex: 1; 
+    margin-right: 50px;
 }
 
 .desenho img{
-    flex: 1; 
-    padding-left: 200px;
-    margin-right: 100px;
-    padding-top: 200px;
-    height: 350px;
+    position: absolute;
+    top: 49%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    width: 30%;
 }
 
-.panel-body {
-    flex: 1; 
-}
 
-@media (max-width: 768px) {
+@media (max-width: 1469px) {
+    .section_login{
+        width: 10%;
+    }
+
     .panel-signin {
-        max-width: 100%;
+        width: 50%;
     }
 
     .pull-left, .pull-right {
@@ -270,11 +271,59 @@ a {
         align-items: left;
     }
 
-    .btn-newconta{
-        margin: 0;
-        font-size: 90%;
-        width: 100px;
-        padding: 10px;
+    .text-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem{
+        width: 50%;
+    }
+
+    .desenho img{
+        width: 33%;
+    }
+
+    .pull-rigth{
+        text-align: right;
+        width: 36%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section_login{
+        width: 10%;
+        display: flex; /* Use flexbox para criar uma coluna */
+        flex-direction: column; /* Direção da coluna */
+    }
+
+    .panel-signin {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pull-left, .pull-right {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .pull-right{
+        text-align: right;
+        padding-left: 15px;
+    }
+
+    .pull-left{
+        padding-right: 15px;
+    }
+
+    .pull-left i{
+        display: flexbox;
+        justify-content: left;
+        align-items: left;
     }
 
     .text-center{
@@ -286,10 +335,34 @@ a {
     .imagem{
         width: 50%;
     }
+
+    .desenho{
+        display: none;
+    }
+
+    .desenho img{
+        display: none;
+    }
 }
 
-@media (max-width: 424px) {
-    form{
-        width: 95%;
-    }
+@media (max-width: 472px) {
+    .btn-newconta{
+        display: inline-block;
+        padding: 16px 2px;
+        padding-right: 10px;
+        margin: 25px;
+        border: none;
+        border-radius: 8px;
+        letter-spacing: 3px;
+        padding-left: 10px;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: #f36743;
+        font-weight: 800;
+        box-shadow: 0px 10px 40px -12px #a5422a;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }   
 }

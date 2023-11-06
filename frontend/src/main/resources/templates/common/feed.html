@@ -39,15 +39,32 @@
             <i class="bx bx-comment"></i>
         </button>
     </form>
-    
+
     <!-- <button name="meusBotoes" class="btn btn-dark btn-sm mr5" th:value="${post.id}" data-toggle="modal" data-target=".bs-example-modal-lg">Comente</button> -->
-    <div class="captions" th:each="cmt : ${post.comentarios}">
+    <!-- <div class="captions" th:each="cmt : ${post.comentarios}">
         <p>
-            <b th:text="${cmt.nome_usuario}">HardTech</b> 
+            <b th:text="${cmt.nome_usuario}">HardTech</b>
             <small th:text=" ' - ' + ${#dates.format(cmt.data_cadastro, 'dd-MM-yyyy HH:mm')}"></small>
             <br/>
             <span th:text="${cmt.comentario}" class="harsh-tag">#ganhador</span>
         </p>
     </div>
-    <div class="comnents text-muted">Olhar os comentários</div>
-</div> 
+    <div class="comnents text-muted">Olhar os comentários</div> -->
+
+    <div class="comment-container" th:each="cmt : ${post.comentarios}">
+        <div class="user-avatar"></div>
+        <div class="comment-content">
+            <div class="comment-header">
+                <span class="username" th:text="${cmt.nome_usuario}">HardTech</span>
+                <span class="comment-meta" th:text="${#dates.format(cmt.data_cadastro, 'dd-MM-yyyy HH:mm')}"></span>
+            </div>
+            <div class="comment-text" th:text="${cmt.comentario}"></div>
+        </div>
+    </div>
+
+    <div class="view-comments text-muted" id="show-comments" onclick="showComments()">Ver todos os comentários</div>
+
+    <div class="comments-container" id="commentsContainer">
+        <!-- Aqui vai a estrutura dos comentários -->
+    </div>
+</div>
