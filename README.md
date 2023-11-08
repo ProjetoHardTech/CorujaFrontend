@@ -16,21 +16,6 @@ O objetivo fundamental do "Cooruja" é contribuir para o bem-estar da comunidade
 |![Web 1](https://github.com/ProjetoCooruja/CorujaFrontend/blob/main/assets/landingpage.png)| ![Web 2](https://github.com/ProjetoCooruja/CorujaFrontend/blob/main/assets/perfil.png) |  <img src="./screenshots/creditos.png" width="2000px"> | ![Web 2](https://github.com/ProjetoCooruja/CorujaFrontend/blob/main/assets/relatar.png) |
 |:---:|:---:|:---:|:---:|
 
-## Divisão de tarefas do projeto
-
-| Time                                                  | Tarefas                                                                                |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [Arthur Henrique](https://github.com/ArthurThuko/)     | Desenvolveu a página de login/essqueci-senha/emergências       |
-| [Beatriz Andrade](https://github.com/trizbeah/) | Principal desenvolvedora da landing page e estilizadadora do projeto |
-| [Diogo Fernandes](https://github.com/Dmaster6/)     | Desenvolveu editar perfil |
-| [Jailson Junior](https://github.com/JiniirProgramacoes/) | Desenvolveu parte da landing page    |
-| [Julia Castor](https://github.com/juliacaastor/)     | Desenvolveu os temas e parte da landing page          
-| [Luana Braga](https://github.com/bglassesgirl/)     | Desenvolveu todo o escorpo da página home e principal estilizadora do projeto        |
-| [Lucas Gabriel](https://github.com/G4brielSiq/)       | Desenolveu a página de cadastro |
-| [Murilo Rodolfo ](https://github.com/ArthurThuko/)     | Principal code reviewer e mediador de conflitos do projeto  |
-| [Karine Ferreira](/)       | Elaborou as artes do Cooruja |
-
-
 # Tecnologias utilizadas
 ## Back end
 - Java
