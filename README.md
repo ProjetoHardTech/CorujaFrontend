@@ -71,5 +71,5 @@ yarn start
 Projeto desenvolvido para as disciplinas de Estrutura de Dados, Banco de Dados, Linguagem de Progamação II e Sistemas Operacionais do Curso de Informática - IFBA Campus Paulo Afonso! 
 
 
-Scrum master: @Murilo Leal; Membros gerais: @Amanda Riany, @Alisson Santos, @Arthur Henrique,  @Carla Fernanda, @Beatriz Andrade, @Diogo Fernandes, @Jailson de Matos, @Júlia Castor,  @Karine Ferreira,   @Luana Braga, @Lucas Gabriel, @Tony Carlos, @Jailson de Matos
+Scrum master: @Murilo Leal; Membros gerais: @Amanda Riany, @Alisson Santos, @Arthur Henrique,  @Carla Fernanda, @Beatriz Andrade, @Diogo Fernandes, @Jailson de Matos, @Júlia Castor,  @Karine Ferreira,   @Luana Braga, @Lucas Gabriel e @Tony Carlos. 
 
