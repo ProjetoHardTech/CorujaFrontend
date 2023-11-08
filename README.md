@@ -27,10 +27,8 @@ O objetivo fundamental do "Cooruja" é contribuir para o bem-estar da comunidade
 | [Julia Castor](https://github.com/juliacaastor/)     | Desenvolveu os temas e parte da landing page          
 | [Luana Braga](https://github.com/bglassesgirl/)     | Desenvolveu todo o escorpo da página home e principal estilizadora do projeto        |
 | [Lucas Gabriel](https://github.com/G4brielSiq/)       | Desenolveu a página de cadastro |
-| [Murilo Rodolfo ](https://github.com/ArthurThuko/)     | Principal code reviewer e mediador de conflitos do projeto |
+| [Murilo Rodolfo ](https://github.com/ArthurThuko/)     | Principal code reviewer e mediador de conflitos do projeto  |
 | [Karine Ferreira](/)       | Elaborou as artes do Cooruja |
-
-
 
 
 # Tecnologias utilizadas
@@ -83,8 +81,8 @@ yarn install
 yarn start
 ```
 
-# Equipe
+---
 
-Alunos da turma 2019.1 de Infomática do IFBA - Campus Paulo Afonso 
+Projeto desenvolvido para as disciplinas de Estrutura de Dados, Banco de Dados, Linguagem de Progamação II e Sistemas Operacionais do Curso de Informática - IFBA Campus Paulo Afonso! 
 
 
