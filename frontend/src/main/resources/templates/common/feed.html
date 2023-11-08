@@ -32,6 +32,8 @@
     <div class="number-liked">
         <p>15 <b>up</b> e 1 <b>down</b></p>
     </div>
+
+
     <form class="form_comentario" id="form_add_comentario" method="post" action="/add_comentario">
         <input hidden id="id_post" name="id_post" type="text"  th:value="${post.id}" />
         <input id="comentario" name="comentario" type="text" />
@@ -61,7 +63,7 @@
             <div class="comment-text" th:text="${cmt.comentario}"></div>
         </div>
     </div>
-
+=
     <div class="view-comments text-muted" id="show-comments" onclick="showComments()">Ver todos os comentários</div>
 
     <div class="comments-container" id="commentsContainer">
