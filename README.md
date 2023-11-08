@@ -73,5 +73,5 @@ Projeto desenvolvido para as disciplinas de Estrutura de Dados, Banco de Dados, 
 
 
 =======
-Scrum master: @Murilo Leal; Membros gerais: @Beatriz Andrade, @Júlia Castor, @Lucas Gabriel, @Arthur Henrique, @Alisson Santos, @Diogo Fernandes, @Luana Braga, @Karine Ferreira, @Carla Fernanda, @Tony Carlos, @Jailson de Matos, @Amanda Riany. 
->>>>>>> f6309072843eeebf17c4e0db571c80b9cf995f72
+Scrum master: @Murilo Leal; Membros gerais: @Amanda Riany, @Alisson Santos, @Arthur Henrique,  @Carla Fernanda, @Beatriz Andrade, @Diogo Fernandes, @Jailson de Matos, @Júlia Castor,  @Karine Ferreira,   @Luana Braga, @Lucas Gabriel, @Tony Carlos, @Jailson de Matos
+
