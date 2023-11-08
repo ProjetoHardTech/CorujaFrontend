@@ -99,7 +99,7 @@ body {
     padding-right: 7px;
 }
 
-#firstname, #lastname {
+#nome, #sobrenome {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -147,7 +147,7 @@ body {
     padding-right: 7px;
 }
 
-#password, #confirmPassword {
+#senha, #confirmacao_senha {
     width: 100%;
     height: 100%;
     box-sizing:  border-box;

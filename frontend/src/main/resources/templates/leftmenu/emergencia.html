@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- header -->
+<div th:replace="~{common/header(_,_)}"></div>
+
+<body>
+    <div th:replace="~{common/nav}"></div>
+
+            <!-- Left -> Menu -->
+
+        <main>
+            <div class="container">
+            <div th:replace="~{common/left}"></div>        <!-- <div > -->
+                <!-- Left -> Menu -->
+                <div class="galeria">
+                    <div class="card-emergencia">
+                        <div class="frente">
+                            <h1>POLÍCIA MILITAR</h1>
+                            <img src="\images\icons_emergencia\Policia.svg" alt="Policia" class="icons_emergencia">
+                            <p class="disk">190</p>
+                        </div>
+                        <div class="atras">
+                            <a href="tel:190">
+                                <img src="\images\icons_emergencia\Telefone.svg" alt="Telefone" id="telefone" class="icons_emergencia">
+                            </a>
+                            <a href="tel:193">
+                                <p class="disk">Clique aqui</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-emergencia">
+                        <div class="frente">
+                            <h1>BOMBEIROS</h1>
+                            <img src="\images\icons_emergencia\Bombeiro.svg" alt="Bombeiro" class="icons_emergencia">
+                            <p class="disk">193</p>
+                        </div>
+                        <div class="atras">
+                            <a href="tel:193">
+                                <img src="\images\icons_emergencia\Telefone.svg" alt="Telefone" id="telefone" class="icons_emergencia">
+                            </a>
+                            <a href="tel:190">
+                                <p class="disk">Clique aqui</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-emergencia">
+                        <div class="frente">
+                            <h1>SAMU</h1>
+                            <img src="\images\icons_emergencia\Samu.svg" alt="Samu" class="icons_emergencia">
+                            <p class="disk">192</p>
+                        </div>
+                        <div class="atras">
+                            <a href="tel:193">
+                                <img src="\images\icons_emergencia\Telefone.svg" alt="Telefone" id="telefone" class="icons_emergencia">
+                            </a>
+                            <a href="tel:193">
+                                <p class="disk">Clique aqui</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-emergencia">
+                        <div class="frente">
+                            <h1>VIGILÂNCIA SANITÁRIA</h1>
+                            <img src="\images\icons_emergencia\Vigilância_Sanitária.svg" alt="Vigilância_Sanitária" class="icons_emergencia">
+                            <p class="disk">150</p>
+                        </div>
+                        <div class="atras">
+                            <a href="tel:193">
+                                <img src="\images\icons_emergencia\Telefone.svg" alt="Telefone" id="telefone" class="icons_emergencia">
+                            </a>
+                            <a href="tel:193">
+                                <p class="disk">Clique aqui</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-emergencia">
+                        <div class="frente">
+                            <h1>DELEGACIA DA MULHER</h1>
+                            <img src="\images\icons_emergencia\Delegacia_Da_Woman.svg" alt="Delegacia_Da_Woman" class="icons_emergencia">
+                            <p class="disk">180</p>
+                        </div>
+                        <div class="atras">
+                            <a href="tel:193">
+                                <img src="\images\icons_emergencia\Telefone.svg" alt="Telefone" id="telefone" class="icons_emergencia">
+                            </a>
+                            <a href="tel:193">
+                                <p class="disk">Clique aqui</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-emergencia">
+                        <div class="frente">
+                            <h1>DIREITOS HUMANOS</h1>
+                            <img src="\images\icons_emergencia\Direitos_Humanos.svg" alt="Direitos_Humanos" class="icons_emergencia">
+                            <p class="disk">100</p>
+                        </div>
+                        <div class="atras">
+                            <a href="tel:193">
+                                <img src="\images\icons_emergencia\Telefone.svg" alt="Telefone" id="telefone" class="icons_emergencia">
+                            </a>
+                            <a href="tel:193">
+                                <p class="disk">Clique aqui</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-emergencia">
+                        <div class="frente">
+                            <h1>VALORIZAÇÃO DA VIDA</h1>
+                            <img src="\images\icons_emergencia\Centro_Valorização_Da_vida.svg" alt="Centro_Valorização_Da_vida" class="icons_emergencia">
+                            <p class="disk">141</p>
+                        </div>
+                        <div class="atras">
+                            <a href="tel:193">
+                                <img src="\images\icons_emergencia\Telefone.svg" alt="Telefone" id="telefone" class="icons_emergencia">
+                            </a>
+                            <a href="tel:193">
+                                <p class="disk">Clique aqui</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-emergencia">
+                        <div class="frente">
+                            <h1>PREFEITURA PAULO AFONSO</h1>
+                            <img src="\images\icons_emergencia\Prefeitura_Paulo_Afonso.svg" alt="Prefeitura_Paulo_Afonso" class="icons_emergencia">
+                            <p class="disk">(75) 3281-3011</p>
+                        </div>
+                        <div class="atras">
+                            <a href="tel:193">
+                                <img src="\images\icons_emergencia\Telefone.svg" alt="Telefone" id="telefone" class="icons_emergencia">
+                            </a>
+                            <a href="tel:193">
+                                <p class="disk">Clique aqui</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+        </div>
+    </main>
+
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'css/styleemergencia.css';
+        document.head.appendChild(link);
+    </script>
+    
+</body>
+</html>

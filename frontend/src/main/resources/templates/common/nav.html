@@ -1,13 +1,37 @@
 <nav>
     <div class="container">
         <h2 class="log">COORUJA</h2>
-        <div >
+        <div class="botoes">
             <form class="create" action="/logout" method="get" >
                 <button class="btn btn-primary" for="create-post">Sair</button>
+                <a class="themes" >
+                    <div class="theme-btn">
+                        <span class="material-symbols-outlined">
+                            LM
+                            </span>
+                        <span class="material-symbols-outlined">
+                            DM
+                            </span>
+                    </div>
+                </a>
+                 
                 <div class="profile-photo">
                     <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" class="foto-perfil">
                 </div>
-            </form>
+             </form>
+             <form class="create" action="/emergencia">
+                <a href="/emergencia"><button class="btn btn-primary" id="btn-emergencia">Emergência</button></a>
+        </form>
         </div>
     </div>
+    <!-- <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'css/perfil.css';
+        document.head.appendChild(link);
+    </script> -->
+
+    <link rel="stylesheet" href="\css\stylenav.css">
+    
 </nav>
+

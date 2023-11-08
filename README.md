@@ -12,6 +12,7 @@ As ferramentas fornecidas pelo "Cooruja" possibilitam que os cidadãos façam de
 O objetivo fundamental do "Cooruja" é contribuir para o bem-estar da comunidade, capitalizando a inata natureza social dos seres humanos, com o intuito de promover a colaboração e a busca pelo interesse público.
 
 
+<<<<<<< HEAD
 ## Capturas de tela
 |![Web 1](https://github.com/ProjetoCooruja/CorujaFrontend/blob/main/assets/landingpage.png)| ![Web 2](https://github.com/ProjetoCooruja/CorujaFrontend/blob/main/assets/perfil.png) |  <img src="./screenshots/creditos.png" width="2000px"> | ![Web 2](https://github.com/ProjetoCooruja/CorujaFrontend/blob/main/assets/relatar.png) |
 |:---:|:---:|:---:|:---:|
@@ -71,3 +72,6 @@ yarn start
 Projeto desenvolvido para as disciplinas de Estrutura de Dados, Banco de Dados, Linguagem de Progamação II e Sistemas Operacionais do Curso de Informática - IFBA Campus Paulo Afonso! 
 
 
+=======
+Scrum master: @Murilo Leal; Membros gerais: @Beatriz Andrade, @Júlia Castor, @Lucas Gabriel, @Arthur Henrique, @Alisson Santos, @Diogo Fernandes, @Luana Braga, @Karine Ferreira, @Carla Fernanda, @Tony Carlos, @Jailson de Matos, @Amanda Riany. 
+>>>>>>> f6309072843eeebf17c4e0db571c80b9cf995f72

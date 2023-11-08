@@ -14,7 +14,11 @@ public class UpdateUtil {
         if(!imagem.isEmpty()){
             String arquiveName = imagem.getOriginalFilename();
             try {
+<<<<<<< HEAD
                 String diretorio = "C:\\frontendLayout\\frontend\\src\\main\\resources\\static\\imagens";
+=======
+                String diretorio = "C:\\Users\\201910070026\\Projetos\\frontend\\src\\main\\resources\\static\\imagens";
+>>>>>>> f6309072843eeebf17c4e0db571c80b9cf995f72
                 File dir = new File(diretorio);
                 if(!dir.exists()){
                     dir.mkdirs();

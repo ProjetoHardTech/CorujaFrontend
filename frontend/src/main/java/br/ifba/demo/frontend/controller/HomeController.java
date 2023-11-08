@@ -86,9 +86,21 @@ public class HomeController{
 		return new ModelAndView("esquecisenha");
 	}
 
+	@GetMapping("/confirmaremail")
+	public ModelAndView confirmaremail() {
+		return new ModelAndView("confirmaremail");
+	}
+
 	@GetMapping("/emergencia")
 	public ModelAndView emergencia() {
-		return new ModelAndView("emergencia");
+		ModelAndView mav = new ModelAndView();
+		UsuarioModel usuario = new UsuarioModel();
+		Long idUser = 1l;
+		usuario = usuarioService.getUsuario(idUser);
+		mav.addObject("usuario", usuario);
+		mav.addObject("currentPage", "emergencia");
+		mav.setViewName("leftmenu/emergencia");
+		return mav;
 	}
 
 	@GetMapping("/home")
