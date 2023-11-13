@@ -150,19 +150,21 @@ public class HomeController{
 
 
 	@GetMapping("/configure-perf")
-	public ModelAndView editarPerfilAutomatico() {
-    Long iduser = 1L;
-    ModelAndView modelAndView = new ModelAndView();
+	public ModelAndView exibirPerfilAutomatico(HttpServletRequest request) {
+    HttpSession session = request.getSession();
+	ModelAndView modelAndView = new ModelAndView();
+	Long iduser = (Long)session.getAttribute("id_usuario");
 	modelAndView.addObject("currentPage", "configure-perf");
 	modelAndView.setViewName("leftmenu/configure-perf");
     UsuarioModel usuario = usuarioService.getUsuario(iduser);
     modelAndView.addObject("usuario", usuario);
     return modelAndView;
-	}
+}
 
 	@GetMapping("/profile")
-	public ModelAndView perfilPessoal() {
-		Long iduser = 1L;
+	public ModelAndView perfilPessoal(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		Long iduser = (Long)session.getAttribute("id_usuario");	
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("currentPage", "profile");
 		modelAndView.setViewName("leftmenu/profile");
@@ -172,9 +174,11 @@ public class HomeController{
 	}
 
 	@PostMapping("/update")
-	public ModelAndView atualizarUsuario(@ModelAttribute UsuarioModel usuario, @RequestParam("file") MultipartFile imagem) {
+	public ModelAndView atualizarUsuario(@ModelAttribute UsuarioModel usuario, @RequestParam("file") MultipartFile imagem, HttpServletRequest request) {
 	ModelAndView mav = new ModelAndView();
-	usuario.setId(1l);
+	HttpSession session = request.getSession();
+	Long iduser = (Long)session.getAttribute("id_usuario");
+	usuario.setId(iduser);
 	try {
 			if(UpdateUtil.enviarImagem(imagem)){
 				usuario.setImagem_usuario(imagem.getOriginalFilename());
@@ -182,13 +186,13 @@ public class HomeController{
 	mav.addObject("usuario", usuario);
 	usuarioService.update(usuario);
 		}catch (Exception e) {
-
+			
 			System.out.println("erro ao salvar" + e.getMessage());
 
 		}
 
-	mav.setViewName("redirect:/configure-perf");
-	return mav;
+	mav.setViewName("redirect:/profile");
+	return mav;	
 
 }
 
