@@ -17,7 +17,7 @@
                                 <img th:src="@{'/imagens/' + ${usuario.imagem_usuario}}" alt="Sua Foto de Perfil">
                             </div>
                             <div class="profile-info">
-                                <h1 th:text="${usuario.nome} + ${usuario.sobrenome}">Nome da Pessoa</h1>
+                                <h1 th:text="${usuario.nome} + ' ' + ${usuario.sobrenome}">Nome da Pessoa</h1>
                                 <!-- para quando o usuario mudar -->
                                 <!-- <p th:text="${usuario}">@hardtech2023</p> -->
                                 <p>@hardtech2023</p>

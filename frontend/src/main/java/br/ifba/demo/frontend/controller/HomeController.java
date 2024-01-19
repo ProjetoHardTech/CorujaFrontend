@@ -44,15 +44,6 @@ public class HomeController{
 		return new ModelAndView("index");
     }
 
-    @GetMapping("/dashboard")
-	public ModelAndView dashboard(HttpServletRequest request, Model model) {
-		List<PostResponse> list = postService.listall();
-		ModelAndView mav = new ModelAndView();
-		mav.addObject("posts", list);
-		mav.addObject("currentPage", "dashboard");
-		return new ModelAndView("dashboard");
-	}
-
     @GetMapping("/login")
 	public ModelAndView login() {
 		return new ModelAndView("login");
@@ -92,35 +83,43 @@ public class HomeController{
 	}
 
 	@GetMapping("/emergencia")
-	public ModelAndView emergencia() {
-		ModelAndView mav = new ModelAndView();
-		UsuarioModel usuario = new UsuarioModel();
-		Long idUser = 1l;
-		usuario = usuarioService.getUsuario(idUser);
-		mav.addObject("usuario", usuario);
-		mav.addObject("currentPage", "emergencia");
-		mav.setViewName("leftmenu/emergencia");
-		return mav;
-	}
+    public ModelAndView emergencia(HttpServletRequest request) {
+        ModelAndView mav = new ModelAndView();
+        HttpSession session = request.getSession();
+        Long iduser = null;
+        try {
+            iduser = Long.valueOf(session.getAttribute("id_usuario").toString());
+            UsuarioModel usuario = usuarioService.getUsuario(iduser);
+            mav.addObject("usuario", usuario);
+            mav.addObject("currentPage", "emergencia");
+            mav.setViewName("leftmenu/emergencia");
+        } catch (NumberFormatException e) {
+            mav.setViewName("redirect:/login");
+            e.printStackTrace();
+        }
+        return mav;
+    }
 
 	@GetMapping("/home")
-	public ModelAndView home(HttpServletRequest request, Model model) {
-		List<PostResponse> list = postService.listall();
-		ModelAndView mav = new ModelAndView();
-		Long iduser = 1L;
-		UsuarioModel usuario = usuarioService.getUsuario(iduser);
-    	mav.addObject("usuario", usuario);
-		mav.addObject("posts", list);
-		mav.addObject("currentPage", "home");
-		HttpSession session = request.getSession();
-		if ( session == null ){
-        	mav.setViewName("redirect:/login");
-		}
-		else {
-			mav.setViewName("home");
-		}
-		return mav;
-	}
+    public ModelAndView home(HttpServletRequest request, Model model) {
+        List<PostResponse> list = postService.listall();
+        ModelAndView mav = new ModelAndView();
+        HttpSession session = request.getSession();
+        Long iduser = null;
+        try {
+            iduser = Long.valueOf(
+session.getAttribute("id_usuario").toString() );
+            UsuarioModel usuario = usuarioService.getUsuario(iduser);
+            mav.addObject("usuario", usuario);
+            mav.addObject("posts", list);
+            mav.addObject("currentPage", "home");
+        } catch (NumberFormatException e) {
+            mav.setViewName("redirect:/login");
+            e.printStackTrace();
+        }
+        return mav;
+    }
+
 	@GetMapping("/comments")
 	public ModelAndView comments(Model model) {
 		ModelAndView modelAndView = new ModelAndView();
@@ -136,33 +135,42 @@ public class HomeController{
 	}
 
 	@GetMapping("/novo_post")
-	public ModelAndView upload_page(Model model) {
-		ModelAndView modelAndView = new ModelAndView();
-		Long iduser = 1L;
-		UsuarioModel usuario = usuarioService.getUsuario(iduser);
-    	modelAndView.addObject("usuario", usuario);
-		modelAndView.addObject("currentPage", "novo_post");
-		modelAndView.setViewName("leftmenu/novo_post");
-		return modelAndView;
-	}
+    public ModelAndView upload_page(HttpServletRequest request, Model model) {
+        ModelAndView mav = new ModelAndView();
+        HttpSession session = request.getSession();
+        Long iduser = null;
+        try {
+            iduser = Long.valueOf(session.getAttribute("id_usuario").toString() );
+            UsuarioModel usuario = usuarioService.getUsuario(iduser);
+            mav.addObject("usuario", usuario);
+            mav.setViewName("leftmenu/novo_post");
+            mav.addObject("currentPage", "novo_post");
+        } catch (NumberFormatException e) {
+            mav.setViewName("redirect:/login");
+            e.printStackTrace();
+        }
+        return mav;
+    }
 
 
 
 
 	@GetMapping("/configure-perf")
-	public ModelAndView editarPerfilAutomatico() {
-    Long iduser = 1L;
-    ModelAndView modelAndView = new ModelAndView();
+	public ModelAndView exibirPerfilAutomatico(HttpServletRequest request) {
+    HttpSession session = request.getSession();
+	ModelAndView modelAndView = new ModelAndView();
+	Long iduser = (Long)session.getAttribute("id_usuario");
 	modelAndView.addObject("currentPage", "configure-perf");
 	modelAndView.setViewName("leftmenu/configure-perf");
     UsuarioModel usuario = usuarioService.getUsuario(iduser);
     modelAndView.addObject("usuario", usuario);
     return modelAndView;
-	}
+}
 
 	@GetMapping("/profile")
-	public ModelAndView perfilPessoal() {
-		Long iduser = 1L;
+	public ModelAndView perfilPessoal(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		Long iduser = (Long)session.getAttribute("id_usuario");	
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("currentPage", "profile");
 		modelAndView.setViewName("leftmenu/profile");
@@ -172,9 +180,11 @@ public class HomeController{
 	}
 
 	@PostMapping("/update")
-	public ModelAndView atualizarUsuario(@ModelAttribute UsuarioModel usuario, @RequestParam("file") MultipartFile imagem) {
+	public ModelAndView atualizarUsuario(@ModelAttribute UsuarioModel usuario, @RequestParam("file") MultipartFile imagem, HttpServletRequest request) {
 	ModelAndView mav = new ModelAndView();
-	usuario.setId(1l);
+	HttpSession session = request.getSession();
+	Long iduser = (Long)session.getAttribute("id_usuario");
+	usuario.setId(iduser);
 	try {
 			if(UpdateUtil.enviarImagem(imagem)){
 				usuario.setImagem_usuario(imagem.getOriginalFilename());
@@ -182,22 +192,23 @@ public class HomeController{
 	mav.addObject("usuario", usuario);
 	usuarioService.update(usuario);
 		}catch (Exception e) {
-
+			
 			System.out.println("erro ao salvar" + e.getMessage());
 
 		}
 
-	mav.setViewName("redirect:/configure-perf");
-	return mav;
+	mav.setViewName("redirect:/profile");
+	return mav;	
 
 }
 
 
 	// MAPEAMENTOS PARA A TELA DE CONFIGURACOES
 	@GetMapping("/config")
-	public ModelAndView config_page(Model model) {
+	public ModelAndView config_page(HttpServletRequest request, Model model) {
 		ModelAndView modelAndView = new ModelAndView();
-		Long iduser = 1L;
+		HttpSession session = request.getSession();
+		Long iduser = Long.valueOf(session.getAttribute("id_usuario").toString());
 		UsuarioModel usuario = usuarioService.getUsuario(iduser);
     	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config");
@@ -206,9 +217,10 @@ public class HomeController{
 	}
 
 	@GetMapping("/config_my_account")
-	public ModelAndView config_my_account_page(Model model) {
+	public ModelAndView config_my_account_page(HttpServletRequest request, Model model) {
 		ModelAndView modelAndView = new ModelAndView();
-		Long iduser = 1L;
+		HttpSession session = request.getSession();
+		Long iduser = Long.valueOf(session.getAttribute("id_usuario").toString());
 		UsuarioModel usuario = usuarioService.getUsuario(iduser);
     	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_my_account");
@@ -217,9 +229,10 @@ public class HomeController{
 	}
 
 	@GetMapping("/config_notifications")
-	public ModelAndView config_notifications_page(Model model) {
+	public ModelAndView config_notifications_page(HttpServletRequest request, Model model) {
 		ModelAndView modelAndView = new ModelAndView();
-		Long iduser = 1L;
+		HttpSession session = request.getSession();
+		Long iduser = Long.valueOf(session.getAttribute("id_usuario").toString());
 		UsuarioModel usuario = usuarioService.getUsuario(iduser);
     	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_notifications");
@@ -228,9 +241,10 @@ public class HomeController{
 	}
 
 	@GetMapping("/config_security")
-	public ModelAndView config_security_page(Model model) {
+	public ModelAndView config_security_page(HttpServletRequest request, Model model) {
 		ModelAndView modelAndView = new ModelAndView();
-		Long iduser = 1L;
+		HttpSession session = request.getSession();
+		Long iduser = Long.valueOf(session.getAttribute("id_usuario").toString());
 		UsuarioModel usuario = usuarioService.getUsuario(iduser);
     	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_security");
@@ -239,9 +253,10 @@ public class HomeController{
 	}
 
 	@GetMapping("/config_privacy")
-	public ModelAndView config_privacy_page(Model model) {
+	public ModelAndView config_privacy_page(HttpServletRequest request, Model model) {
 		ModelAndView modelAndView = new ModelAndView();
-		Long iduser = 1L;
+		HttpSession session = request.getSession();
+		Long iduser = Long.valueOf(session.getAttribute("id_usuario").toString());
 		UsuarioModel usuario = usuarioService.getUsuario(iduser);
     	modelAndView.addObject("usuario", usuario);
 		modelAndView.addObject("currentPage", "config_privacy");
