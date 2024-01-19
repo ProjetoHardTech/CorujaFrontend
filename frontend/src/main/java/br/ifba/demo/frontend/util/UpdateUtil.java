@@ -8,13 +8,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class UpdateUtil {
     public static boolean enviarImagem(MultipartFile imagem) {
-        
+
         boolean sucessUpload = false;
 
         if(!imagem.isEmpty()){
             String arquiveName = imagem.getOriginalFilename();
             try {
-                String diretorio = "C:\\Users\\201910070026\\Front\\frontend\\src\\main\\resources\\static\\imagens";
+               String diretorio = "C:\\frontendLayout\\frontend\\src\\main\\resources\\static\\imagens";
+
                 File dir = new File(diretorio);
                 if(!dir.exists()){
                     dir.mkdirs();
@@ -33,7 +34,7 @@ public class UpdateUtil {
                 System.out.println("O envio do arquivo:" +arquiveName + "não foi executado com sucesso" +e.getMessage() );
 
             }
-            
+
         }
         else{
                 System.out.println("O arquivo está vazio!!");
